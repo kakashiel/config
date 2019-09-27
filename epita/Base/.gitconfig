@@ -1,0 +1,12 @@
+[user]
+	name = Adrien Loustaunau
+	mail = adrien.loustaunau@epita.fr
+	email = lousta_a@epita.fr
+[color]
+	status = auto
+	ui = true
+	branch = true
+	diff = true
+	interactive = true
+[alias]
+	tree = log --oneline --decorate --all --graph
