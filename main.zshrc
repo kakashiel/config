@@ -1,3 +1,5 @@
+export AWS_PROFILE=palo-hk
+
 export MYCONF=$HOME/config/
 source $MYCONF/myconf/adrien.zshrc
 source $MYCONF/myconf/npm.zshrc

@@ -13,6 +13,7 @@ plugins=(
   kubectl
   iterm2
   tig
+  vi-mode
   terraform
 )
 
@@ -42,3 +43,21 @@ alias ag="agrep"
 # FZF use Ripgrep for listing the files
 export FZF_DEFAULT_COMMAND='rg --files --follow --hidden'
 
+#==============================================================================
+# vi-mode plugin don t loose history arrow
+#==============================================================================
+autoload -Uz history-search-end
+
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+
+bindkey -M vicmd '^[[A' history-beginning-search-backward-end \
+                 '^[OA' history-beginning-search-backward-end \
+                 '^[[B' history-beginning-search-forward-end \
+                 '^[OB' history-beginning-search-forward-end
+bindkey -M viins '^[[A' history-beginning-search-backward-end \
+                 '^[OA' history-beginning-search-backward-end \
+                 '^[[B' history-beginning-search-forward-end \
+                 '^[OB' history-beginning-search-forward-end
+
+#==============================================================================
