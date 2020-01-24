@@ -1,3 +1,5 @@
+# Oh my zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 brew install neovim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -10,6 +12,8 @@ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 brew tap homebrew/cask-fonts
 brew cask install font-hack-nerd-font
 
-#mkdir .config/nvim
-#echo 'source ~/.vimrc' >> touch .config/nvim/init.vim
-#echo 'source ~/config/Vim/my_configs.vim' >> touch ~/.vimrc
+mkdir -p ~/.config/nvim
+touch ~/.vimrc 
+touch .config/nvim/init.vim 
+echo 'source ~/config/Vim/my_configs.vim' >>  ~/.vimrc
+echo 'source ~/.vimrc' >>  .config/nvim/init.vim
