@@ -3,6 +3,7 @@ export AWS_PROFILE=sonder
 export MYCONF=$HOME/config/
 source $MYCONF/myconf/adrien.zshrc
 source $MYCONF/myconf/npm.zshrc
+source $MYCONF/myconf/android.zshrc
 source $MYCONF/paloit/paloit.zshrc
 source $MYCONF/paloit/dmmw.zshrc
 source $MYCONF/paloit/mms/mms.zshrc

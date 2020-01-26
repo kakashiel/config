@@ -36,7 +36,7 @@ nmap <leader>w :w!<cr>
 map <CR> o<Esc>
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
-command W w !sudo tee % > /dev/null
+" command W w !sudo tee % > /dev/null
 
 " Set number line 
 set number relativenumber

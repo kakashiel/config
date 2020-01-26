@@ -9,11 +9,13 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 brew install fzf bat ripgrep
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 
+
+#Add font in iterm2->preference->profile->text
 brew tap homebrew/cask-fonts
 brew cask install font-hack-nerd-font
 
 mkdir -p ~/.config/nvim
-touch ~/.vimrc 
-touch .config/nvim/init.vim 
+touch ~/.vimrc
+touch .config/nvim/init.vim
 echo 'source ~/config/Vim/my_configs.vim' >>  ~/.vimrc
 echo 'source ~/.vimrc' >>  .config/nvim/init.vim
