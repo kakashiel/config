@@ -19,13 +19,14 @@ plugins=(
 alias v="vagrant"
 
 alias myconf="vim $HOME/config/MyConf/adrien.zshrc"
-alias gpmyconf="cd $HOME/config && gaa && gcam 'update myconf' && gl && gp && cd -"
+alias gpmyconf='cp $HOME/.vim/coc-settings.json $HOME/config/Vim/
+cd $HOME/config && gaa && gcam 'update myconf' && gl && gp && cd -'
 
 alias cnote="cat $HOME/config/note.txt"
 alias vnote="vim $HOME/config/note.txt"
 
 
-alias vim="nvim"
+# alias vim="nvim"
 # Docker completion for MAC
 etc=/Applications/Docker.app/Contents/Resources/etc
 touch /tmp/zsh.log

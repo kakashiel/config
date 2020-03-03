@@ -12,6 +12,7 @@
 "   - Editing mappings
 "   - vimgrep searching
 "   - Spell checking
+"   - Restore opened files
 "   - Vundle
 "   - Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -281,12 +282,19 @@ set spell spelllang=en_us
 "map <leader>s? z=
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Restore opened files
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Quick write session with F2
+map <F2> :mksession! ~/.vim/.vim_session <cr> 
+" Load session with F3
+map <F3> :source ~/.vim/.vim_session <cr>    
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim-plug 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Specify a directory for plugins
-" - For Neovim: ~/.local/share/nvim/plugged
-" - Avoid using standard Vim directory names like 'plugin'
-call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin('~/.vim/plugged')
+
 
 "Full path fuzzy file, buffer, mru, tag, ... 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -314,7 +322,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " coc extensions
 let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 
       \ 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 
-      \'coc-prettier', 'coc-git']
+      \'coc-prettier', 'coc-git', 'coc-yaml', 'coc-python']
 
 " syntax checking and semantic errors
 Plug 'dense-analysis/ale'
@@ -329,8 +337,8 @@ Plug 'sheerun/vim-polyglot'
 
 " Icon nerd fancy
 let g:webdevicons_enable_nerdtree = 1
-let g:webdevicons_conceal_nerdtree_brackets = 1
 let g:airline_powerline_fonts = 1
+let g:webdevicons_conceal_nerdtree_brackets = 1
 set guifont=DroidSansMono\ Nerd\ Font\ 11
 Plug 'ryanoasis/vim-devicons'
 
@@ -339,6 +347,7 @@ Plug 'ludovicchabant/vim-gutentags'
 set statusline+=%{gutentags#statusline()}
 let g:gutentags_ctags_exclude = ["*.min.js", "*.min.css", "build", 
       \ "vendor", ".git", "node_modules", "*.vim/bundle/*"]
+let g:gutentags_cache_dir = "~/.vim/tags"
 
 
 call plug#end()
