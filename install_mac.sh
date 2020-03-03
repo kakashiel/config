@@ -13,6 +13,9 @@ brew install vim
 brew tap homebrew/cask-fonts
 brew cask install font-hack-nerd-font
 
+#Add coc setting config
+cp  $HOME/config/Vim/coc-settings.json $HOME/.vim/
+
 mkdir -p ~/.config/nvim
 touch ~/.vimrc
 touch .config/nvim/init.vim
