@@ -17,14 +17,16 @@ plugins=(
 )
 
 alias v="vagrant"
+alias terra="terraform"
 
 alias myconf="vim $HOME/config/MyConf/adrien.zshrc"
 alias gpmyconf='cp $HOME/.vim/coc-settings.json $HOME/config/Vim/
+cp $HOME/Library/Application\ Support/Code/User/settings.json $HOME/config/vscode
 cd $HOME/config && gaa && gcam 'update myconf' && gl && gp && cd -'
 
 alias cnote="cat $HOME/config/note.txt"
 alias vnote="vim $HOME/config/note.txt"
-
+alias sec="~/.sec"
 
 # alias vim="nvim"
 # Docker completion for MAC

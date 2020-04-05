@@ -1,5 +1,3 @@
-export AWS_PROFILE=sonder
-
 export MYCONF=$HOME/config/
 source $MYCONF/myconf/adrien.zshrc
 source $MYCONF/myconf/npm.zshrc
