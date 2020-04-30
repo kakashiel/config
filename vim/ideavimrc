@@ -1,0 +1,4 @@
+source ~/config/Vim/my_configs.vim
+set surround
+set commentary
+nmap <leader><leader>f :action KJumpAction<CR>
