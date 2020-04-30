@@ -1,1 +1,1 @@
-alias dmmw='cd ~/work/dont-make-me-wait-gov-hack-2018'
+alias dmmw='cd $MYWORK/dont-make-me-wait-gov-hack-2018'

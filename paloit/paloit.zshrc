@@ -1,3 +1,3 @@
-alias palfe="cd /Users/adriendemontey/work/websitePaloIt/palo-it-website-fe"
-alias palbe="cd /Users/adriendemontey/work/websitePaloIt/palo-it-website-serverless"
+alias palfe="cd $MYWORK/websitePaloIt/palo-it-website-fe"
+alias palbe="cd $MYWORK/websitePaloIt/palo-it-website-serverless"
 

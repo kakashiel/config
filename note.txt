@@ -1,4 +1,0 @@
-###################################################
-Split payment
-semaphore
-spinnaker

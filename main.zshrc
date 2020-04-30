@@ -1,11 +1,9 @@
-export MYCONF=$HOME/config/
+export MYCONF=$HOME/perso/config/
+export MYWORK=$HOME/work
+
 source $MYCONF/myconf/adrien.zshrc
 source $MYCONF/myconf/npm.zshrc
 source $MYCONF/myconf/android.zshrc
 source $MYCONF/paloit/paloit.zshrc
 source $MYCONF/paloit/dmmw.zshrc
-source $MYCONF/paloit/mms/mms.zshrc
 source $MYCONF/paloit/aig.zshrc
-source $MYCONF/apollo/apollo.zshrc
-source $MYCONF/itm/itm.zshrc
-source $MYCONF/myconf/others.zshrc

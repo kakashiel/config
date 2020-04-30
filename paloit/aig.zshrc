@@ -1,3 +1,3 @@
-  alias iagfe='cd ~/work/iag/IAG-SafetyHub'
-  alias iagbe='cd ~/work/iag/IAG-SafetyHub_be'
-  alias iagma='cd ~/work/iag/IAG_SafetyHub_Management'
+  alias iagfe='cd $MYWORK/iag/IAG-SafetyHub'
+  alias iagbe='cd $MYWORK/iag/IAG-SafetyHub_be'
+  alias iagma='cd $MYWORK/iag/IAG_SafetyHub_Management'

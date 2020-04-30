@@ -1,5 +1,0 @@
-alias itmdev="k config use-context gke_intermarche-anniv-dev_europe-west1-b_cluster-ddb-dev"
-alias itmppd="k config use-context gke_intermarche-anniv-preprod_europe-west1-b_cluster-ddb-preprod"
-alias itmprod="k config use-context gke_intermarche-anniv-prod_europe-west1-b_cluster-ddb-prod"
-alias itmrec="k config use-context gke_intermarche-anniv-recette_europe-west1-b_cluster-ddb-rec"
-alias it="cd $HOME/work/itm"

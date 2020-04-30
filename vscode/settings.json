@@ -18,11 +18,13 @@
         }
     ],
     "vim.startInInsertMode": true,
+    "vim.useCtrlKeys": true,
     "vim.handleKeys": {
         "<C-c>": false,
         "<C-v>": false,
         "<D-c>": false,
-        "<D-v>": false
+        "<D-v>": false,
+        "<C-r>": true,
     },
     "vim.normalModeKeyBindingsNonRecursive": [
         {
