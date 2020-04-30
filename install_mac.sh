@@ -1,53 +1,66 @@
-#Tools
-brew cask install firefox
-brew cask install google-chrome
-brew cask install tunnelblick
-#Tools code
-brew cask install virtualbox
-brew cask install docker
-brew cask install iterm2
-brew cask install visual-studio-code
-brew cask install intellij-idea
-#Tools agile
-brew cask install miro-formerly-realtimeboard
-#Fun
-brew cask install steam
-brew cask install spotify
-#Social
-brew cask install slack
-brew cask install whatsapp
-brew cask install zoomus
-brew cask install all-in-one-messenger
+#Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-#======================================
-# Oh my zsh
-#======================================
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+brew cask install \
+    firefox \
+    google-chrome \
+    tunnelblick \
+    virtualbox \
+    docker \
+    iterm2 \
+    visual-studio-code \
+    intellij-idea \
+    steam \
+    spotify \
+    slack \
+    whatsapp \
+    zoomus \
+    miro-formerly-realtimeboard \
+
+
+brew install \
+    node \
+    npm \
+    vim \
+    oath-toolkit \
+    fzf \
+    bat \
+    ripgrep 
 
 #======================================
 #Vim
 #======================================
-
-#Install a complete vim with all features (need conceal)
-brew install vim
 #Install other dependencies
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-brew install fzf bat ripgrep
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 
 #Add font in iterm2->preference->profile->text
+#Change iterm2->preference->profile->working directory
+#Change iterm2->preference->profile->key->preset->working directory
 brew tap homebrew/cask-fonts
 brew cask install font-hack-nerd-font
 
 #Add coc setting config
-cp  $MYCONF/Vim/coc-settings.json $HOME/.vim/
+cp  ~/perso/config/vim/coc-settings.json $HOME/.vim/
 
 touch ~/.vimrc
-echo 'source $MYCONF/vim/my_configs.vim' >>  ~/.vimrc
+echo 'source ~/perso/config/vim/my_configs.vim' >>  ~/.vimrc
+
+vim -E -s -u ~/.vimrc -u ~/perso/config/vim/my_configs.vim +PlugInstall +qall
 
 #======================================
 #INTELLIJ
 #======================================
 touch .ideavimrc
-echo 'source $MYCONF/ideavimrc' >>  ~/.ideavimrc
+echo 'source ~/perso/config/ideavimrc' >>  ~/.ideavimrc
+
+cp ~/perso/config/vscode/settings.json ~/Library/Application\ Support/Code/User
+#======================================
+# Oh my zsh
+#======================================
+echo 'LAST STEP MANUAL'
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#FIXME: /!\MANUAL STEP
+echo 'source ~/perso/config/main.zshrc' >> ~/.zshrc
+source ~/.zshrc

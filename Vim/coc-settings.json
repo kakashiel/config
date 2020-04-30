@@ -22,9 +22,6 @@
       "initializationOptions": {}
     }
   },
-  "yaml.schemas": {
-    "kubernetes": "/*.yaml"
-  },
   "json.schemas": {
     "http://json.schemastore.org/package": "package.json"
   }

@@ -359,7 +359,7 @@ call plug#end()
 syntax on 
 
 set t_Co=256
-set termguicolors
+silent! set termguicolors
 
 " for dark version
 set background=dark
