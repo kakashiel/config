@@ -8,6 +8,8 @@ brew cask install docker
 brew cask install iterm2
 brew cask install visual-studio-code
 brew cask install intellij-idea
+#Tools agile
+brew cask install miro-formerly-realtimeboard
 #Fun
 brew cask install steam
 brew cask install spotify
