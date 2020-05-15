@@ -24,8 +24,11 @@ brew install \
     vim \
     oath-toolkit \
     fzf \
-    bat \
-    ripgrep 
+    bat \ #fancy cat
+    ccat \ #color cat
+    ripgrep \
+    glances \ #best htop
+    nnn
 
 #======================================
 #Vim
@@ -45,7 +48,7 @@ brew cask install font-hack-nerd-font
 cp  ~/perso/config/vim/coc-settings.json $HOME/.vim/
 
 touch ~/.vimrc
-echo 'source ~/perso/config/vim/my_configs.vim' >>  ~/.vimrc
+echo 'source $MYCONF/vim/my_configs.vim' >>  ~/.vimrc
 
 vim -E -s -u ~/.vimrc -u ~/perso/config/vim/my_configs.vim +PlugInstall +qall
 
@@ -53,12 +56,14 @@ vim -E -s -u ~/.vimrc -u ~/perso/config/vim/my_configs.vim +PlugInstall +qall
 #INTELLIJ
 #======================================
 touch .ideavimrc
-echo 'source ~/perso/config/ideavimrc' >>  ~/.ideavimrc
+echo 'source $MYCONF/vim/ideavimrc' >>  ~/.ideavimrc
 
 cp ~/perso/config/vscode/settings.json ~/Library/Application\ Support/Code/User
 #======================================
 # Oh my zsh
 #======================================
+cd ~ && git clone https://github.com/zsh-users/antigen.git .antigen && cd -
+
 echo 'LAST STEP MANUAL'
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 #FIXME: /!\MANUAL STEP
