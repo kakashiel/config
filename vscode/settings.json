@@ -10,6 +10,7 @@
     },
     // JEST plugin
     "jest.showCoverageOnLoad": true,
+    
     // VIM plugin
     "vim.insertModeKeyBindings": [
         {
@@ -17,13 +18,17 @@
             "after": ["<Esc>"]
         }
     ],
-    "vim.startInInsertMode": true,
+    "vim.easymotionMarkerBackgroundColor": "#D08770",
+    "vim.leader": ",",
+    "vim.easymotion": true,
+    // "vim.startInInsertMode": true,
     "vim.useCtrlKeys": true,
     "vim.handleKeys": {
         "<C-c>": false,
         "<C-v>": false,
         "<D-c>": false,
         "<D-v>": false,
+        "<D-d>": false,
         "<C-r>": true,
     },
     "vim.normalModeKeyBindingsNonRecursive": [
@@ -67,5 +72,19 @@
                 "internalConsoleOptions": "neverOpen"
             }
         ]
-      }
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#8FBCBB",
+        "statusBar.noFolderBackground": "#8FBCBB",
+        "statusBar.debuggingBackground": "#8FBCBB",
+        "statusBar.foreground": "#434C5E"
+    }
 }

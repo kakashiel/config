@@ -1,5 +1,41 @@
 source ~/config/vim/my_configs.vim
+
+""" Map leader to space ---------------------
+let mapleader=","
+
+""" Plugins  --------------------------------
 set surround
+set relativenumber
 set commentary
-nmap <leader><leader>f :action KJumpAction<CR>
+set easymotion
+
+""" Plugin settings -------------------------
+
+""" Common settings -------------------------
+set showmode
+set so=5
+set incsearch
+set nu
+
+""" Idea specific settings ------------------
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+""" Mappings --------------------------------
 imap jj <Esc>
+map <leader>f <Plug>(easymotion-s)
+map <leader>e <Plug>(easymotion-f)
+
+map <leader>d :action Debug<CR>
+map <leader>r :action RenameElement<CR>
+map <leader>c :action Stop<CR>
+map <leader>z :action ToggleDistractionFreeMode<CR>
+
+map <leader>s :action SelectInProjectView<CR>
+map <leader>a :action Annotate<CR>
+map <leader>h :action Vcs.ShowTabbedFileHistory<CR>
+map <S-Space> :action GotoNextError<CR>
+
+map <leader>b :action ToggleLineBreakpoint<CR>
+map <leader>o :action FileStructurePopup<CR>

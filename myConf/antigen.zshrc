@@ -11,16 +11,20 @@ antigen bundle command-not-found
 antigen bundle docker
 antigen bundle docker-compose
 antigen bundle tig
+antigen bundle git-auto-fetch
+GIT_AUTO_FETCH_INTERVAL=1200 #in seconds
 antigen bundle terraform
 antigen bundle osx
 antigen bundle paulirish/git-open
 
+
 # Syntax highlighting bundle.
-antigen bundle zsh-users/zsh-syntax-highlighting
+# antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions 
 antigen bundle zsh-users/zsh-completions
 
 # Load the theme.
-antigen theme robbyrussell 
+# antigen theme robbyrussell 
+antigen theme romkatv/powerlevel10k
 
 antigen apply

@@ -15,6 +15,7 @@ brew cask install \
     slack \
     whatsapp \
     zoomus \
+    spectacle \
     miro-formerly-realtimeboard \
 
 
@@ -28,7 +29,10 @@ brew install \
     ccat \ #color cat
     ripgrep \
     glances \ #best htop
-    nnn
+    nnn \
+    z \
+    gpg \
+    git-crypt
 
 #======================================
 #Vim
