@@ -43,6 +43,10 @@ alias sec="~/.sec"
 alias go='open "$(git open --print)/pull-requests"'
 alias top="glances"
 
+alias vimt="vim -c 'ter ++curwin'"
+alias vimtt="vim -c 'ter ++curwin' -c 'vert ter'"
+alias vnpms="vim  -c ':ter ++curwin npm run start'  -c ':vert ter'"
+
 #Function to see all alias which match the first argument
 #ex agrep 'git'
 agrep (){

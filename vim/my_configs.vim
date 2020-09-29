@@ -29,7 +29,7 @@ set autoread
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
-let mapleader = ","
+let mapleader = " "
 
 " Fast saving
 nmap <leader>w :w!<cr>
@@ -137,8 +137,11 @@ endif
 " Add a bit extra margin to the left
 set foldcolumn=1
 
-
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vim terminal mode
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+tnoremap <Esc> <C-\><C-n>
+tnoremap jj <C-\><C-n>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -192,8 +195,8 @@ map <leader>bd :Bclose<cr>:tabclose<cr>gT
 " Close all the buffers
 map <leader>ba :bufdo bd<cr>
 
-"map <leader>l :bnext<cr>
-"map <leader>h :bprevious<cr>
+map <leader>l :bnext<cr>
+map <leader>h :bprevious<cr>
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
@@ -201,9 +204,13 @@ map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove 
 map <leader>t<leader> :tabnext 
-noremap <S-l> gt
-noremap <S-h> gT
+noremap <M-l> gt
+noremap <M-h> gT
 
+if has("mac") || has("macunix")
+  noremap <M-l> <D-l>
+  noremap <M-h> <D-h>
+endif
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
 nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
@@ -242,19 +249,6 @@ set laststatus=2
 " Remap VIM 0 to first non-blank character
 map 0 ^
 
-" Move a line of text using ALT+[jk] or Command+[jk] on mac
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
-
-if has("mac") || has("macunix")
-  nmap <D-j> <M-j>
-  nmap <D-k> <M-k>
-  vmap <D-j> <M-j>
-  vmap <D-k> <M-k>
-endif
-
 " Delete trailing white space on save, useful for some filetypes ;)
 fun! CleanExtraSpaces()
   let save_cursor = getpos(".")
@@ -275,11 +269,6 @@ endif
 " Pressing ,ss will toggle and untoggle spell checking
 map <leader>S :set nospell<cr>
 set spell spelllang=en_us
-" Shortcuts using <leader>
-"map <leader>sn ]s
-"map <leader>sp [s
-"map <leader>sa zg
-"map <leader>s? z=
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Restore opened files
