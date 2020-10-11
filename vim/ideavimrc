@@ -8,6 +8,7 @@ set surround
 set relativenumber
 set commentary
 set easymotion
+set vim-highlightedyank
 
 """ Plugin settings -------------------------
 
@@ -26,7 +27,7 @@ set idearefactormode=keep
 imap jj <Esc>
 nmap gD :action GotoImplementation<CR>
 map <leader>s <Plug>(easymotion-s)
-map <leader>f <Plug>(easymotion-s)
+map <leader>f :action FindInPath<CR>
 
 map <leader>d :action Debug<CR>
 map <leader>r :action RenameElement<CR>
