@@ -1,226 +1,98 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer:
 "   Adrien loustaunau
-" Sections:
-"   - General
-"   - Vim user interface
-"   - Files and backups
-"   - Text, tab and indent related
-"   - Visual mode related
-"   - Moving around, tabs and buffers
-"   - Satus line
-"   - Editing mappings
-"   - vimgrep searching
-"   - Spell checking
-"   - Restore opened files
-"   - Vundle
-"   - Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Sets how many lines of history VIM has to remember
-set history=500
-
-" Set to auto read when a file is changed from the outside
-set autoread
-
-" With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
 let mapleader = " "
+let maplocalleader = ","
 
-" Fast saving
-nmap <leader>w :w!<cr>
+set autoread " Set to auto read when a file is changed from the outside
+set magic " For regular expressions turn magic on
+
+syntax enable                           " Enables syntax highlighing
+set colorcolumn=80                      " Linebreak
+set hidden                              " Required to keep multiple buffers open multiple buffers
+set wrap                                " Cut long lines as just one line
+set tw=500                              " Linebreak on 500 characters
+set lbr                                 " When wrap doesnt cut word
+set whichwrap+=<,>,h,l,[,]              " Will move to the previous/next line after reaching first/last character in the line.
+set encoding=utf-8                      " The encoding displayed
+set pumheight=10                        " Makes popup menu smaller
+set fileencoding=utf-8                  " The encoding written to file
+set spell spelllang=en_us               " English language state
+set lazyredraw                          " Don't redraw while executing macros (good performance config)
+set ruler                               " Show the cursor position all the time
+set cmdheight=2                         " More space for displaying messages
+set iskeyword+=-                        " treat dash separated words as a word text object"
+set mouse=a                             " Enable your mouse
+set splitbelow                          " Horizontal splits will automatically be below
+set splitright                          " Vertical splits will automatically be to the right
+set t_Co=256                            " Support 256 colors
+silent! set termguicolors               " More colors
+set showmatch                           " Show matching brackets when text indicator is over them
+set mat=1                               " How many tenths of a second to blink when matching brackets
+set foldcolumn=1                        " Add a bit extra margin to the left
+set conceallevel=0                      " So that I can see `` in markdown files
+set tabstop=2                           " Insert 2 spaces for a tab
+set shiftwidth=2                        " Change the number of space characters inserted for indentation
+set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
+set expandtab                           " Converts tabs to spaces
+set smartindent                         " Makes indenting smart
+set autoindent                          " Good auto indent
+set laststatus=2                        " Always display the status line
+set number relativenumber               " Set number line 
+set cursorline                          " Enable highlighting of the current line
+set background=dark                     " tell vim what the background color looks like
+set showtabline=2                       " Always show tabs
+set noshowmode                          " We don't need to see things like -- INSERT -- anymore
+set nobackup                            " This is recommended by coc
+set nowritebackup                       " This is recommended by coc
+set updatetime=300                      " Faster completion
+set timeoutlen=500                      " By default timeoutlen is 1000 ms
+set history=500                         " Sets how many lines of history
+set noerrorbells                        " No annoying sound on errors
+set novisualbell                        " No annoying sound on errors
+set backspace=eol,start,indent          " backspace so it acts as it should act
+set formatoptions-=cro                  " Stop newline continution of comments
+set ignorecase                          " Ignore case when searching
+set smartcase                           " When searching try to be smart about cases 
+set hlsearch                            " Highlight search results
+set incsearch                           " Makes search act like search in modern browsers
+set clipboard=unnamedplus               " Copy paste between vim and everything else
+"set autochdir                          " Your working directory will always be the same as your working directory
+set ffs=unix,dos,mac                    " Use Unix as the standard file type
+" set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+" set list                                " Set no print character
+set wildmenu                            " Turn on the Wild menu
+set wildmode=longest:full,full
+set wildignore=*.o,*~,*.pyc             " Ignore compiled files
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/node_modules/*
+
+imap jj <Esc>
+" Remap VIM 0 to first non-blank character
+map 0 ^ 
+nmap <leader>w :wq!<cr>
 " New line with enter
 map <CR> o<Esc>
 " :W sudo saves the file 
-" (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Colors and Fonts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Enable syntax highlighting
-syntax on 
-
-set t_Co=256
-silent! set termguicolors
-
-" Set number line 
-set number relativenumber
-set colorcolumn=80
-
-" Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
-
-" Use Unix as the standard file type
-set ffs=unix,dos,mac
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => VIM mode insert
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use jj or Esc to use normal mode
-imap jj <Esc>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => VIM user interface
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set 7 lines to the cursor - when moving vertically using j/k
-set scrolloff=7
-
-" Avoid garbled characters in Chinese language windows OS
-let $LANG='en' 
-set langmenu=en
-
-" Turn on the Wild menu
-set wildmenu
-set wildmode=list:full
-
-" Ignore compiled files
-set wildignore=*.o,*~,*.pyc
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/node_modules/*
-
-if has("win16") || has("win32")
-  set wildignore+=.git\*,.hg\*,.svn\*
-else
-  set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
-endif
-
-"Always show current position
-set ruler
-
-" Height of the command bar
-set cmdheight=2
-
-" Enable mouse click
-set mouse=a
-
-" A buffer becomes hidden when it is abandoned
-set hid
-
-" Configure backspace so it acts as it should act
-set backspace=eol,start,indent
-set whichwrap+=<,>,h,l
-
-" Ignore case when searching
-set ignorecase
-
-" When searching try to be smart about cases 
-set smartcase
-
-" Highlight search results
-set hlsearch
-
-" Makes search act like search in modern browsers
-set incsearch 
-
-" Don't redraw while executing macros (good performance config)
-set lazyredraw 
-
-" For regular expressions turn magic on
-set magic
-
-" Show matching brackets when text indicator is over them
-set showmatch 
-
-" How many tenths of a second to blink when matching brackets
-set mat=2
-
-" No annoying sound on errors
-set noerrorbells
-set novisualbell
-set t_vb=
-set tm=500
-
-" Properly disable sound on errors on MacVim
-if has("gui_macvim")
-  autocmd GUIEnter * set vb t_vb=
-endif
-
-" Add a bit extra margin to the left
-set foldcolumn=1
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vim terminal mode
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-tnoremap <Esc> <C-\><C-n>
-tnoremap jj <C-\><C-n>
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Text, tab and indent related
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use spaces instead of tabs
-set expandtab
-
-" Be smart when using tabs ;)
-set smarttab
-
-" 1 tab == 2 spaces
-set shiftwidth=2
-set tabstop=2
-
-" Linebreak on 500 characters
-set lbr
-set tw=500
-
-set ai "Auto indent
-set si "Smart indent
-set wrap "Wrap lines
-
-" map <silent> <C-l> gg=G
 noremap == <esc>gg=G''<CR>
-"Select all text
-noremap <C-a> <esc>ggVG<CR>
-
-""""""""""""""""""""""""""""""
-" => Visual mode related
-""""""""""""""""""""""""""""""
-" Visual mode pressing * or # searches for the current selection
-" Super useful! From an idea by Michael Naumann
-vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
-vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Moving around, tabs, windows and buffers
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Vim terminal mode
+tnoremap <Esc> <C-\><C-n> 
+tnoremap jj <C-\><C-n>
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
-
 " Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-
+" map <C-j> <C-W>j
+" map <C-k> <C-W>k
+" map <C-h> <C-W>h
+" map <C-l> <C-W>l
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
       \ if line("'\"") > 0 && line("'\"") <= line("$") |
       \   exe "normal! g`\"" |
       \ endif
+au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
-""""""""""""""""""""""""""""""
-" => Status line
-""""""""""""""""""""""""""""""
-" Always show the status line
-set laststatus=2
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Editing mappings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remap VIM 0 to first non-blank character
-map 0 ^
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Spell checking
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set spell spelllang=en_us
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vim-plug 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
 Plug 'mhinz/vim-startify' " Vim start dashboard
@@ -235,7 +107,6 @@ Plug 'tpope/vim-fugitive' "GIT
 Plug 'airblade/vim-gitgutter' "GIT
 Plug 'junegunn/goyo.vim' "ZEN mode
 Plug 'https://github.com/vim-airline/vim-airline.git' " Good airline
-Plug 'morhetz/gruvbox' " Theme vim
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Completion COC
 Plug 'liuchengxu/vim-which-key'
 Plug 'dense-analysis/ale' " syntax checking and semantic errors
@@ -244,16 +115,22 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'ludovicchabant/vim-gutentags' " Automate the creation and updating of tags in the background
 Plug 'voldikss/vim-floaterm'
 
+" Plug 'morhetz/gruvbox' " Theme vim
+Plug 'joshdick/onedark.vim' " Theme vim
 call plug#end()
 
+" source $MYCONF/vim/themes/gruvbox.vim
+source $MYCONF/vim/themes/onedark.vim
+
+source $MYCONF/vim/plugins/which-key.vim
 source $MYCONF/vim/plugins/startify.vim
 source $MYCONF/vim/plugins/nerdtree.vim
 source $MYCONF/vim/plugins/ale.vim
 source $MYCONF/vim/plugins/coc.vim
 source $MYCONF/vim/plugins/fzf.vim
-source $MYCONF/vim/plugins/gruvbox.vim
-source $MYCONF/vim/plugins/which-key.vim
 source $MYCONF/vim/plugins/devicons.vim
 source $MYCONF/vim/plugins/gutentags.vim
 source $MYCONF/vim/plugins/floaterm.vim
 
+nnoremap <space>/ :Commentary<CR>
+vnoremap <space>/ :Commentary<CR>

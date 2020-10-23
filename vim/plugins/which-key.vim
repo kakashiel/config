@@ -94,4 +94,15 @@ let g:which_key_map.S = {
       \ 'v' : [':ViewSession'       , 'View vim session'],
       \ }
 
+" P is for Plug
+let g:which_key_map.P = {
+      \ 'name' : '+Plug' ,
+      \ 's' : [':PlugStatus'            , 'Status'],
+      \ 'i' : [':PlugInstall'           , 'Install'],
+      \ 'u' : [':PlugUpdate'            , 'Update'],
+      \ 'd' : [':PlugDiff'              , 'Diff'],
+      \ 'c' : [':PlugClean'             , 'Clean'],
+      \ 'U' : [':PlugUpgrade'           , 'Upgrade'],
+      \ }
+
 call which_key#register('<Space>', 'g:which_key_map')
