@@ -30,6 +30,10 @@ brew install \
     ripgrep \
     glances \ #best htop
     nnn \
+    ranger \
+    lazygit \
+    lazydocker \
+    ncdu \
     z \
     gpg \
     git-crypt

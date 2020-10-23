@@ -32,7 +32,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 alias v="vagrant"
 alias terra="terraform"
 
-alias myconf="vim $MYCONF/myConf/adrien.zshrc"
+alias vmyconf="vim $MYCONF/myConf/adrien.zshrc"
 alias gpmyconf='
 cp $HOME/.vim/coc-settings.json $MYCONF/vim/
 cp $HOME/Library/Application\ Support/Code/User/*.json $MYCONF/vscode
@@ -45,7 +45,10 @@ alias top="glances"
 
 alias vimt="vim -c 'ter ++curwin'"
 alias vimtt="vim -c 'ter ++curwin' -c 'vert ter'"
-alias vnpms="vim  -c ':ter ++curwin npm run start'  -c ':vert ter'"
+alias gitlab="git remote set-url --push --add origin https://gitlab.com/kakashiel/"
+alias gpa="gp gitlab master --force --no-verify && gp"
+alias gpaf="gp gitlab master --force --no-verify && gpf"
+alias gpasup="gp gitlab master --force --no-verify && gpsup"
 
 #Function to see all alias which match the first argument
 #ex agrep 'git'
