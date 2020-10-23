@@ -224,6 +224,7 @@ set spell spelllang=en_us
 call plug#begin('~/.vim/plugged')
 
 Plug 'mhinz/vim-startify' " Vim start dashboard
+Plug 'jiangmiao/auto-pairs' " Auto pairs for '(' '[' '{'
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'https://github.com/tpope/vim-commentary.git' " Shortcut commentary
 " Plug 'easymotion/vim-easymotion' " Easy motion plug
