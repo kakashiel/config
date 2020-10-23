@@ -95,27 +95,27 @@ au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm al
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'mhinz/vim-startify' " Vim start dashboard
-Plug 'jiangmiao/auto-pairs' " Auto pairs for '(' '[' '{'
-Plug 'https://github.com/tpope/vim-surround.git'
-Plug 'https://github.com/tpope/vim-commentary.git' " Shortcut commentary
-" Plug 'easymotion/vim-easymotion' " Easy motion plug
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'mhinz/vim-startify'                                   " Vim start dashboard
+Plug 'jiangmiao/auto-pairs'                                 " Auto pairs for '(' '[' '{'
+Plug 'https://github.com/tpope/vim-surround.git'            " Shortcut surroung
+Plug 'https://github.com/tpope/vim-commentary.git'          " Shortcut commentary
+" Plug 'easymotion/vim-easymotion'                          " Easy motion plug
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }     " Project manager
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-fugitive' "GIT
-Plug 'airblade/vim-gitgutter' "GIT
-Plug 'junegunn/goyo.vim' "ZEN mode
-Plug 'https://github.com/vim-airline/vim-airline.git' " Good airline
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " Completion COC
-Plug 'liuchengxu/vim-which-key'
-Plug 'dense-analysis/ale' " syntax checking and semantic errors
-Plug 'sheerun/vim-polyglot' " A collection of language packs for Vim.
-Plug 'ryanoasis/vim-devicons'
-Plug 'ludovicchabant/vim-gutentags' " Automate the creation and updating of tags in the background
-Plug 'voldikss/vim-floaterm'
+Plug 'tpope/vim-fugitive'                                  "GIT
+Plug 'airblade/vim-gitgutter'                              "GIT
+Plug 'junegunn/goyo.vim'                                   "ZEN mode
+Plug 'https://github.com/vim-airline/vim-airline.git'      " Good airline
+Plug 'neoclide/coc.nvim', {'branch': 'release'}            " Completion COC
+Plug 'liuchengxu/vim-which-key'                            " Shortcut manager
+Plug 'dense-analysis/ale'                                  " syntax checking and semantic errors
+Plug 'sheerun/vim-polyglot'                                " A collection of language packs for Vim.
+Plug 'ryanoasis/vim-devicons'                              " Set of icons
+Plug 'ludovicchabant/vim-gutentags'                        " Automate the creation and updating of tags in the background
+Plug 'voldikss/vim-floaterm'                               " Allow float windows
 
-" Plug 'morhetz/gruvbox' " Theme vim
+Plug 'morhetz/gruvbox' " Theme vim
 Plug 'joshdick/onedark.vim' " Theme vim
 call plug#end()
 
