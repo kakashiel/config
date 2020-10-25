@@ -1,5 +1,3 @@
-let mapleader = " "
-let maplocalleader = ","
 
 set autoread " Set to auto read when a file is changed from the outside
 set magic " For regular expressions turn magic on
@@ -64,62 +62,10 @@ set  wildmenu                           " Turn on the Wild menu
 set wildmode=longest:full,full
 set wildignore=*.o,*~,*.pyc             " Ignore compiled files
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/node_modules/*
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""MAPPING
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-imap jj <Esc>
-" Remap VIM 0 to first non-blank character
-map 0 ^ 
-nmap <leader>w :wq!<cr>
-" New line with enter
-map <CR> o<Esc>
-" :W sudo saves the file 
-" command W w !sudo tee % > /dev/null
-noremap == <esc>gg=G''<CR>
-" Better nav for omnicomplete
-inoremap <expr> <c-j> ("\<C-n>")
-inoremap <expr> <c-k> ("\<C-p>")
-
-
-" Use alt + hjkl to resize windows
-nnoremap <M-j>    :resize -2<CR>
-nnoremap <M-k>    :resize +2<CR>
-nnoremap <M-h>    :vertical resize -2<CR>
-nnoremap <C-l>    :vertical resize +2<CR>
-" Use alt + hjkl to resize windows (MAC)
-nnoremap ∆    :resize -2<CR>
-nnoremap ˚    :resize +2<CR>
-nnoremap ˙    :vertical resize -2<CR>
-nnoremap ¬    :vertical resize +2<CR>
-
-" TAB in general mode will move to text buffer
-nnoremap <TAB> :bnext<CR>
-" SHIFT-TAB will go back
-nnoremap <S-TAB> :bprevious<CR>
-
-" Alternate way to save
-nnoremap <C-s> :w<CR>
-" Alternate way to quit
-nnoremap <C-Q> :wq!<CR>
-" Use control-c instead of escape
-nnoremap <C-c> <Esc>
-" <TAB>: completion.
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-
-" Better tabbing
-vnoremap < <gv
-vnoremap > >gv
-
-" Better window navigation
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
-"Vim terminal mode
-tnoremap <Esc> <C-\><C-n> 
-tnoremap jj <C-\><C-n>
+set undofile                            " Maintain undo history between sessions
+set undodir=~/.vim/undodir              "Dir where undo are save
+set undolevels=1000                     " How many undos
+set undoreload=10000                    " number of lines to save for undo
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
@@ -127,7 +73,7 @@ autocmd BufReadPost *
       \   exe "normal! g`\"" |
       \ endif
 
-" au! BufWritePost $MYVIMRC source ~/.vimrc      " auto source 
+au! BufWritePost $MYVIMRC source ~/.vimrc      " auto source 
 " au! BufWritePost $MYVIMRC source %      " auto source 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -141,17 +87,22 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify'                                   " Vim start dashboard
-Plug 'liuchengxu/vim-which-key'                            " Shortcut manager
+Plug 'liuchengxu/vim-which-key'                             " Shortcut manager
 Plug 'jiangmiao/auto-pairs'                                 " Auto pairs for '(' '[' '{'
 Plug 'https://github.com/tpope/vim-surround.git'            " Shortcut surroung
 Plug 'https://github.com/tpope/vim-commentary.git'          " Shortcut commentary
-Plug 'easymotion/vim-easymotion'                          " Easy motion plug
+Plug 'justinmk/vim-sneak'                                   " s<char><char>
+Plug 'easymotion/vim-easymotion'                            " Easy motion plug
+Plug 'airblade/vim-rooter'                                  " Set vim to root directory
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }     " Project manager
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-fugitive'                                  "GIT
-Plug 'airblade/vim-gitgutter'                              "GIT
-Plug 'junegunn/goyo.vim'                                   "ZEN mode
+Plug 'tpope/vim-fugitive'                                  " GIT
+Plug 'tpope/vim-rhubarb'                                   " GIT with more command
+Plug 'junegunn/gv.vim'                                     " GIT browse commit
+Plug 'mhinz/vim-signify'                                   " GIT show line modified
+" Plug 'airblade/vim-gitgutter'                             " GIT show line modified
+Plug 'junegunn/goyo.vim'                                   " ZEN mode
 Plug 'vim-airline/vim-airline'                             " Good airline
 Plug 'vim-airline/vim-airline-themes'                      " Theme for airline
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}            " Completion COC
@@ -160,24 +111,29 @@ Plug 'sheerun/vim-polyglot'                                " A collection of lan
 Plug 'ryanoasis/vim-devicons'                              " Set of icons
 Plug 'ludovicchabant/vim-gutentags'                        " Automate the creation and updating of tags in the background
 Plug 'voldikss/vim-floaterm'                               " Allow float windows
-
-" Plug 'morhetz/gruvbox'                                   " Theme vim
+Plug 'luochen1990/rainbow'                                 " Rainbow
+Plug 'morhetz/gruvbox'                                     " Theme vim
 Plug 'joshdick/onedark.vim'                                " Theme vim
 call plug#end()
 
 " source $MYCONF/vim/themes/gruvbox.vim
 source $MYCONF/vim/themes/onedark.vim
-g:goyo_height:85%
-g:goyo_width:100%
-source $MYCONF/vim/plugins/which-key.vim
+
+source $MYCONF/vim/plugins/sneak.vim
+source $MYCONF/vim/plugins/signify.vim
+source $MYCONF/vim/plugins/rainbow.vim
 source $MYCONF/vim/plugins/startify.vim
 source $MYCONF/vim/plugins/airline.vim
 " source $MYCONF/vim/plugins/nerdtree.vim
+source $MYCONF/vim/plugins/vim-rooter.vim
 source $MYCONF/vim/plugins/ale.vim
 " source $MYCONF/vim/plugins/coc.vim
-" source $MYCONF/vim/plugins/fzf.vim
+source $MYCONF/vim/plugins/fzf.vim
 source $MYCONF/vim/plugins/devicons.vim
 source $MYCONF/vim/plugins/gutentags.vim
 source $MYCONF/vim/plugins/floaterm.vim
+
+source $MYCONF/vim/mapping/mapping.vim
+source $MYCONF/vim/plugins/which-key.vim
 
 

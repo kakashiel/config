@@ -2,6 +2,7 @@
 
 """ Map leader to space ---------------------
 let mapleader=" "
+let maplocalleader="//"
 
 """ Plugins  --------------------------------
 set surround
@@ -26,7 +27,7 @@ set idearefactormode=keep
 """ Mappings --------------------------------
 imap jj <Esc>
 nmap gD :action GotoImplementation<CR>
-map <leader>s <Plug>(easymotion-s)
+map <leader><leader>s <Plug>(easymotion-s)
 map <leader>f :action FindInPath<CR>
 
 map <leader>d :action Debug<CR>

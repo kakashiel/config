@@ -18,6 +18,7 @@ brew cask install \
     spectacle \
     miro-formerly-realtimeboard \
 
+brew tap cjbassi/ytop
 
 brew install \
     node \
@@ -28,6 +29,9 @@ brew install \
     bat \ #fancy cat
     ccat \ #color cat
     ripgrep \
+    the_silver_searcher \
+    fd \
+    ytop \ #Super fast top
     glances \ #best htop
     nnn \
     ranger \
@@ -37,6 +41,10 @@ brew install \
     z \
     gpg \
     git-crypt
+
+
+# To install useful key bindings and fuzzy completion:
+$(brew --prefix)/opt/fzf/install
 
 #======================================
 #Vim

@@ -29,7 +29,7 @@ let g:startify_bookmarks = [
             \ { 's': '$MYCONF/vim/plugins/startify.vim' },
             \ { 'v': '$MYCONF/vim/my_configs.vim' },
             \ { 'z': '$MYCONF/myConf/adrien.zshrc' },
-            \ { 'k': '$MYCONF/vim/plugins/which-key.vim' },
+            \ { 'k': '$MYCONF/vim/mapping/mapping.vim' },
             \ ]
 
 let g:startify_lists = [
