@@ -92,6 +92,7 @@ Plug 'jiangmiao/auto-pairs'                                 " Auto pairs for '('
 Plug 'https://github.com/tpope/vim-surround.git'            " Shortcut surroung
 Plug 'https://github.com/tpope/vim-commentary.git'          " Shortcut commentary
 Plug 'justinmk/vim-sneak'                                   " s<char><char>
+Plug 'brooth/far.vim'                                       " Best find and find & replace
 Plug 'easymotion/vim-easymotion'                            " Easy motion plug
 Plug 'airblade/vim-rooter'                                  " Set vim to root directory
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }     " Project manager
@@ -101,11 +102,10 @@ Plug 'tpope/vim-fugitive'                                  " GIT
 Plug 'tpope/vim-rhubarb'                                   " GIT with more command
 Plug 'junegunn/gv.vim'                                     " GIT browse commit
 Plug 'mhinz/vim-signify'                                   " GIT show line modified
-" Plug 'airblade/vim-gitgutter'                             " GIT show line modified
 Plug 'junegunn/goyo.vim'                                   " ZEN mode
 Plug 'vim-airline/vim-airline'                             " Good airline
 Plug 'vim-airline/vim-airline-themes'                      " Theme for airline
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}            " Completion COC
+Plug 'neoclide/coc.nvim', {'branch': 'release'}            " Completion COC
 Plug 'dense-analysis/ale'                                  " syntax checking and semantic errors
 Plug 'sheerun/vim-polyglot'                                " A collection of language packs for Vim.
 Plug 'ryanoasis/vim-devicons'                              " Set of icons
@@ -121,13 +121,13 @@ source $MYCONF/vim/themes/onedark.vim
 
 source $MYCONF/vim/plugins/sneak.vim
 source $MYCONF/vim/plugins/signify.vim
+source $MYCONF/vim/plugins/far.vim
 source $MYCONF/vim/plugins/rainbow.vim
 source $MYCONF/vim/plugins/startify.vim
 source $MYCONF/vim/plugins/airline.vim
-" source $MYCONF/vim/plugins/nerdtree.vim
 source $MYCONF/vim/plugins/vim-rooter.vim
 source $MYCONF/vim/plugins/ale.vim
-" source $MYCONF/vim/plugins/coc.vim
+source $MYCONF/vim/plugins/coc.vim
 source $MYCONF/vim/plugins/fzf.vim
 source $MYCONF/vim/plugins/devicons.vim
 source $MYCONF/vim/plugins/gutentags.vim

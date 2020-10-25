@@ -59,6 +59,8 @@ nnoremap <C-l> <C-w>l
 
 " Alternate way to save
 nnoremap <C-s> :w<CR>
+nnoremap <C-w> :w\|bd<CR>
+nnoremap <C-W> :bd<CR>
 " Alternate way to quit
 nnoremap <C-Q> :wq!<CR>
 " Use control-c instead of escape
@@ -67,7 +69,6 @@ nnoremap <C-c> <Esc>
 map <C-F> :Ag<CR>
 map <C-O> :Files<CR>
 map <C-e> :Buffers<CR>
-map <C-w> :bd!<CR>
 
 "==============
 "LEADER
@@ -78,11 +79,12 @@ let g:which_key_map['1']       = [ ':NERDTreeToggle'            , 'NERDTree' ]
 let g:which_key_map['n']       = [ ':NERDTreeToggle'            , 'NERDTree' ]
 let g:which_key_map['e']       = [ ':CocCommand explorer'       , 'explorer' ]
 let g:which_key_map['q']       = [ ':wqa!'                      , 'Save & Quit' ]
-let g:which_key_map['o']       = [ ':Files'                     , 'search files' ]
-let g:which_key_map['h']       = [ '<C-W>s'                     , 'split below']
-let g:which_key_map['f']       = [ ':Ag'                        , 'search text' ]
-let g:which_key_map['v']       = [ '<C-W>v'                     , 'split right']
-let g:which_key_map['z']       = [ 'Goyo'                       , 'zen' ]
+let g:which_key_map['o']       = [ ':Files'                     , 'Search files' ]
+let g:which_key_map['h']       = [ '<C-W>s'                     , 'Split below']
+let g:which_key_map['f']       = [ ':Farf'                      , 'Search text' ]
+let g:which_key_map['r']       = [ ':Farr'                      , 'Replace text' ]
+let g:which_key_map['v']       = [ '<C-W>v'                     , 'Split right']
+let g:which_key_map['z']       = [ 'Goyo'                       , 'Zen' ]
 nnoremap <leader>/ :Commentary<esc><CR>
 vnoremap <leader>/ :Commentary<CR>
 let g:which_key_map['/'] =                                     'Comment'
@@ -165,17 +167,17 @@ let g:which_key_map_local['S'] = [ ':Startify'        , 'start screen' ]
 " t is for terminal
 let g:which_key_map_local.t = {
                   \ 'name' : '+terminal' ,
-                  \ ';' : [':FloatermNew --wintype=popup --height=6'        , 'terminal'],
-                  \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
-                  \ 'g' : [':FloatermNew lazygit'                           , 'git'],
-                  \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
-                  \ 'n' : [':FloatermNew node'                              , 'node'],
-                  \ 'N' : [':FloatermNew nnn'                               , 'nnn'],
-                  \ 'p' : [':FloatermNew python'                            , 'python'],
-                  \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
-                  \ 't' : [':FloatermToggle'                                , 'toggle'],
-                  \ 'y' : [':FloatermNew ytop'                              , 'ytop'],
-                  \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
+                  \ ';' : [':FloatermNew --wintype=popup --height=6'   , 'terminal'],
+                  \ 'f' : [':FloatermNew fzf'                          , 'fzf'],
+                  \ 'g' : [':FloatermNew lazygit'                      , 'git'],
+                  \ 'd' : [':FloatermNew lazydocker'                   , 'docker'],
+                  \ 'n' : [':FloatermNew node'                         , 'node'],
+                  \ 'N' : [':FloatermNew nnn'                          , 'nnn'],
+                  \ 'p' : [':FloatermNew python'                       , 'python'],
+                  \ 'r' : [':FloatermNew ranger'                       , 'ranger'],
+                  \ 't' : [':FloatermToggle'                           , 'toggle'],
+                  \ 'y' : [':FloatermNew ytop'                         , 'ytop'],
+                  \ 's' : [':FloatermNew ncdu'                         , 'ncdu'],
                   \ }
 
 " s is for Session
@@ -206,8 +208,18 @@ let g:which_key_map_local.c = {
                   \ 'k' : [':e $MYCONF/vim/mapping/mapping.vim'    , 'Open which-key'],
                   \ 'z' : [':e $MYCONF/myCon/adrien.zshrc'         , 'Open zshrc'],
                   \ 'i' : [':e $MYCONF/install_mac.sh'             , 'Install mac script'],
+                  \ 'c' : [':CocConfig'                            , 'Open coc config'],
                   \ }
-
+" C is for coc
+let g:which_key_map_local.C = {
+                  \ 'name' : '+Coc' ,
+                  \ 'i' : [':CocInstall'              , ':CocInstall'],
+                  \ 'u' : [':CocUninstall'            , ':CocUninstall '],
+                  \ 'l' : [':CocList'                 , ':CocList'],
+                  \ 'e' : [':CocList extensions'      , ':CocList extensions'],
+                  \ 'c' : [':CocList commands'        , ':CocList commands'],
+                  \ 'C' : [':CocConfig'               , ':CocConfig'],
+                  \ }
 " g is for git
 let g:which_key_map_local.g = {
                   \ 'name' : '+GIT' ,
