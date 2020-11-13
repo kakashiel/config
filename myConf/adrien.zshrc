@@ -28,7 +28,8 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 #ALIAS
 ###############
 
-alias v="vagrant"
+alias v="nvim"
+alias t="tmux"
 alias terra="terraform"
 
 alias vmyconf="vim $MYCONF/myConf/adrien.zshrc"

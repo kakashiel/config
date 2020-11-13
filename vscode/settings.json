@@ -86,5 +86,6 @@
         "statusBar.noFolderBackground": "#8FBCBB",
         "statusBar.debuggingBackground": "#8FBCBB",
         "statusBar.foreground": "#434C5E"
-    }
+    },
+    "workbench.colorTheme": "Nord"
 }

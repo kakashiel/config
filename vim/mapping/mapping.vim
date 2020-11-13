@@ -10,7 +10,6 @@ let g:which_key_map_local =  {}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 imap jj <Esc>|                       " No escape
 map 0 ^|                             " Remap VIM 0 to first non-blank character
-map <CR> o<Esc>|                     " New line with enter
 command! W w !sudo tee % > /dev/null|" :W sudo saves the file 
 noremap == <esc>gg=G''<CR>|          "== Fast indent
 "Better nav for omnicomplete
@@ -21,9 +20,6 @@ inoremap <expr> <c-k> ("\<C-p>")
 nnoremap <TAB> :bnext<CR>
 " SHIFT-TAB will go back
 nnoremap <S-TAB> :bprevious<CR>
-
-" <TAB>: completion.
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Better tabbing
 vnoremap < <gv
@@ -41,7 +37,7 @@ tnoremap jj <C-\><C-n>
 nnoremap <M-j>    :resize -2<CR>
 nnoremap <M-k>    :resize +2<CR>
 nnoremap <M-h>    :vertical resize -2<CR>
-nnoremap <C-l>    :vertical resize +2<CR>
+nnoremap <M-l>    :vertical resize +2<CR>
 " Use alt + hjkl to resize windows (MAC)
 nnoremap ∆    :resize -2<CR>
 nnoremap ˚    :resize +2<CR>
@@ -67,31 +63,50 @@ nnoremap <C-Q> :wq!<CR>
 nnoremap <C-c> <Esc>
 "Intellij mapping
 map <C-F> :Ag<CR>
-map <C-O> :Files<CR>
+"map <C-S-O> :Files<CR>
 map <C-e> :Buffers<CR>
+"================
+"Cmd (NeoVim)
+"================
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 "==============
 "LEADER
 "==============
 "
 " Single mappings
-let g:which_key_map['1']       = [ ':NERDTreeToggle'            , 'NERDTree' ]
+let g:which_key_map['1']       = [ ':CocCommand explorer'       , 'explorer' ]
 let g:which_key_map['n']       = [ ':NERDTreeToggle'            , 'NERDTree' ]
-let g:which_key_map['e']       = [ ':CocCommand explorer'       , 'explorer' ]
-let g:which_key_map['q']       = [ ':wqa!'                      , 'Save & Quit' ]
+let g:which_key_map['q']       = [ ':wq!'                       , 'Save & Quit File' ]
+let g:which_key_map['Q']       = [ ':wqa!'                      , 'Save & Quit VIM' ]
+let g:which_key_map['w']       = [ ':w'                         , 'Save' ]
 let g:which_key_map['o']       = [ ':Files'                     , 'Search files' ]
-let g:which_key_map['h']       = [ '<C-W>s'                     , 'Split below']
-let g:which_key_map['f']       = [ ':Farf'                      , 'Search text' ]
-let g:which_key_map['r']       = [ ':Farr'                      , 'Replace text' ]
-let g:which_key_map['v']       = [ '<C-W>v'                     , 'Split right']
+let g:which_key_map['l']       = [ ':CocCommand eslint.executeAutofix'  , 'Eslint']
+let g:which_key_map['-']       = [ '<C-W>s'                     , 'Split below']
+let g:which_key_map['|']       = [ '<C-W>v'                     , 'Split right']
 let g:which_key_map['z']       = [ 'Goyo'                       , 'Zen' ]
 nnoremap <leader>/ :Commentary<esc><CR>
 vnoremap <leader>/ :Commentary<CR>
 let g:which_key_map['/'] =                                     'Comment'
-nmap <silent> <localleader>E <Plug>(ale_previous_wrap)
-nmap <silent> <localleader>e <Plug>(ale_next_wrap)
-let g:which_key_map_local['e'] =                                  'Next error'
-let g:which_key_map_local['E'] =                                  'Previous error'
+let g:which_key_map['f'] =                                     'Search text'
+nnoremap <Leader>f :CocSearch<Space>
+nmap <silent> <leader>E <Plug>(ale_previous_wrap)
+nmap <silent> <leader>e <Plug>(ale_next_wrap)
+let g:which_key_map['e'] =                                    'Next error'
+let g:which_key_map['E'] =                                   'Previous error'
+
+
+" r is for refactor
+let g:which_key_map['r'] = {
+                  \ 'name' : '+refactor' ,
+                  \ 'o' : [':OR'                      , 'Optimise import'],
+                  \ 'r' : ['<Plug>(coc-rename)'       , 'Rename'],
+                  \ 'a' : ['<Plug>(coc-codeaction)'   , 'Code action'],
+                  \ '/' : ['<Plug>(coc-fix-current)'  , 'Autofix'],
+                  \ 'f' : ['<Plug>(coc-format-selected)'  , 'Format'],
+                  \ 'l' : [':CocCommand eslint.executeAutofix'  , 'Eslint'],
+                  \ }
 
 " s is for search
 let g:which_key_map['s'] = {
@@ -122,9 +137,14 @@ let g:which_key_map['s'] = {
                   \ 'z' : [':FZF'          , 'FZF'],
                   \ }
 
+"==============
+"LOCALLEADER
+"==============
+
+let g:which_key_map_local['S'] = [ ':Startify'        , 'start screen' ]
 
 " w is for windows
-let g:which_key_map['w'] = {
+let g:which_key_map_local['w'] = {
                   \ 'name' : '+windows' ,
                   \ 'w' : ['<C-W>w'     , 'other-window']          ,
                   \ 'd' : ['<C-W>c'     , 'delete-window']         ,
@@ -145,7 +165,7 @@ let g:which_key_map['w'] = {
                   \ '?' : ['Windows'    , 'fzf-window']            ,
                   \ }
 " b is for buffer
-let g:which_key_map.b = {
+let g:which_key_map_local.b = {
                   \ 'name' : '+buffer' ,
                   \ '1' : ['b1'        , 'buffer 1']        ,
                   \ '2' : ['b2'        , 'buffer 2']        ,
@@ -158,16 +178,11 @@ let g:which_key_map.b = {
                   \ '?' : ['Buffers'   , 'fzf-buffer']      ,
                   \ }
 
-"==============
-"LOCALLEADER
-"==============
-
-let g:which_key_map_local['S'] = [ ':Startify'        , 'start screen' ]
 
 " t is for terminal
 let g:which_key_map_local.t = {
                   \ 'name' : '+terminal' ,
-                  \ ';' : [':FloatermNew --wintype=popup --height=6'   , 'terminal'],
+                  \ ';' : [':FloatermNew --wintype=popup --height=6 --cmd="zsh"'   , 'terminal'],
                   \ 'f' : [':FloatermNew fzf'                          , 'fzf'],
                   \ 'g' : [':FloatermNew lazygit'                      , 'git'],
                   \ 'd' : [':FloatermNew lazydocker'                   , 'docker'],
@@ -178,6 +193,8 @@ let g:which_key_map_local.t = {
                   \ 't' : [':FloatermToggle'                           , 'toggle'],
                   \ 'y' : [':FloatermNew ytop'                         , 'ytop'],
                   \ 's' : [':FloatermNew ncdu'                         , 'ncdu'],
+                  \ 'c' : [':FloatermNew --wintype=floating ranger --cmd="cd ~"'   , 'cd'],
+                  \ 'T' : [':FloatermNew --wintype=floating terminal -cmd="bash"'  , 'cd'],
                   \ }
 
 " s is for Session
@@ -186,8 +203,7 @@ let g:which_key_map_local.s = {
                   \ 's' : [':SSave'             , 'Save session'],
                   \ 'd' : [':SDelete'           , 'Delete session'],
                   \ 'c' : [':SClose'            , 'Close session'],
-                  \ 'r' : [':RestartVim'        , 'Restart vim & session'],
-                  \ 'v' : [':ViewSession'       , 'View vim session'],
+                  \ 'l' : [':SLoad'             , 'Load session'],
                   \ }
 
 " p is for Plug
@@ -204,7 +220,7 @@ let g:which_key_map_local.p = {
 " c is for config
 let g:which_key_map_local.c = {
                   \ 'name' : '+Config' ,
-                  \ 'o' : [':e $MYCONF/vim/my_configs.vim'         , 'Open vimrc'],
+                  \ 'v' : [':e $MYCONF/vim/my_configs.vim'         , 'Open vimrc'],
                   \ 'k' : [':e $MYCONF/vim/mapping/mapping.vim'    , 'Open which-key'],
                   \ 'z' : [':e $MYCONF/myCon/adrien.zshrc'         , 'Open zshrc'],
                   \ 'i' : [':e $MYCONF/install_mac.sh'             , 'Install mac script'],
@@ -219,6 +235,8 @@ let g:which_key_map_local.C = {
                   \ 'e' : [':CocList extensions'      , ':CocList extensions'],
                   \ 'c' : [':CocList commands'        , ':CocList commands'],
                   \ 'C' : [':CocConfig'               , ':CocConfig'],
+                  \ 'm' : [':CocList marketplace'     , ':CocList marketplace'],
+                  \ 'd' : [':CocDiagnostics'          , ':CocDiagnostics'],
                   \ }
 " g is for git
 let g:which_key_map_local.g = {
@@ -232,6 +250,7 @@ let g:which_key_map_local.g = {
                   \ 'l' : [':Git log'         , 'Log'],
                   \ 'L' : [':GV'              , 'Commit browser'],
                   \ 'b' : [':Git blame'       , 'Blame'],
+                  \ 's' : [':GStatus'         , 'Status'],
                   \ 'r' : [':GRemove'         , 'Remove'],
                   \ 'g' : [':GBrowse'         , 'Browse'],
                   \ }

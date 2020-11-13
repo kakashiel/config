@@ -67,14 +67,19 @@ set undodir=~/.vim/undodir              "Dir where undo are save
 set undolevels=1000                     " How many undos
 set undoreload=10000                    " number of lines to save for undo
 
+" This two line remove netrw from the buffer
+let g:netrw_fastbrowse = 0
+autocmd FileType netrw setl bufhidden=wipe
+
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
       \ if line("'\"") > 0 && line("'\"") <= line("$") |
       \   exe "normal! g`\"" |
       \ endif
 
-au! BufWritePost $MYVIMRC source ~/.vimrc      " auto source 
-" au! BufWritePost $MYVIMRC source %      " auto source 
+au! BufWritePost $MYVIMRC source %                                " auto source 
+au! BufWritePost $MYCONFIG/vim/my_configs.vim source $MYVIMRC     " auto source 
+au! BufWritePost $MYCONFIG/vim/mapping/mapping.vim source $MYVIMRC 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""PLUGIN
@@ -88,13 +93,15 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify'                                   " Vim start dashboard
 Plug 'liuchengxu/vim-which-key'                             " Shortcut manager
-Plug 'jiangmiao/auto-pairs'                                 " Auto pairs for '(' '[' '{'
 Plug 'https://github.com/tpope/vim-surround.git'            " Shortcut surroung
-Plug 'https://github.com/tpope/vim-commentary.git'          " Shortcut commentary
+Plug 'https://github.com/tpope/vim-commentary.git'          " intellij: Shortcut commentary
+Plug 'vim-scripts/argtextobj.vim'                           " intellij: Text-object like motion for arguments
+Plug 'machakann/vim-highlightedyank'                        " intellij: Make the yanked region apparent!
 Plug 'justinmk/vim-sneak'                                   " s<char><char>
-Plug 'brooth/far.vim'                                       " Best find and find & replace
 Plug 'easymotion/vim-easymotion'                            " Easy motion plug
 Plug 'airblade/vim-rooter'                                  " Set vim to root directory
+Plug 'honza/vim-snippets'                                   " Vim snippets
+Plug '907th/vim-auto-save'                                  " Autosave
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }     " Project manager
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -111,22 +118,28 @@ Plug 'sheerun/vim-polyglot'                                " A collection of lan
 Plug 'ryanoasis/vim-devicons'                              " Set of icons
 Plug 'ludovicchabant/vim-gutentags'                        " Automate the creation and updating of tags in the background
 Plug 'voldikss/vim-floaterm'                               " Allow float windows
+" Plug 'nvim-treesitter/nvim-treesitter'                     " Better syntax
 Plug 'luochen1990/rainbow'                                 " Rainbow
 Plug 'morhetz/gruvbox'                                     " Theme vim
 Plug 'joshdick/onedark.vim'                                " Theme vim
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 " source $MYCONF/vim/themes/gruvbox.vim
-source $MYCONF/vim/themes/onedark.vim
+" source $MYCONF/vim/themes/onedark.vim
+source $MYCONF/vim/themes/nord.vim
+
 
 source $MYCONF/vim/plugins/sneak.vim
 source $MYCONF/vim/plugins/signify.vim
-source $MYCONF/vim/plugins/far.vim
 source $MYCONF/vim/plugins/rainbow.vim
+source $MYCONF/vim/plugins/argtextobj.vim
 source $MYCONF/vim/plugins/startify.vim
 source $MYCONF/vim/plugins/airline.vim
 source $MYCONF/vim/plugins/vim-rooter.vim
-source $MYCONF/vim/plugins/ale.vim
+" source $MYCONF/vim/plugins/treesitter.vim
+" source $MYCONF/vim/plugins/auto-save.vim
+" source $MYCONF/vim/plugins/ale.vim
 source $MYCONF/vim/plugins/coc.vim
 source $MYCONF/vim/plugins/fzf.vim
 source $MYCONF/vim/plugins/devicons.vim
@@ -135,5 +148,3 @@ source $MYCONF/vim/plugins/floaterm.vim
 
 source $MYCONF/vim/mapping/mapping.vim
 source $MYCONF/vim/plugins/which-key.vim
-
-

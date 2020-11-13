@@ -22,6 +22,7 @@ brew tap cjbassi/ytop
 
 brew install \
     node \
+    python \
     npm \
     vim \
     oath-toolkit \
@@ -33,6 +34,8 @@ brew install \
     fd \
     ytop \ #Super fast top
     glances \ #best htop
+    gawk \
+    coreutils \
     nnn \
     ranger \
     lazygit \
@@ -42,6 +45,8 @@ brew install \
     gpg \
     git-crypt
 
+npm install -g \
+    tldr
 
 # To install useful key bindings and fuzzy completion:
 $(brew --prefix)/opt/fzf/install
@@ -54,6 +59,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 
+sh $MYCONFIG/mac/coc.sh
 #Add font in iterm2->preference->profile->text
 #Change iterm2->preference->profile->working directory
 #Change iterm2->preference->profile->key->preset->working directory
