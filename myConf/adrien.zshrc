@@ -1,35 +1,32 @@
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export PATH=/usr/local/sbin:$PATH
-export BROWSER=chrome
 #With brew install z
 . /usr/local/etc/profile.d/z.sh
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
+# Check antigen
 plugins=(
   ...
   osx
   z
 )
-###############
-#Prompt
-###############
-local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
-PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
 
-ZSH_THEME_GIT_PROMPT_PREFIX="(%{$fg[red]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
+###############
+#ENV
+###############
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export PATH=/usr/local/sbin:$PATH
+export BROWSER=chrome
+export PATH=$PATH:$HOME/.local/bin
+
 ###############
 #ALIAS
 ###############
 
 alias v="nvim"
 alias t="tmux"
+alias tw="tmuxp load $MYCONF/tmux/sessions/work.yml"
+alias t2="tmuxp load $MYCONF/tmux/sessions/t2.yml"
+alias t3="tmuxp load $MYCONF/tmux/sessions/t4.yml"
 alias terra="terraform"
 
 alias vmyconf="vim $MYCONF/myConf/adrien.zshrc"

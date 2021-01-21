@@ -67,84 +67,86 @@ set undodir=~/.vim/undodir              "Dir where undo are save
 set undolevels=1000                     " How many undos
 set undoreload=10000                    " number of lines to save for undo
 
-" This two line remove netrw from the buffer
+ " This two line remove netrw from the buffer
 let g:netrw_fastbrowse = 0
 autocmd FileType netrw setl bufhidden=wipe
 
-" Return to last edit position when opening files (You want this!)
+ " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
       \ if line("'\"") > 0 && line("'\"") <= line("$") |
       \   exe "normal! g`\"" |
       \ endif
 
-au! BufWritePost $MYVIMRC source %                                " auto source 
-au! BufWritePost $MYCONFIG/vim/my_configs.vim source $MYVIMRC     " auto source 
-au! BufWritePost $MYCONFIG/vim/mapping/mapping.vim source $MYVIMRC 
-
+augroup myvimrc " auto source
+     au!
+     au BufWritePost *.vim,.vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+ augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""PLUGIN
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if empty(glob('~/.vim/autoload/plug.vim'))  "Install Plug if not present
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+ silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+   \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+ autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'mhinz/vim-startify'                                   " Vim start dashboard
-Plug 'liuchengxu/vim-which-key'                             " Shortcut manager
-Plug 'https://github.com/tpope/vim-surround.git'            " Shortcut surroung
-Plug 'https://github.com/tpope/vim-commentary.git'          " intellij: Shortcut commentary
-Plug 'vim-scripts/argtextobj.vim'                           " intellij: Text-object like motion for arguments
-Plug 'machakann/vim-highlightedyank'                        " intellij: Make the yanked region apparent!
-Plug 'justinmk/vim-sneak'                                   " s<char><char>
-Plug 'easymotion/vim-easymotion'                            " Easy motion plug
-Plug 'airblade/vim-rooter'                                  " Set vim to root directory
-Plug 'honza/vim-snippets'                                   " Vim snippets
-Plug '907th/vim-auto-save'                                  " Autosave
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }     " Project manager
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-fugitive'                                  " GIT
-Plug 'tpope/vim-rhubarb'                                   " GIT with more command
-Plug 'junegunn/gv.vim'                                     " GIT browse commit
-Plug 'mhinz/vim-signify'                                   " GIT show line modified
-Plug 'junegunn/goyo.vim'                                   " ZEN mode
-Plug 'vim-airline/vim-airline'                             " Good airline
-Plug 'vim-airline/vim-airline-themes'                      " Theme for airline
-Plug 'neoclide/coc.nvim', {'branch': 'release'}            " Completion COC
-Plug 'dense-analysis/ale'                                  " syntax checking and semantic errors
-Plug 'sheerun/vim-polyglot'                                " A collection of language packs for Vim.
-Plug 'ryanoasis/vim-devicons'                              " Set of icons
-Plug 'ludovicchabant/vim-gutentags'                        " Automate the creation and updating of tags in the background
-Plug 'voldikss/vim-floaterm'                               " Allow float windows
-" Plug 'nvim-treesitter/nvim-treesitter'                     " Better syntax
-Plug 'luochen1990/rainbow'                                 " Rainbow
-Plug 'morhetz/gruvbox'                                     " Theme vim
-Plug 'joshdick/onedark.vim'                                " Theme vim
-Plug 'arcticicestudio/nord-vim'
+ Plug 'mhinz/vim-startify'                                   " Vim start dashboard
+ Plug 'liuchengxu/vim-which-key'                             " Shortcut manager
+ Plug 'https://github.com/tpope/vim-surround.git'            " Shortcut surroung
+ Plug 'https://github.com/tpope/vim-commentary.git'          " intellij: Shortcut commentary
+ Plug 'vim-scripts/argtextobj.vim'                           " intellij: Text-object like motion for arguments
+ Plug 'machakann/vim-highlightedyank'                        " intellij: Make the yanked region apparent!
+ Plug 'justinmk/vim-sneak'                                   " s<char><char>
+ Plug 'easymotion/vim-easymotion'                            " Easy motion plug
+ Plug 'airblade/vim-rooter'                                  " Set vim to root directory
+ Plug 'honza/vim-snippets'                                   " Vim snippets
+ Plug '907th/vim-auto-save'                                  " Autosave
+ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }     " Project manager
+ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+ Plug 'junegunn/fzf.vim'
+ Plug 'tpope/vim-fugitive'                                  " GIT
+ Plug 'tpope/vim-rhubarb'                                   " GIT with more command
+ Plug 'junegunn/gv.vim'                                     " GIT browse commit
+ Plug 'mhinz/vim-signify'                                   " GIT show line modified
+ Plug 'junegunn/goyo.vim'                                   " ZEN mode
+ Plug 'vim-airline/vim-airline'                             " Good airline
+ Plug 'vim-airline/vim-airline-themes'                      " Theme for airline
+ Plug 'neoclide/coc.nvim', {'branch': 'release'}            " Completion COC
+ " Plug 'dense-analysis/ale'                                  " syntax checking and semantic errors
+ Plug 'sheerun/vim-polyglot'                                " A collection of language packs for Vim.
+ Plug 'ryanoasis/vim-devicons'                              " Set of icons
+ Plug 'ludovicchabant/vim-gutentags'                        " Automate the creation and updating of tags in the background
+ Plug 'voldikss/vim-floaterm'                               " Allow float windows
+" " Plug 'nvim-treesitter/nvim-treesitter'                     " Better syntax
+ Plug 'luochen1990/rainbow'                                 " Rainbow
+ Plug 'christoomey/vim-tmux-navigator'                      " Vim/Tmux seamlessly
+ Plug 'morhetz/gruvbox'                                     " Theme vim
+ Plug 'joshdick/onedark.vim'                                " Theme vim
+ Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 " source $MYCONF/vim/themes/gruvbox.vim
 " source $MYCONF/vim/themes/onedark.vim
-source $MYCONF/vim/themes/nord.vim
+ source $MYCONF/vim/themes/nord.vim
 
 
-source $MYCONF/vim/plugins/sneak.vim
-source $MYCONF/vim/plugins/signify.vim
-source $MYCONF/vim/plugins/rainbow.vim
-source $MYCONF/vim/plugins/argtextobj.vim
-source $MYCONF/vim/plugins/startify.vim
-source $MYCONF/vim/plugins/airline.vim
-source $MYCONF/vim/plugins/vim-rooter.vim
-" source $MYCONF/vim/plugins/treesitter.vim
-" source $MYCONF/vim/plugins/auto-save.vim
+ source $MYCONF/vim/plugins/sneak.vim
+ source $MYCONF/vim/plugins/signify.vim
+ source $MYCONF/vim/plugins/rainbow.vim
+ source $MYCONF/vim/plugins/argtextobj.vim
+ source $MYCONF/vim/plugins/startify.vim
+ source $MYCONF/vim/plugins/airline.vim
+ source $MYCONF/vim/plugins/vim-rooter.vim
+ source $MYCONF/vim/plugins/vim-tmux-navigator.vim
+ " source $MYCONF/vim/plugins/treesitter.vim
+ " source $MYCONF/vim/plugins/auto-save.vim
 " source $MYCONF/vim/plugins/ale.vim
-source $MYCONF/vim/plugins/coc.vim
-source $MYCONF/vim/plugins/fzf.vim
-source $MYCONF/vim/plugins/devicons.vim
-source $MYCONF/vim/plugins/gutentags.vim
-source $MYCONF/vim/plugins/floaterm.vim
+ source $MYCONF/vim/plugins/coc.vim
+ source $MYCONF/vim/plugins/fzf.vim
+ source $MYCONF/vim/plugins/devicons.vim
+ source $MYCONF/vim/plugins/gutentags.vim
+ source $MYCONF/vim/plugins/floaterm.vim
 
-source $MYCONF/vim/mapping/mapping.vim
-source $MYCONF/vim/plugins/which-key.vim
+ source $MYCONF/vim/mapping/mapping.vim
+ source $MYCONF/vim/plugins/which-key.vim

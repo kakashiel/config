@@ -9,7 +9,6 @@ let g:coc_global_extensions = [
       \ 'coc-html',
       \ 'coc-json',
       \ 'coc-yank', 
-      \ 'coc-prettier',
       \ 'coc-git',
       \ 'coc-yaml',
       \ 'coc-python',
@@ -22,9 +21,9 @@ let g:coc_global_extensions = [
       \ 'coc-java',
       \ 'coc-emoji',
       \ 'coc-svg',
-      \ 'coc-pairs',
       \ 'coc-highlight',
-      \ 'coc-git'
+      \ 'coc-git',
+      \ 'coc-prettier'
       \ ]
 
 

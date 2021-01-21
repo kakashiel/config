@@ -1,0 +1,11 @@
+session_name: work
+windows:
+  - window_name: dev window
+    layout: main-vertical
+    panes:
+      - shell_command: # pane no. 1
+          - z w w w
+          - npm run start
+      - shell_command: # pane no. 1
+          - z w api
+          - npm run logs

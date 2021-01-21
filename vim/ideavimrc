@@ -11,7 +11,7 @@ set commentary
 set easymotion
 set argtextobj
 set highlightedyank
-
+set sneak
 """ Plugin settings -------------------------
 let g:highlightedyank_highlight_color = "rgba(:136, 195, 136, 1)"
 let g:argtextobj_pairs="[:],{:},(:),<:>"

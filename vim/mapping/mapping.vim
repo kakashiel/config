@@ -78,7 +78,7 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 " Single mappings
 let g:which_key_map['1']       = [ ':CocCommand explorer'       , 'explorer' ]
 let g:which_key_map['n']       = [ ':NERDTreeToggle'            , 'NERDTree' ]
-let g:which_key_map['q']       = [ ':wq!'                       , 'Save & Quit File' ]
+let g:which_key_map['q']       = [ ':wq!'                       , 'Save & Quit file' ]
 let g:which_key_map['Q']       = [ ':wqa!'                      , 'Save & Quit VIM' ]
 let g:which_key_map['w']       = [ ':w'                         , 'Save' ]
 let g:which_key_map['o']       = [ ':Files'                     , 'Search files' ]
