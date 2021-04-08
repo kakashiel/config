@@ -16,6 +16,7 @@ brew cask install \
     zoomus \
     spectacle \
     miro-formerly-realtimeboard \
+    syncthing
 
 brew tap cjbassi/ytop
 
@@ -33,8 +34,7 @@ brew install \
     fd \
     ytop \ #Super fast top
     glances \ #best htop
-    gawk \
-    coreutils \
+    coreutils \ #The GNU Core Utilities are the basic file, shell and text manipulation utilities
     nnn \
     ranger \
     lazygit \
