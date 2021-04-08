@@ -1,4 +1,5 @@
 source ~/perso/config/vim/my_configs.vim
+source ~/perso/config/vim/config/settings.vim
 source ~/perso/config/vim/mapping/mapping.vim
 
 """ Map leader to space ---------------------
@@ -49,7 +50,8 @@ map <leader>E :action GotoPreviousError<CR>
 
 map <leader>b :action ToggleLineBreakpoint<CR>
 map <leader>o :action FileStructurePopup<CR>
-map <leader>t :action ActivateTerminalToolWindow<CR>
+map <leader>T :action ActivateTerminalToolWindow<CR>
+map <leader>t :action Refactorings.QuickListPopupAction<CR>
 map <leader>l :action Javascript.Linters.EsLint.Fix<CR>
 
 map <leader>v :action MoveEditorToOppositeTabGroup<CR>

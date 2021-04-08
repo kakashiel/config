@@ -16,11 +16,23 @@ noremap == <esc>gg=G''<CR>|          "== Fast indent
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
+"""""""
+"Buffer
+"""""""
 " TAB in general mode will move to text buffer
-nnoremap <TAB> :bnext<CR>
-" SHIFT-TAB will go back
-nnoremap <S-TAB> :bprevious<CR>
-
+nnoremap <silent>    <TAB> :BufferPrevious<CR>
+nnoremap <silent>    <S-TAB> :BufferNext<CR>
+" Move to previous/next
+nnoremap <silent>    <A-,> :BufferPrevious<CR>
+nnoremap <silent>    <A-.> :BufferNext<CR>
+" Re-order to previous/next
+nnoremap <silent>    <A-<> :BufferMovePrevious<CR>
+nnoremap <silent>    <A->> :BufferMoveNext<CR>
+" Magic buffer-picking mode
+nnoremap <silent> <C-s>    :BufferPick<CR>
+" Sort automatically by...
+nnoremap <silent> <Space>bd :BufferOrderByDirectory<CR>
+nnoremap <silent> <Space>bl :BufferOrderByLanguage<CR>
 " Better tabbing
 vnoremap < <gv
 vnoremap > >gv
@@ -54,8 +66,8 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Alternate way to save
-nnoremap <C-s> :w<CR>
-nnoremap <C-w> :w\|bd<CR>
+" nnoremap <C-s> :w<CR>
+nnoremap <C-w> :w\|BufferClose<CR>
 nnoremap <C-W> :bd<CR>
 " Alternate way to quit
 nnoremap <C-Q> :wq!<CR>
@@ -64,77 +76,74 @@ nnoremap <C-c> <Esc>
 "Intellij mapping
 map <C-F> :Ag<CR>
 "map <C-S-O> :Files<CR>
-map <C-e> :Buffers<CR>
-"================
-"Cmd (NeoVim)
-"================
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+" map <C-e> :Buffers<CR>
+
 
 "==============
 "LEADER
 "==============
 "
 " Single mappings
-let g:which_key_map['1']       = [ ':CocCommand explorer'       , 'explorer' ]
+let g:which_key_map['1']       = [ ':NvimTreeToggle'            , 'explorer' ]
+let g:which_key_map['3']       = [ ':DBUI'                      , 'Database explorer' ]
 let g:which_key_map['n']       = [ ':NERDTreeToggle'            , 'NERDTree' ]
-let g:which_key_map['q']       = [ ':wq!'                       , 'Save & Quit file' ]
+let g:which_key_map['q']       = [ ':q!'                        , 'Save & Quit file' ]
 let g:which_key_map['Q']       = [ ':wqa!'                      , 'Save & Quit VIM' ]
 let g:which_key_map['w']       = [ ':w'                         , 'Save' ]
-let g:which_key_map['o']       = [ ':Files'                     , 'Search files' ]
-let g:which_key_map['l']       = [ ':CocCommand eslint.executeAutofix'  , 'Eslint']
 let g:which_key_map['-']       = [ '<C-W>s'                     , 'Split below']
 let g:which_key_map['|']       = [ '<C-W>v'                     , 'Split right']
 let g:which_key_map['z']       = [ 'Goyo'                       , 'Zen' ]
 nnoremap <leader>/ :Commentary<esc><CR>
 vnoremap <leader>/ :Commentary<CR>
 let g:which_key_map['/'] =                                     'Comment'
-let g:which_key_map['f'] =                                     'Search text'
-nnoremap <Leader>f :CocSearch<Space>
-nmap <silent> <leader>E <Plug>(ale_previous_wrap)
-nmap <silent> <leader>e <Plug>(ale_next_wrap)
+nnoremap <silent> <leader>e <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 let g:which_key_map['e'] =                                    'Next error'
-let g:which_key_map['E'] =                                   'Previous error'
+nnoremap <silent> <leader>E <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+let g:which_key_map['E'] =                                    'Previous error'
 
 
+nnoremap <C-n> :NvimTreeToggle<CR>
+nnoremap <leader>r :NvimTreeRefresh<CR>
+nnoremap <leader>n :NvimTreeFindFile<CR>
+
+if has('nvim')
+  " LSP config (the mappings used in the default file don't quite work right)
+  nnoremap <silent> gh <cmd>lua require'lspsaga.provider'.lsp_finder()<CR>
+  " nnoremap <silent> gh :Lspsaga lsp_finder<CR>
+  nnoremap <silent> gs :Lspsaga signature_help<CR>
+  " nnoremap <silent> gs <cmd>lua require('lspsaga.signaturehelp').signature_help()<CR>
+  " nnoremap <silent>gr <cmd>lua require('lspsaga.rename').rename()<CR>
+  nnoremap <silent>gr :Lspsaga rename<CR>
+  nnoremap <silent> gd <cmd>lua require'lspsaga.provider'.preview_definition()<CR>
+  nnoremap <silent> gd :Lspsaga preview_definition<CR>
+  " nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+  nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
+  nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
+  nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
+  nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+  nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+  nnoremap <silent> <leader>r <cmd>lua vim.lsp.diagnostic.rename()<CR>
+  nnoremap <silent> <leader>l <cmd>lua vim.lsp.diagnostic.formatting()<CR>
+endif
 " r is for refactor
 let g:which_key_map['r'] = {
                   \ 'name' : '+refactor' ,
-                  \ 'o' : [':OR'                      , 'Optimise import'],
-                  \ 'r' : ['<Plug>(coc-rename)'       , 'Rename'],
-                  \ 'a' : ['<Plug>(coc-codeaction)'   , 'Code action'],
-                  \ '/' : ['<Plug>(coc-fix-current)'  , 'Autofix'],
-                  \ 'f' : ['<Plug>(coc-format-selected)'  , 'Format'],
-                  \ 'l' : [':CocCommand eslint.executeAutofix'  , 'Eslint'],
+                  \ 'o' : [':OR'                             , 'Optimise import'],
+                  \ 'a' : [':Lspsaga code_action'            , 'Code action'],
+                  \ 'r' : [':lua vim.lsp.buf.rename()'       , 'Rename'],
+                  \ 'l' : [':lua vim.lsp.buf.formatting()'   , 'Format'],
                   \ }
 
-" s is for search
-let g:which_key_map['s'] = {
-                  \ 'name' : '+search' ,
-                  \ '/' : [':History/'     , 'history'],
-                  \ ';' : [':Commands'     , 'commands'],
-                  \ 'a' : [':Ag'           , 'text Ag'],
-                  \ 'b' : [':BLines'       , 'current buffer'],
-                  \ 'B' : [':Buffers'      , 'open buffers'],
-                  \ 'c' : [':Commits'      , 'commits'],
-                  \ 'C' : [':BCommits'     , 'buffer commits'],
-                  \ 'f' : [':Files'        , 'files'],
-                  \ 'g' : [':GFiles'       , 'git files'],
-                  \ 'G' : [':GFiles?'      , 'modified git files'],
-                  \ 'h' : [':History'      , 'file history'],
-                  \ 'H' : [':History:'     , 'command history'],
-                  \ 'l' : [':Lines'        , 'lines'] ,
-                  \ 'm' : [':Marks'        , 'marks'] ,
-                  \ 'M' : [':Maps'         , 'normal maps'] ,
-                  \ 'p' : [':Helptags'     , 'help tags'] ,
-                  \ 'P' : [':Tags'         , 'project tags'],
-                  \ 's' : [':Snippets'     , 'snippets'],
-                  \ 'S' : [':Colors'       , 'color schemes'],
-                  \ 't' : [':Tags'         , 'tags'],
-                  \ 'T' : [':BTags'        , 'buffer tags'],
-                  \ 'w' : [':Windows'      , 'search windows'],
-                  \ 'y' : [':Filetypes'    , 'file types'],
-                  \ 'z' : [':FZF'          , 'FZF'],
+" f is for find
+let g:which_key_map['f'] = {
+                  \ 'name' : '+find' ,
+                  \ 'b' : [':Telescope buffers'         , 'current buffer'],
+                  \ 'f' : [':Telescope find_files'      , 'files'],
+                  \ 'g' : [':Telescope live_grep'       , 'Grep text'],
+                  \ 'o' : [':Telescope live_grep'       , 'Grep text'],
+                  \ 'l' : [':Telescope builtin'         , 'List search'],
+                  \ 'm' : [':Telescope marks'           , 'marks'],
+                  \ 's' : [':Telescope git_status'      , 'modified git files'],
                   \ }
 
 "==============
@@ -225,18 +234,6 @@ let g:which_key_map_local.c = {
                   \ 'z' : [':e $MYCONF/myCon/adrien.zshrc'         , 'Open zshrc'],
                   \ 'i' : [':e $MYCONF/install_mac.sh'             , 'Install mac script'],
                   \ 'c' : [':CocConfig'                            , 'Open coc config'],
-                  \ }
-" C is for coc
-let g:which_key_map_local.C = {
-                  \ 'name' : '+Coc' ,
-                  \ 'i' : [':CocInstall'              , ':CocInstall'],
-                  \ 'u' : [':CocUninstall'            , ':CocUninstall '],
-                  \ 'l' : [':CocList'                 , ':CocList'],
-                  \ 'e' : [':CocList extensions'      , ':CocList extensions'],
-                  \ 'c' : [':CocList commands'        , ':CocList commands'],
-                  \ 'C' : [':CocConfig'               , ':CocConfig'],
-                  \ 'm' : [':CocList marketplace'     , ':CocList marketplace'],
-                  \ 'd' : [':CocDiagnostics'          , ':CocDiagnostics'],
                   \ }
 " g is for git
 let g:which_key_map_local.g = {

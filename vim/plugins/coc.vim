@@ -23,6 +23,7 @@ let g:coc_global_extensions = [
       \ 'coc-svg',
       \ 'coc-highlight',
       \ 'coc-git',
+      \ 'coc-db',
       \ 'coc-prettier'
       \ ]
 

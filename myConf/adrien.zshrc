@@ -31,13 +31,12 @@ alias terra="terraform"
 
 alias vmyconf="vim $MYCONF/myConf/adrien.zshrc"
 alias gpmyconf='
-cp $HOME/.vim/coc-settings.json $MYCONF/vim/
 cp $HOME/Library/Application\ Support/Code/User/*.json $MYCONF/vscode
 cd $MYCONF && gaa && gcam 'update myconf' && gl && gp && cd -
 '
 
 alias sec="~/.sec"
-alias go='open "$(git open --print)/pull-requests"'
+alias gitgo='open "$(git open --print)/pull-requests"'
 alias top="glances"
 
 alias vimt="vim -c 'ter ++curwin'"
