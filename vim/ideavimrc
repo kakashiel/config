@@ -1,4 +1,4 @@
-source ~/perso/config/vim/my_configs.vim
+source ~/perso/config/vim/init.vim
 source ~/perso/config/vim/config/settings.vim
 source ~/perso/config/vim/mapping/mapping.vim
 
@@ -30,7 +30,6 @@ set ideajoin
 " set clipboard=unnamedplus
 set ideastatusicon=gray
 set idearefactormode=keep
-(asd,asdf, {asdf)
 """ Mappings --------------------------------
 "imap jj <Esc>
 nmap gD :action GotoImplementation<CR>

@@ -57,7 +57,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'sheerun/vim-polyglot'                                " A collection of language packs for Vim.
  " Plug 'ryanoasis/vim-devicons'                              " Set of icons
  Plug 'kyazdani42/nvim-web-devicons'                        " Set of icons with lua
- Plug 'ludovicchabant/vim-gutentags'                        " Automate the creation and updating of tags in the background
+ " Plug 'ludovicchabant/vim-gutentags'                        " Automate the creation and updating of tags in the background
  Plug 'voldikss/vim-floaterm'                               " Allow float windows
  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Better syntax
  Plug 'luochen1990/rainbow'                                 " Rainbow
