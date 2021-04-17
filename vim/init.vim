@@ -9,13 +9,14 @@ augroup myvimrc " auto source
      au!
      au BufWritePost *.lua,*.vim,.vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
  augroup END
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""PLUGIN
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if empty(glob('~/.vim/autoload/plug.vim'))  "Install Plug if not present
- silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-   \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
- autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 call plug#begin('~/.vim/plugged')
@@ -50,14 +51,14 @@ call plug#begin('~/.vim/plugged')
  Plug 'vim-airline/vim-airline'                             " Good airline
  Plug 'vim-airline/vim-airline-themes'                      " Theme for airline
  " Plug 'neoclide/coc.nvim', {'branch': 'release'}            " Completion COC
+ " Plug 'dense-analysis/ale'                                  " syntax checking and semantic errors
+ " Plug 'ludovicchabant/vim-gutentags'                        " Automate the creation and updating of tags in the background
  Plug 'neovim/nvim-lspconfig'                               " LSP
  Plug 'hrsh7th/nvim-compe'                                  " Completion
  Plug 'glepnir/lspsaga.nvim'                                " Popup action
- " Plug 'dense-analysis/ale'                                  " syntax checking and semantic errors
  Plug 'sheerun/vim-polyglot'                                " A collection of language packs for Vim.
- " Plug 'ryanoasis/vim-devicons'                              " Set of icons
  Plug 'kyazdani42/nvim-web-devicons'                        " Set of icons with lua
- " Plug 'ludovicchabant/vim-gutentags'                        " Automate the creation and updating of tags in the background
+ " Plug 'ryanoasis/vim-devicons'                              " Set of icons
  Plug 'voldikss/vim-floaterm'                               " Allow float windows
  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Better syntax
  Plug 'luochen1990/rainbow'                                 " Rainbow
@@ -87,12 +88,12 @@ source $MYCONF/vim/themes/oceanic-next.vim
  source $MYCONF/vim/plugins/dadbod.vim
 " source $MYCONF/vim/plugins/ale.vim
  " source $MYCONF/vim/plugins/coc.vim
+ " source $MYCONF/vim/plugins/gutentags.vim
  source $MYCONF/vim/plugins/lsp-config.vim
  luafile $MYCONF/vim/lua/compe.lua
  luafile $MYCONF/vim/lua/lspaga.lua
  source $MYCONF/vim/plugins/fzf.vim
  source $MYCONF/vim/plugins/devicons.vim
- source $MYCONF/vim/plugins/gutentags.vim
  source $MYCONF/vim/plugins/floaterm.vim
  source $MYCONF/vim/plugins/vim-tmux-navigator.vim
 

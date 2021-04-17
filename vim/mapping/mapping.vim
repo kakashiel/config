@@ -95,16 +95,17 @@ let g:which_key_map['|']       = [ '<C-W>v'                     , 'Split right']
 let g:which_key_map['z']       = [ 'Goyo'                       , 'Zen' ]
 nnoremap <leader>/ :Commentary<esc><CR>
 vnoremap <leader>/ :Commentary<CR>
-let g:which_key_map['/'] =                                     'Comment'
+" let g:which_key_map['/'] =                                     'Comment'
 nnoremap <silent> <leader>e <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 let g:which_key_map['e'] =                                    'Next error'
 nnoremap <silent> <leader>E <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 let g:which_key_map['E'] =                                    'Previous error'
 
 
-nnoremap <C-n> :NvimTreeToggle<CR>
-nnoremap <leader>r :NvimTreeRefresh<CR>
-nnoremap <leader>n :NvimTreeFindFile<CR>
+" nnoremap <C-n> :NvimTreeToggle<CR>
+" nnoremap <leader>r :NvimTreeRefresh<CR>
+" nnoremap <leader>n :NvimTreeFindFile<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
 
 if has('nvim')
   " LSP config (the mappings used in the default file don't quite work right)

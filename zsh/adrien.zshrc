@@ -46,6 +46,9 @@ alias gpa="gp gitlab master --force --no-verify && gp"
 alias gpaf="gp gitlab master --force --no-verify && gpf"
 alias gpasup="gp gitlab master --force --no-verify && gpsup"
 
+#Icloud nosync node_modules
+alias nosync="find . -name node_modules -exec touch {}/.nosync \;"
+
 #Function to see all alias which match the first argument
 #ex agrep 'git'
 agrep (){
@@ -64,3 +67,11 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --hidden'
 case $(uname -a) in
    *Microsoft*) unsetopt BG_NICE ;;
 esac
+
+###############
+# Symlink
+###############
+mkdir -p ~/.config/nvim
+ln -f $MYCONF/vim/init.vim ~/.config/nvim/init.vim 
+ln -f $MYCONF/vim/init.vim ~/.vimrc 
+ln -f $MYCONF/vim/ideavimrc ~/.ideavimrc 

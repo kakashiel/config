@@ -8,7 +8,7 @@ let maplocalleader="//"
 
 """ Plugins  --------------------------------
 set surround
-set commentary
+" set commentary
 set easymotion
 set argtextobj
 set highlightedyank

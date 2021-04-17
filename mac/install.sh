@@ -15,6 +15,7 @@ brew install --cask whatsapp
 brew install --cask spectacle 
 brew install --cask miro 
 brew install --cask syncthing
+brew install --cask all-in-one-messenger
 
 brew tap cjbassi/ytop
 
@@ -38,6 +39,7 @@ brew install z
 brew install gpg
 brew install fzf
 brew install git-crypt
+brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 
 npm install -g \
     tldr
