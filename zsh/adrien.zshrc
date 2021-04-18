@@ -1,13 +1,3 @@
-#With brew install z
-. /usr/local/etc/profile.d/z.sh
-
-# Check antigen
-plugins=(
-  ...
-  osx
-  z
-)
-
 ###############
 #ENV
 ###############
@@ -28,6 +18,7 @@ alias tw="tmuxp load $MYCONF/tmux/sessions/work.yml"
 alias t2="tmuxp load $MYCONF/tmux/sessions/t2.yml"
 alias t3="tmuxp load $MYCONF/tmux/sessions/t4.yml"
 alias terra="terraform"
+#alias python="python3"
 
 alias vmyconf="vim $MYCONF/myConf/adrien.zshrc"
 alias gpmyconf='
@@ -48,25 +39,6 @@ alias gpasup="gp gitlab master --force --no-verify && gpsup"
 
 #Icloud nosync node_modules
 alias nosync="find . -name node_modules -exec touch {}/.nosync \;"
-
-#Function to see all alias which match the first argument
-#ex agrep 'git'
-agrep (){
-    if [ -z $2 ]; 
-        then alias |  grep $1; 
-    else 
-        alias |  grep -E ''"$1"'.*'"$2"'';
-    fi
-     
-}
-alias ag="agrep"
-
-# FZF use Ripgrep for listing the files
-export FZF_DEFAULT_COMMAND='rg --files --follow --hidden'
-
-case $(uname -a) in
-   *Microsoft*) unsetopt BG_NICE ;;
-esac
 
 ###############
 # Symlink

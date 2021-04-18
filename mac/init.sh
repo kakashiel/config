@@ -6,10 +6,9 @@ echo "source ~/Documents/perso/config/zsh/init.zshrc" >> ~/.zshrc
 #Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
+source ./install_app.sh
 source ./install.sh
 
-#======================================
-# Oh my zsh
-#======================================
-# cd ~ && git clone https://github.com/zsh-users/antigen.git .antigen && cd -
+# To install useful key bindings and fuzzy completion:
+$(brew --prefix)/opt/fzf/install
 

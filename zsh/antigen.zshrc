@@ -1,3 +1,6 @@
+#Activate antigen with brew
+source $(brew --prefix)/share/antigen/antigen.zsh
+
 source "$HOME/.antigen/antigen.zsh"
 antigen use oh-my-zsh
 
@@ -18,16 +21,18 @@ antigen bundle git-auto-fetch
 GIT_AUTO_FETCH_INTERVAL=1200 #in seconds
 antigen bundle terraform
 antigen bundle osx
+antigen bundle z
 antigen bundle paulirish/git-open
 
 
 # Syntax highlighting bundle.
 # antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions 
+#antigen bundle zsh-users/zsh-autosuggestions 
 antigen bundle zsh-users/zsh-completions
 
 # Load the theme.
+# antigen theme romkatv/powerlevel10k
+ZSH_THEME="powerlevel10k/powerlevel10k"
 # antigen theme robbyrussell 
-antigen theme romkatv/powerlevel10k
 
 antigen apply
