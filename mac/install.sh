@@ -1,9 +1,6 @@
 #!/bin/bash
-#sudo chown -R $(whoami) /usr/local/Cellar
-brew tap cjbassi/ytop
-
+sudo chown -R $(whoami) /usr/local/Cellar
 brew install antigen
-brew install coreutils
 brew install node
 brew install python
 brew install npm
@@ -24,11 +21,7 @@ brew install ripgrep
 brew install the_silver_searcher
 brew install fd
 
-#TMUX
-brew install tmux
-pip install --user tmuxp
 #PASS
 brew install pass
 brew install pass-otp
-
 

@@ -31,8 +31,8 @@ antigen bundle paulirish/git-open
 antigen bundle zsh-users/zsh-completions
 
 # Load the theme.
-# antigen theme romkatv/powerlevel10k
-ZSH_THEME="powerlevel10k/powerlevel10k"
+antigen theme romkatv/powerlevel10k
+#ZSH_THEME="powerlevel10k/powerlevel10k"
 # antigen theme robbyrussell 
 
 antigen apply
