@@ -31,7 +31,7 @@ set ideajoin
 set ideastatusicon=gray
 set idearefactormode=keep
 """ Mappings --------------------------------
-"imap jj <Esc>
+imap jj <Esc>
 nmap gD :action GotoImplementation<CR>
 map <leader><leader>s <Plug>(easymotion-s)
 map <leader>f :action FindInPath<CR>

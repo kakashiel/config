@@ -1,5 +1,4 @@
 #!/bin/bash
-sudo chown -R $(whoami) /usr/local/Cellar
 brew install antigen
 brew install node
 brew install python
@@ -25,3 +24,6 @@ brew install fd
 brew install pass
 brew install pass-otp
 
+#VPN
+brew tap benwebber/tunnelblickctl
+brew install tunnelblickctl

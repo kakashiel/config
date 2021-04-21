@@ -4,14 +4,22 @@
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-export PATH=/usr/local/sbin:$PATH
 export BROWSER=chrome
+#Color ls
+export CLICOLOR=1
+export HISTFILE="$MYPERSO/.zsh_history"
+export HISTSIZE=50000
+export SAVEHIST=50000
+#PATH
+export PATH=/usr/local/sbin:$PATH
 export PATH=$PATH:$HOME/.local/bin
+
 
 ###############
 #ALIAS
 ###############
 
+alias la="ls -a"
 alias v="nvim"
 alias t="tmux"
 alias tw="tmuxp load $MYCONF/tmux/sessions/work.yml"
@@ -26,7 +34,7 @@ cp $HOME/Library/Application\ Support/Code/User/*.json $MYCONF/vscode
 cd $MYCONF && gaa && gcam 'update myconf' && gl && gp && cd -
 '
 
-alias sec="~/.sec"
+alias sec="$MYPERSO/.sec"
 alias gitgo='open "$(git open --print)/pull-requests"'
 alias top="glances"
 
@@ -38,7 +46,7 @@ alias gpaf="gp gitlab master --force --no-verify && gpf"
 alias gpasup="gp gitlab master --force --no-verify && gpsup"
 
 #Icloud nosync node_modules
-alias nosync="find . -name node_modules -exec touch {}/.nosync \;"
+alias nosync="find ~/Documents -name node_modules -prune -exec touch {}/.nosync \;"
 
 ###############
 # Symlink

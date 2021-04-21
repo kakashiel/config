@@ -21,6 +21,7 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma/fast-syntax-highlighting
 zinit load zdharma/history-search-multi-word
 zinit snippet PZT::modules/tmux
+zinit load wfxr/forgit
 zstyle ':prezto:module:tmux:iterm' integrate 'yes'
 
 # HISTORY SUBSTRING SEARCHING
@@ -51,10 +52,19 @@ zstyle ':fzf-tab:complete:_zlua:*' query-string input
 zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm,cmd -w -w"
 zstyle ':fzf-tab:complete:kill:argument-rest' extra-opts --preview=$extract'ps --pid=$in[(w)1] -o cmd --no-headers -w -w' --preview-window=down:3:wrap
 zstyle ":completion:*:git-checkout:*" sort false
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+# LS_COLOR
+zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
+    atpull'%atclone' pick"clrs.zsh" nocompile'!' \
+    atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
+zinit light trapd00r/LS_COLORS
 
 #THEME
-zinit ice depth=1; zinit light romkatv/powerlevel10k
+#zinit ice depth=1; zinit light romkatv/powerlevel10k
+zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
+zinit light sindresorhus/pure
+zstyle :prompt:pure:git:stash show yes
+
 
 
 # Load a few important annexes, without Turbo
