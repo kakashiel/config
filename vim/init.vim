@@ -47,6 +47,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'voldikss/vim-floaterm'                               " Allow float windows
  Plug 'luochen1990/rainbow'                                 " Rainbow
  Plug 'christoomey/vim-tmux-navigator'                      " Vim/Tmux seamlessly
+ " Plug 'preservim/vimux'                                     " run VimuxRunCommand
 
  Plug 'liuchengxu/vim-which-key'
 
@@ -116,6 +117,7 @@ endif
  source $MYCONF/vim/plugins/fzf.vim
  source $MYCONF/vim/plugins/floaterm.vim
  source $MYCONF/vim/plugins/vim-tmux-navigator.vim
+ " source $MYCONF/vim/plugins/vimux.vim
 
  source $MYCONF/vim/mapping/mapping.vim
  source $MYCONF/vim/plugins/which-key.vim
