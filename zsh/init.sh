@@ -1,12 +1,12 @@
 export MYDOC=~/Documents
-export MYWORK=$MYDOC/work
+export MYWORK=$HOME/work
 export MYPERSO=$MYDOC/perso
 export MYCONF=$MYPERSO/config
 
 #Plugin
 #source $MYCONF/zsh/antigen.sh
 source $MYCONF/zsh/zinit.sh
-source $MYCONF/zsh/adrien.conf
+source $MYCONF/zsh/adrien.sh
 
 #Settings
 source $MYCONF/zsh/settings/function.sh

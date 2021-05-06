@@ -13,6 +13,9 @@ export SAVEHIST=50000
 #PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=$PATH:$HOME/.local/bin
+#NVIM for evryone
+export VISUAL=nvim
+export EDITOR="$VISUAL"
 
 
 ###############
@@ -30,11 +33,11 @@ alias terra="terraform"
 
 alias vmyconf="vim $MYCONF/myConf/adrien.zshrc"
 alias gpmyconf='
-cp $HOME/Library/Application\ Support/Code/User/*.json $MYCONF/vscode
 cd $MYCONF && gaa && gcam 'update myconf' && gl && gp && cd -
 '
 
 alias sec="$MYPERSO/.sec"
+alias vpn='osascript -e "tell application \"/Applications/Tunnelblick.app\"" -e "connect \"config\"" -e "end tell" ; sec'
 alias gitgo='open "$(git open --print)/pull-requests"'
 alias top="glances"
 
