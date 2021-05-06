@@ -1,6 +1,8 @@
 " Create map to add keys to
 let mapleader = " "
-let maplocalleader = "//"
+let maplocalleader = '//'
+let g:mapleader = " "
+let g:maplocalleader = '//'
 
 let g:which_key_map =  {}
 let g:which_key_map_local =  {}
@@ -12,6 +14,7 @@ imap jj <Esc>|                       " No escape
 map 0 ^|                             " Remap VIM 0 to first non-blank character
 command! W w !sudo tee % > /dev/null|" :W sudo saves the file 
 noremap == <esc>gg=G''<CR>|          "== Fast indent
+
 "Better nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
@@ -23,13 +26,13 @@ inoremap <expr> <c-k> ("\<C-p>")
 nnoremap <silent>    <TAB> :BufferPrevious<CR>
 nnoremap <silent>    <S-TAB> :BufferNext<CR>
 " Move to previous/next
-nnoremap <silent>    <A-,> :BufferPrevious<CR>
-nnoremap <silent>    <A-.> :BufferNext<CR>
-" Re-order to previous/next
-nnoremap <silent>    <A-<> :BufferMovePrevious<CR>
-nnoremap <silent>    <A->> :BufferMoveNext<CR>
-" Magic buffer-picking mode
-nnoremap <silent> <C-s>    :BufferPick<CR>
+" nnoremap <silent>    <A-,> :BufferPrevious<CR>
+" nnoremap <silent>    <A-.> :BufferNext<CR>
+" " Re-order to previous/next
+" nnoremap <silent>    <A-<> :BufferMovePrevious<CR>
+" nnoremap <silent>    <A->> :BufferMoveNext<CR>
+" " Magic buffer-picking mode
+" nnoremap <silent> <C-s>    :BufferPick<CR>
 " Sort automatically by...
 nnoremap <silent> <Space>bd :BufferOrderByDirectory<CR>
 nnoremap <silent> <Space>bl :BufferOrderByLanguage<CR>
@@ -74,41 +77,16 @@ nnoremap <C-Q> :wq!<CR>
 " Use control-c instead of escape
 nnoremap <C-c> <Esc>
 "Intellij mapping
-map <C-F> :Ag<CR>
+" map <C-F> :Ag<CR>
 "map <C-S-O> :Files<CR>
 " map <C-e> :Buffers<CR>
 
 
 "==============
-"LEADER
+"LSP
 "==============
-"
-" Single mappings
-let g:which_key_map['1']       = [ ':NvimTreeToggle'            , 'explorer' ]
-let g:which_key_map['3']       = [ ':DBUI'                      , 'Database explorer' ]
-let g:which_key_map['n']       = [ ':NERDTreeToggle'            , 'NERDTree' ]
-let g:which_key_map['q']       = [ ':q!'                        , 'Save & Quit file' ]
-let g:which_key_map['Q']       = [ ':wqa!'                      , 'Save & Quit VIM' ]
-let g:which_key_map['w']       = [ ':w'                         , 'Save' ]
-let g:which_key_map['-']       = [ '<C-W>s'                     , 'Split below']
-let g:which_key_map['|']       = [ '<C-W>v'                     , 'Split right']
-let g:which_key_map['z']       = [ 'Goyo'                       , 'Zen' ]
-nnoremap <leader>/ :Commentary<esc><CR>
-vnoremap <leader>/ :Commentary<CR>
-" let g:which_key_map['/'] =                                     'Comment'
-nnoremap <silent> <leader>e <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
-let g:which_key_map['e'] =                                    'Next error'
-nnoremap <silent> <leader>E <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
-let g:which_key_map['E'] =                                    'Previous error'
-
-
-" nnoremap <C-n> :NvimTreeToggle<CR>
-" nnoremap <leader>r :NvimTreeRefresh<CR>
-" nnoremap <leader>n :NvimTreeFindFile<CR>
-nnoremap <leader>n :NERDTreeToggle<CR>
-
 if has('nvim')
-  " LSP config (the mappings used in the default file don't quite work right)
+"  LSP config (the mappings used in the default file don't quite work right)
   nnoremap <silent> gh <cmd>lua require'lspsaga.provider'.lsp_finder()<CR>
   " nnoremap <silent> gh :Lspsaga lsp_finder<CR>
   nnoremap <silent> gs :Lspsaga signature_help<CR>
@@ -126,6 +104,33 @@ if has('nvim')
   nnoremap <silent> <leader>r <cmd>lua vim.lsp.diagnostic.rename()<CR>
   nnoremap <silent> <leader>l <cmd>lua vim.lsp.diagnostic.formatting()<CR>
 endif
+
+"==============
+"LEADER
+"==============
+
+" Single mappings
+let g:which_key_map['1']       = [ ':NvimTreeToggle'            , 'explorer' ]
+let g:which_key_map['3']       = [ ':DBUI'                      , 'Database explorer' ]
+let g:which_key_map['n']       = [ ':NERDTreeToggle'            , 'NERDTree' ]
+let g:which_key_map['q']       = [ ':q!'                        , 'Save & Quit file' ]
+let g:which_key_map['Q']       = [ ':wqa!'                      , 'Save & Quit VIM' ]
+let g:which_key_map['w']       = [ ':w'                         , 'Save' ]
+let g:which_key_map['-']       = [ '<C-W>s'                     , 'Split below']
+let g:which_key_map['|']       = [ '<C-W>v'                     , 'Split right']
+let g:which_key_map['z']       = [ 'Goyo'                       , 'Zen' ]
+nnoremap <leader>/ :Commentary<esc><CR>
+vnoremap <leader>/ :Commentary<CR>
+let g:which_key_map['/'] =                                     'Comment'
+nnoremap <silent> <leader>e <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+let g:which_key_map['e'] =                                    'Next error'
+nnoremap <silent> <leader>E <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+let g:which_key_map['E'] =                                    'Previous error'
+let g:which_key_map['z'] =                                     'Comment'
+
+nnoremap <leader>n :NERDTreeToggle<CR>
+
+
 " r is for refactor
 let g:which_key_map['r'] = {
                   \ 'name' : '+refactor' ,

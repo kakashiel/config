@@ -27,8 +27,8 @@ endfunction
 
 let g:startify_bookmarks = [
             \ { 's': '$MYCONF/vim/plugins/startify.vim' },
-            \ { 'v': '$MYCONF/vim/my_configs.vim' },
-            \ { 'z': '$MYCONF/myConf/adrien.zshrc' },
+            \ { 'v': '$MYCONF/vim/init.vim' },
+            \ { 'z': '$MYCONF/zsh/init.sh' },
             \ { 'k': '$MYCONF/vim/mapping/mapping.vim' },
             \ ]
 
