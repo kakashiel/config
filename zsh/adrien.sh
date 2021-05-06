@@ -32,9 +32,7 @@ alias terra="terraform"
 #alias python="python3"
 
 alias vmyconf="vim $MYCONF/myConf/adrien.zshrc"
-alias gpmyconf='
-cd $MYCONF && gaa && gcam 'update myconf' && gl && gp && cd -
-'
+alias gpmyconf="cd $MYCONF && gaa && gcam 'update myconf' && gl && gp && cd -"
 
 alias sec="$MYPERSO/.sec"
 alias vpn='osascript -e "tell application \"/Applications/Tunnelblick.app\"" -e "connect \"config\"" -e "end tell" ; sec'
