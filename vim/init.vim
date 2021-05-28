@@ -51,6 +51,9 @@ call plug#begin('~/.vim/plugged')
 
  Plug 'liuchengxu/vim-which-key'
 
+ "LSP
+ Plug 'dense-analysis/ale'                                   " LSP VIM & NVIM
+
 " VIM ONLY
 if !has('nvim')
  Plug 'ryanoasis/vim-devicons'                              " Set of icons
@@ -66,7 +69,7 @@ if has('nvim')
 
 
  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Better syntax
- Plug 'neovim/nvim-lspconfig'                                " LSP
+ Plug 'neovim/nvim-lspconfig'                                " LSP nvim
  Plug 'glepnir/lspsaga.nvim'                                 " LSP Popup action
  Plug 'hrsh7th/nvim-compe'                                   " Completion
  Plug 'kyazdani42/nvim-tree.lua'                             " Project manager
@@ -99,9 +102,9 @@ if has('nvim')
 
  source $MYCONF/vim/plugins/barbar.vim
  luafile $MYCONF/vim/lua/treesitter.lua
- source $MYCONF/vim/plugins/lsp-config.vim
- luafile $MYCONF/vim/lua/compe.lua
- luafile $MYCONF/vim/lua/lspaga.lua
+ " source $MYCONF/vim/plugins/lsp-config.vim
+ " luafile $MYCONF/vim/lua/compe.lua
+ " luafile $MYCONF/vim/lua/lspaga.lua
 endif
 
 
@@ -115,6 +118,7 @@ endif
  source $MYCONF/vim/plugins/dadbod.vim
  " source $MYCONF/vim/plugins/gutentags.vim
  source $MYCONF/vim/plugins/fzf.vim
+ source $MYCONF/vim/plugins/ale.vim
  source $MYCONF/vim/plugins/floaterm.vim
  source $MYCONF/vim/plugins/vim-tmux-navigator.vim
  " source $MYCONF/vim/plugins/vimux.vim
@@ -122,6 +126,11 @@ endif
  source $MYCONF/vim/mapping/mapping.vim
  source $MYCONF/vim/plugins/which-key.vim
 
-if has('nvim')
- luafile $MYCONF/vim/lua/lsp.lua
-endif
+ "vim-lsp
+ " source $MYCONF/vim/plugins/efm-langserver.vim
+ "lsp-config
+ "luafile $MYCONF/vim/lua/efm-langserver.lua
+ " source $MYCONF/vim/plugins/vim-lsp.vim
+" if has('nvim')
+"  luafile $MYCONF/vim/lua/lsp.lua
+" endif

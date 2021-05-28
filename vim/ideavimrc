@@ -7,12 +7,12 @@ let mapleader=" "
 let maplocalleader="//"
 
 """ Plugins  --------------------------------
-" set surround
 " set commentary
 " set easymotion
 " set argtextobj
 " set highlightedyank
-" set sneak
+set sneak
+set surround
 """ Plugin settings -------------------------
 let g:highlightedyank_highlight_color = "rgba(:136, 195, 136, 1)"
 let g:argtextobj_pairs="[:],{:},(:),<:>"
@@ -34,7 +34,12 @@ set idearefactormode=keep
 """ Mappings --------------------------------
 "imap jj <Esc>
 nmap gD :action GotoImplementation<CR>
-map <leader><leader>s <Plug>(easymotion-s)
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gr :action FindUsages<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gs :action ActivateStructureToolWindow<CR>
+
+map <leader>s <Plug>(easymotion-s)
 map <leader>f :action FindInPath<CR>
 
 map <leader>d :action Debug<CR>
@@ -42,7 +47,7 @@ map <leader>r :action RenameElement<CR>
 map <leader>c :action Stop<CR>
 map <leader>z :action ToggleDistractionFreeMode<CR>
 
-" map <leader>s :action SelectInProjectView<CR>
+"map <leader>p :action SelectInProjectView<CR>
 map <leader>a :action Annotate<CR>
 map <leader>h :action Vcs.ShowTabbedFileHistory<CR>
 map <leader>e :action GotoNextError<CR>
@@ -50,8 +55,8 @@ map <leader>E :action GotoPreviousError<CR>
 
 map <leader>b :action ToggleLineBreakpoint<CR>
 map <leader>o :action FileStructurePopup<CR>
-map <leader>T :action ActivateTerminalToolWindow<CR>
-map <leader>t :action Refactorings.QuickListPopupAction<CR>
+map <leader>t :action ActivateTerminalToolWindow<CR>
+map <leader>T :action Refactorings.QuickListPopupAction<CR>
 map <leader>l :action Javascript.Linters.EsLint.Fix<CR>
 
 map <leader>v :action MoveEditorToOppositeTabGroup<CR>

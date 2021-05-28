@@ -10,7 +10,9 @@ let g:which_key_map_local =  {}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""MAPPING
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-imap jj <Esc>|                       " No escape
+" imap jj <Esc>|                       " No escape
+imap jk <Esc>|                       " No escape
+imap kj <Esc>|                       " No escape
 map 0 ^|                             " Remap VIM 0 to first non-blank character
 command! W w !sudo tee % > /dev/null|" :W sudo saves the file 
 noremap == <esc>gg=G''<CR>|          "== Fast indent
@@ -69,9 +71,11 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Alternate way to save
-" nnoremap <C-s> :w<CR>
-nnoremap <C-w> :w\|BufferClose<CR>
-nnoremap <C-W> :bd<CR>
+if has('nvim')
+  " nnoremap <C-s> :w<CR>
+  nnoremap <C-w> :w\|BufferClose<CR>
+  "nnoremap <C-W> :bd<CR>
+endif
 " Alternate way to quit
 nnoremap <C-Q> :wq!<CR>
 " Use control-c instead of escape
@@ -83,27 +87,24 @@ nnoremap <C-c> <Esc>
 
 
 "==============
-"LSP
+"LSP ALE
 "==============
-if has('nvim')
-"  LSP config (the mappings used in the default file don't quite work right)
-  nnoremap <silent> gh <cmd>lua require'lspsaga.provider'.lsp_finder()<CR>
-  " nnoremap <silent> gh :Lspsaga lsp_finder<CR>
-  nnoremap <silent> gs :Lspsaga signature_help<CR>
-  " nnoremap <silent> gs <cmd>lua require('lspsaga.signaturehelp').signature_help()<CR>
-  " nnoremap <silent>gr <cmd>lua require('lspsaga.rename').rename()<CR>
-  nnoremap <silent>gr :Lspsaga rename<CR>
-  nnoremap <silent> gd <cmd>lua require'lspsaga.provider'.preview_definition()<CR>
-  nnoremap <silent> gd :Lspsaga preview_definition<CR>
-  " nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
-  nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
-  nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
-  nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
-  nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
-  nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
-  nnoremap <silent> <leader>r <cmd>lua vim.lsp.diagnostic.rename()<CR>
-  nnoremap <silent> <leader>l <cmd>lua vim.lsp.diagnostic.formatting()<CR>
-endif
+nnoremap <silent><C-o> :ALEOrganizeImports<CR>
+
+nnoremap <silent>gr :ALERename<CR>
+nnoremap <silent> <leader>r :ALERename<CR>
+nnoremap <silent> gd :ALEGoToDefinition<CR>
+nnoremap <silent> gr :ALESymbolSearch<CR>
+
+nnoremap <silent> K :ALEHover<CR>
+nnoremap <silent> <C-k> <cmd>:ALEHover<CR>
+nnoremap <silent> <leader>l :ALEFix<CR>
+nnoremap <silent> <leader>a :ALECodeAction<CR>
+
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+nmap <silent> <leader>E <Plug>(ale_previous_wrap)
+nmap <silent> <leader>e <Plug>(ale_next_wrap)
 
 "==============
 "LEADER
@@ -122,9 +123,7 @@ let g:which_key_map['z']       = [ 'Goyo'                       , 'Zen' ]
 nnoremap <leader>/ :Commentary<esc><CR>
 vnoremap <leader>/ :Commentary<CR>
 let g:which_key_map['/'] =                                     'Comment'
-nnoremap <silent> <leader>e <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 let g:which_key_map['e'] =                                    'Next error'
-nnoremap <silent> <leader>E <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 let g:which_key_map['E'] =                                    'Previous error'
 let g:which_key_map['z'] =                                     'Comment'
 

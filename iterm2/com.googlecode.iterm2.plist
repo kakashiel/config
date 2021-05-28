@@ -1243,9 +1243,9 @@
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
-			<false/>
+			<integer>2</integer>
 			<key>Right Option Key Sends</key>
 			<integer>0</integer>
 			<key>Rows</key>
@@ -1357,7 +1357,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>8A0F2610-9494-466E-AD47-5A11568CBCF1</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>91</integer>
+	<integer>92</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
