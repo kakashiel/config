@@ -3,15 +3,17 @@ export MYWORK=$HOME/work
 export MYPERSO=$MYDOC/perso
 export MYCONF=$MYPERSO/config
 
+#Settings
+source $MYCONF/zsh/settings/function.sh
+
 #Plugin
 #source $MYCONF/zsh/antigen.sh
 source $MYCONF/zsh/zinit.sh
 source $MYCONF/zsh/adrien.sh
 
-#Settings
-source $MYCONF/zsh/settings/function.sh
 
 #App
+source $MYCONF/zsh/app/git.sh
 source $MYCONF/zsh/app/npm.sh
 source $MYCONF/zsh/app/python.sh
 source $MYCONF/zsh/app/android.sh

@@ -33,6 +33,8 @@ set idearefactormode=keep
 
 """ Mappings --------------------------------
 "imap jj <Esc>
+nnoremap <C-o> :action Back<CR>
+nnoremap <C-i> :action Forward<CR>
 nmap gD :action GotoImplementation<CR>
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gr :action FindUsages<CR>

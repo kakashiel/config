@@ -1,0 +1,9 @@
+session_name: eyes
+windows:
+  - window_name: dev window
+    layout: main-vertical
+    panes:
+      - shell_command: # pane no. 1
+          - docker stats
+      - htop
+      - cointop

@@ -13,10 +13,13 @@ autoload -Uz _zinit
 
 
 # PLUGINS
+zinit ice wait'!0' 
 zinit snippet OMZ::plugins/git/git.plugin.zsh
 zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
+zinit ice wait'!0' 
 zinit snippet PZT::modules/node/init.zsh
 zinit snippet PZT::modules/command-not-found/init.zsh
+zinit ice wait lucid atload'_zsh_autosuggest_start'
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma/fast-syntax-highlighting
 zinit load zdharma/history-search-multi-word
@@ -37,9 +40,9 @@ bindkey -M viins 'kj' vi-cmd-mode
 
 
 # NVM
-export NVM_AUTO_USE=true
-zinit ice wait"1" lucid
-zinit light lukechilds/zsh-nvm
+# export NVM_AUTO_USE=true
+# zinit ice wait"1" lucid
+# zinit light lukechilds/zsh-nvm
 
 # TAB COMPLETIONS
 zinit ice wait"0b" lucid blockf
