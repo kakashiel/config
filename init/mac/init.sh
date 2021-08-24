@@ -9,8 +9,6 @@ sudo chown -R $(whoami) /usr/local/Cellar
 
 source ./install_app.sh
 source ./install.sh
-source ./app/zsh.sh
-source ./app/tmux.sh
 
 # To install useful key bindings and fuzzy completion:
 $(brew --prefix)/opt/fzf/install
