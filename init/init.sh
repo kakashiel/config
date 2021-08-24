@@ -1,9 +1,18 @@
 #!/bin/bash
+echo "source ~/Documents/perso/config/zsh/init.sh" >> ~/.zshrc
+
 if [[ $OSTYPE == 'darwin'* ]]; then
   source ./os/mac/init.sh
 fi
 
-awk -F= '/^NAME/{print $2}' /etc/os-release
+
+MY_OS=`awk -F= "/^NAME/{print $2}" /etc/os-release`
+
+if [[ $MY_OS == *'Ubuntu'* ]]; then
+  source ./ubuntu_rig/init.sh
+fi
+
 source ./app/zsh.sh
 
 source ./app/tmux.sh
+source ./app/vim.sh

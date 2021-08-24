@@ -1,5 +1,4 @@
 #!/bin/bash
-echo "source ~/Documents/perso/config/zsh/init.zshrc" >> ~/.zshrc
 sudo chown -R $(whoami) /usr/local/var/homebrew
 sudo chown -R $(whoami) /usr/local/Cellar
 

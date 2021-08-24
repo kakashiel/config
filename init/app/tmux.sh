@@ -1,6 +1,5 @@
 #!/bin/bash
 #TMUX
-brew install tmux
 pip install --user tmuxp
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
