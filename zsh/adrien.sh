@@ -33,9 +33,13 @@ alias vpn='osascript -e "tell application \"/Applications/Tunnelblick.app\"" -e 
 
 alias top="glances"
 
+alias home_vpn=""
+alias home_rig1="ssh -i $MYPERSO/credentials/ssh/mining ad@192.168.0.51"
+
 
 #Icloud nosync node_modules
 alias nosync="find ~/Documents -name node_modules -prune -exec touch {}/.nosync \;"
+
 
 ###############
 # Symlink
