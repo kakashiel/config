@@ -56,6 +56,9 @@
     #When everything is break
     reg = "reflog"
 
+    re = "git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)' --color=always|column -ts'|'}"
+    recent = "!r() { count=$1; git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)' --color=always --count=${count:=10} | column -ts'|'}; r"
+
 [diff]
   # Use better, descriptive initials (c, i, w) instead of a/b.
   mnemonicPrefix = true
