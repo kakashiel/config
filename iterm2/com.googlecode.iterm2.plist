@@ -433,7 +433,7 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>560 562 799 450 0 0 1920 1200 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1 0 1920 1175 0 0 1920 1175 </string>
+	<string>0 0 1920 1175 0 0 1920 1175 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 0 1920 1177 0 0 1920 1177 </string>
 	<key>New Bookmarks</key>
@@ -958,7 +958,7 @@
 				<key>0x7f-0x0</key>
 				<dict>
 					<key>Action</key>
-					<integer>16</integer>
+					<integer>17</integer>
 					<key>Text</key>
 					<string></string>
 				</dict>
@@ -1345,12 +1345,12 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1920, 1200}}</string>
 		<key>topLeft</key>
-		<string>{436, 957}</string>
+		<string>{345, 922}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>8A0F2610-9494-466E-AD47-5A11568CBCF1</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>94</integer>
+	<integer>106</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>

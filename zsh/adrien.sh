@@ -33,7 +33,7 @@ alias vpn='osascript -e "tell application \"/Applications/Tunnelblick.app\"" -e 
 
 alias top="glances"
 
-alias home_vpn=""
+alias home_vpn="ssh pi@192.168.0.50"
 alias home_rig1="ssh -i $MYPERSO/credentials/euryale/ssh/mining ad@192.168.0.51"
 
 
