@@ -14,7 +14,7 @@ let g:db_ui_table_helpers = {
 \   }
 \ }
 
-let g:db_ui_auto_execute_table_helpers = 1
+"let g:db_ui_auto_execute_table_helpers = 0
 
 " To hide Press ? for help add this to vimrc:
 let g:db_ui_show_help = 0
@@ -23,5 +23,9 @@ let g:db_ui_show_help = 0
 let g:db_ui_winwidth = 40
 
 " Save all queries here
-let g:db_ui_save_location = '$MYCONF/vim/DBUiQuery'
+let g:db_ui_save_location = '~/Users/adrien/Documents/perso/config/'
 
+nnoremap <silent> <leader>du :DBUIToggle<CR>
+nnoremap <silent> <leader>df :DBUIFindBuffer<CR>
+nnoremap <silent> <leader>dr :DBUIRenameBuffer<CR>
+nnoremap <silent> <leader>dl :DBUILastQueryInfo<CR>

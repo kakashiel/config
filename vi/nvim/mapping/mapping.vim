@@ -1,78 +1,3 @@
-" Create map to add keys to
-let mapleader = " "
-let maplocalleader = '//'
-let g:mapleader = " "
-let g:maplocalleader = '//'
-
-let g:which_key_map =  {}
-let g:which_key_map_local =  {}
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""MAPPING
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" imap jj <Esc>|                       " No escape
-imap jk <Esc>|                       " No escape
-imap kj <Esc>|                       " No escape
-map 0 ^|                             " Remap VIM 0 to first non-blank character
-command! W w !sudo tee % > /dev/null|" :W sudo saves the file 
-noremap == <esc>gg=G''<CR>|          "== Fast indent
-
-" Use backspace in normal mode
-nnoremap <BS> i<BS><Esc>`^
-
-"Better nav for omnicomplete
-inoremap <expr> <c-j> ("\<C-n>")
-inoremap <expr> <c-k> ("\<C-p>")
-
-"""""""
-"Buffer
-"""""""
-" TAB in general mode will move to text buffer
-nnoremap <silent>    <TAB> :BufferPrevious<CR>
-nnoremap <silent>    <S-TAB> :BufferNext<CR>
-" Move to previous/next
-" nnoremap <silent>    <A-,> :BufferPrevious<CR>
-" nnoremap <silent>    <A-.> :BufferNext<CR>
-" " Re-order to previous/next
-" nnoremap <silent>    <A-<> :BufferMovePrevious<CR>
-" nnoremap <silent>    <A->> :BufferMoveNext<CR>
-" " Magic buffer-picking mode
-" nnoremap <silent> <C-s>    :BufferPick<CR>
-" Sort automatically by...
-nnoremap <silent> <Space>bd :BufferOrderByDirectory<CR>
-nnoremap <silent> <Space>bl :BufferOrderByLanguage<CR>
-" Better tabbing
-vnoremap < <gv
-vnoremap > >gv
-
-"Vim terminal mode
-tnoremap <Esc> <C-\><C-n> 
-tnoremap jj <C-\><C-n>
-
-"==============
-"Alt
-"==============
-
-" Use alt + hjkl to resize windows
-nnoremap <M-j>    :resize -2<CR>
-nnoremap <M-k>    :resize +2<CR>
-nnoremap <M-h>    :vertical resize -2<CR>
-nnoremap <M-l>    :vertical resize +2<CR>
-" Use alt + hjkl to resize windows (MAC)
-nnoremap ∆    :resize -2<CR>
-nnoremap ˚    :resize +2<CR>
-nnoremap ˙    :vertical resize -2<CR>
-nnoremap ¬    :vertical resize +2<CR>
-
-"==============
-"Ctrl
-"==============
-" Better window navigation
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
 " Alternate way to save
 if has('nvim')
   " nnoremap <C-s> :w<CR>
@@ -83,31 +8,6 @@ endif
 nnoremap <C-Q> :wq!<CR>
 " Use control-c instead of escape
 nnoremap <C-c> <Esc>
-"Intellij mapping
-" map <C-F> :Ag<CR>
-"map <C-S-O> :Files<CR>
-" map <C-e> :Buffers<CR>
-
-
-"==============
-"LSP ALE
-"==============
-nnoremap <silent><C-o> :ALEOrganizeImports<CR>
-
-nnoremap <silent>gr :ALERename<CR>
-nnoremap <silent> <leader>r :ALERename<CR>
-nnoremap <silent> gd :ALEGoToDefinition<CR>
-nnoremap <silent> gr :ALESymbolSearch<CR>
-
-nnoremap <silent> K :ALEHover<CR>
-nnoremap <silent> <C-k> <cmd>:ALEHover<CR>
-nnoremap <silent> <leader>l :ALEFix<CR>
-nnoremap <silent> <leader>a :ALECodeAction<CR>
-
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
-nmap <silent> <leader>E <Plug>(ale_previous_wrap)
-nmap <silent> <leader>e <Plug>(ale_next_wrap)
 
 "==============
 "LEADER
@@ -119,15 +19,12 @@ let g:which_key_map['3']       = [ ':DBUI'                      , 'Database expl
 let g:which_key_map['n']       = [ ':NERDTreeToggle'            , 'NERDTree' ]
 let g:which_key_map['q']       = [ ':q!'                        , 'Save & Quit file' ]
 let g:which_key_map['Q']       = [ ':wqa!'                      , 'Save & Quit VIM' ]
-let g:which_key_map['w']       = [ ':w'                         , 'Save' ]
 let g:which_key_map['-']       = [ '<C-W>s'                     , 'Split below']
 let g:which_key_map['|']       = [ '<C-W>v'                     , 'Split right']
 let g:which_key_map['z']       = [ 'Goyo'                       , 'Zen' ]
 nnoremap <leader>/ :Commentary<esc><CR>
 vnoremap <leader>/ :Commentary<CR>
 let g:which_key_map['/'] =                                     'Comment'
-let g:which_key_map['e'] =                                    'Next error'
-let g:which_key_map['E'] =                                    'Previous error'
 let g:which_key_map['z'] =                                     'Comment'
 
 nnoremap <leader>n :NERDTreeToggle<CR>
@@ -136,10 +33,10 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 " r is for refactor
 let g:which_key_map['r'] = {
                   \ 'name' : '+refactor' ,
-                  \ 'o' : [':OR'                             , 'Optimise import'],
-                  \ 'a' : [':Lspsaga code_action'            , 'Code action'],
-                  \ 'r' : [':lua vim.lsp.buf.rename()'       , 'Rename'],
-                  \ 'l' : [':lua vim.lsp.buf.formatting()'   , 'Format'],
+                  \ 'o' : [':TSLspOrganize'                  , 'Optimise import'],
+                  \ 'a' : [':lua vim.lsp.buf.code_action()<CR>'  , 'Code action'],
+                  \ 'n' : [':lua vim.lsp.buf.rename()<CR>'       , 'Rename'],
+                  \ 'l' : [':lua vim.lsp.buf.formatting()<CR>'   , 'Format'],
                   \ }
 
 " f is for find
@@ -152,6 +49,14 @@ let g:which_key_map['f'] = {
                   \ 'l' : [':Telescope builtin'         , 'List search'],
                   \ 'm' : [':Telescope marks'           , 'marks'],
                   \ 's' : [':Telescope git_status'      , 'modified git files'],
+                  \ }
+
+" w is for workspace
+let g:which_key_map['w'] = {
+                  \ 'name' : '+workspace' ,
+                  \ 'a' : [':lua vim.lsp.buf.add_workspace_folder()<CR>',                       'Add'],
+                  \ 'r' : [':lua vim.lsp.buf.remove_workspace_folder()<CR>',                    'Remove'],
+                  \ 'l' : [':lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', 'List'],
                   \ }
 
 "==============

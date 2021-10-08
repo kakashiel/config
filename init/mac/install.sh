@@ -12,7 +12,7 @@ brew install z
 brew install gpg
 brew install git-crypt
 #VIM
-brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+brew install universal-ctags
 brew install fzf
 brew install vim
 brew install neovim

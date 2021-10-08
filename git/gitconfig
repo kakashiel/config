@@ -54,7 +54,7 @@
     fixup = "commit --fixup=HEAD"
 
     #When everything is break
-    reg = "reflog"
+    ref = "reflog --pretty='%Cred%h%Creset %<|(15)%gd -%C(auto)%d%Creset %gs %C(blue)%cr%C(reset) %C(bold blue)<%an>%Creset'"
 
     re = "git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)' --color=always|column -ts'|'}"
     recent = "!r() { count=$1; git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)' --color=always --count=${count:=10} | column -ts'|'}; r"

@@ -1,4 +1,4 @@
-source ~/Documents/perso/config/vim/init.vim
+source ~/Documents/perso/config/vi/vim/init.vim
 source ~/Documents/perso/config/vim/config/settings.vim
 source ~/Documents/perso/config/vim/mapping/mapping.vim
 
@@ -45,15 +45,15 @@ map <leader>s <Plug>(easymotion-s)
 map <leader>f :action FindInPath<CR>
 
 map <leader>d :action Debug<CR>
-map <leader>r :action RenameElement<CR>
+map <leader>rn :action RenameElement<CR>
 map <leader>c :action Stop<CR>
 map <leader>z :action ToggleDistractionFreeMode<CR>
 
-"map <leader>p :action SelectInProjectView<CR>
+map <leader>p :action SelectInProjectView<CR>
 map <leader>a :action Annotate<CR>
 map <leader>h :action Vcs.ShowTabbedFileHistory<CR>
-map <leader>e :action GotoNextError<CR>
-map <leader>E :action GotoPreviousError<CR>
+map [d :action GotoNextError<CR>
+map ]d :action GotoPreviousError<CR>
 
 map <leader>b :action ToggleLineBreakpoint<CR>
 map <leader>o :action FileStructurePopup<CR>

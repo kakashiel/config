@@ -21,7 +21,6 @@ set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
 set t_Co=256                            " Support 256 colors
-silent! set termguicolors               " More colors
 set showmatch                           " Show matching brackets when text indicator is over them
 set mat=1                               " How many tenths of a second to blink when matching brackets
 set foldcolumn=1                        " Add a bit extra margin to the left
@@ -74,4 +73,17 @@ autocmd FileType netrw setl bufhidden=wipe
 let g:netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
 autocmd FileType *  setlocal number relativenumber
 au BufWinEnter * set number
+set completeopt=menuone,noselect        " Always open popup and user selection
+
+
+ " Return to last edit position when opening files (You want this!)
+autocmd BufReadPost *
+      \ if line("'\"") > 0 && line("'\"") <= line("$") |
+      \   exe "normal! g`\"" |
+      \ endif
+
+augroup myvimrc " auto source
+     au!
+     au BufWritePost *.lua,*.vim,.vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+ augroup END
 
