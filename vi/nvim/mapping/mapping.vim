@@ -1,34 +1,31 @@
-" Alternate way to save
-if has('nvim')
-  " nnoremap <C-s> :w<CR>
-  nnoremap <C-w> :w\|BufferClose<CR>
-  "nnoremap <C-W> :bd<CR>
-endif
-" Alternate way to quit
-nnoremap <C-Q> :wq!<CR>
-" Use control-c instead of escape
-nnoremap <C-c> <Esc>
+"==============
+" LSP
+"==============
+nnoremap <silent> gh <cmd>lua require'lspsaga.provider'.lsp_finder()<CR>
 
+nnoremap <silent><leader>ca <cmd>lua require('lspsaga.codeaction').code_action()<CR>
+vnoremap <silent><leader>ca :<C-U>lua require('lspsaga.codeaction').range_code_action()<CR>
+
+" show hover doc
+nnoremap <silent> K <cmd>lua require('lspsaga.hover').render_hover_doc()<CR>
+" or use command
+nnoremap <silent>K :Lspsaga hover_doc<CR>
+
+" scroll down hover doc or scroll in definition preview
+nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
+" scroll up hover doc
+nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
+
+" show signature help
+nnoremap <silent> gs <cmd>lua require('lspsaga.signaturehelp').signature_help()<CR>
+"Rename
+nnoremap <silent>gr <cmd>lua require('lspsaga.rename').rename()<CR>
+
+" preview definition
+nnoremap <silent> gd <cmd>lua require'lspsaga.provider'.preview_definition()<CR>
 "==============
 "LEADER
 "==============
-
-" Single mappings
-let g:which_key_map['1']       = [ ':NvimTreeToggle'            , 'explorer' ]
-let g:which_key_map['3']       = [ ':DBUI'                      , 'Database explorer' ]
-let g:which_key_map['n']       = [ ':NERDTreeToggle'            , 'NERDTree' ]
-let g:which_key_map['q']       = [ ':q!'                        , 'Save & Quit file' ]
-let g:which_key_map['Q']       = [ ':wqa!'                      , 'Save & Quit VIM' ]
-let g:which_key_map['-']       = [ '<C-W>s'                     , 'Split below']
-let g:which_key_map['|']       = [ '<C-W>v'                     , 'Split right']
-let g:which_key_map['z']       = [ 'Goyo'                       , 'Zen' ]
-nnoremap <leader>/ :Commentary<esc><CR>
-vnoremap <leader>/ :Commentary<CR>
-let g:which_key_map['/'] =                                     'Comment'
-let g:which_key_map['z'] =                                     'Comment'
-
-nnoremap <leader>n :NERDTreeToggle<CR>
-
 
 " r is for refactor
 let g:which_key_map['r'] = {
@@ -100,24 +97,6 @@ let g:which_key_map_local.b = {
                   \ '?' : ['Buffers'   , 'fzf-buffer']      ,
                   \ }
 
-
-" t is for terminal
-let g:which_key_map_local.t = {
-                  \ 'name' : '+terminal' ,
-                  \ ';' : [':FloatermNew --wintype=popup --height=6 --cmd="zsh"'   , 'terminal'],
-                  \ 'f' : [':FloatermNew fzf'                          , 'fzf'],
-                  \ 'g' : [':FloatermNew lazygit'                      , 'git'],
-                  \ 'd' : [':FloatermNew lazydocker'                   , 'docker'],
-                  \ 'n' : [':FloatermNew node'                         , 'node'],
-                  \ 'N' : [':FloatermNew nnn'                          , 'nnn'],
-                  \ 'p' : [':FloatermNew python'                       , 'python'],
-                  \ 'r' : [':FloatermNew ranger'                       , 'ranger'],
-                  \ 't' : [':FloatermToggle'                           , 'toggle'],
-                  \ 'y' : [':FloatermNew ytop'                         , 'ytop'],
-                  \ 's' : [':FloatermNew ncdu'                         , 'ncdu'],
-                  \ 'c' : [':FloatermNew --wintype=floating ranger --cmd="cd ~"'   , 'cd'],
-                  \ 'T' : [':FloatermNew --wintype=floating terminal -cmd="bash"'  , 'cd'],
-                  \ }
 
 " s is for Session
 let g:which_key_map_local.s = {

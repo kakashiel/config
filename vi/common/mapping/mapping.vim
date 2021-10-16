@@ -65,13 +65,30 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" Close buffer
+nnoremap <C-w> :bd<CR>
+if has('nvim')
+  " nnoremap <C-s> :w<CR>
+  nnoremap <C-w> :BufferClose<CR>
+endif
 "==============
 "LEADER
 "==============
+nnoremap <leader>1 :NERDTreeToggle<esc><CR>
+nnoremap <leader>3 :DBUI<esc><CR>
+
+nnoremap <leader>n :NERDTreeFind<CR>
+nnoremap <leader>N :NERDTreeToggle<CR>
+nnoremap <leader>z :Goyo<CR>
 nnoremap <leader>/ :Commentary<esc><CR>
 vnoremap <leader>/ :Commentary<CR>
-
-nnoremap <leader>n :NERDTreeToggle<CR>
+" Single mappings
+let g:which_key_map['1'] = 'explorer'
+let g:which_key_map['3'] = 'Database explorer'
+let g:which_key_map['n'] = 'NERDTree'
+let g:which_key_map['N'] = 'NERDTree'
+let g:which_key_map['z'] = 'Zen'
+let g:which_key_map['/'] = 'Comment'
 
 "==============
 "LOCALLEADER

@@ -14,7 +14,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'machakann/vim-highlightedyank'                        " intellij: Make the yanked region apparent!
  Plug 'justinmk/vim-sneak'                                   " s<char><char>
  Plug 'easymotion/vim-easymotion'                            " Easy motion plug
- Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }     " Project manager
+ Plug 'preservim/nerdtree'                                  " Project manager
  Plug 'tpope/vim-fugitive'                                  " GIT
  Plug 'tpope/vim-rhubarb'                                   " GIT with more command
  Plug 'junegunn/gv.vim'                                     " GIT browse commit
@@ -51,6 +51,7 @@ source $MYCONF/vi/vim/themes/nord.vim
 source $MYCONF/vi/vim/plugins/devicons.vim
 
 
+source $MYCONF/vi/common/plugins/nerdtree.vim
 source $MYCONF/vi/common/plugins/sneak.vim
 source $MYCONF/vi/common/plugins/signify.vim
 source $MYCONF/vi/common/plugins/rainbow.vim

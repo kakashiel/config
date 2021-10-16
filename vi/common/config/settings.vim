@@ -2,13 +2,15 @@ set autoread " Set to auto read when a file is changed from the outside
 au FocusGained,BufEnter * :checktime "Trigger autoread
 set magic " For regular expressions turn magic on
 
+set t_Co=256                            " Support 256 colors
+set mouse=a                             " Enable your mouse
 syntax enable                           " Enables syntax highlighing
 set colorcolumn=80                      " Linebreak
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                                " WRAP Cut long lines as just one line
-" set tw=500                              " Wrap Linebreak on 500 characters
-" set lbr                                 " Wrap When wrap doesnt cut word
-" set whichwrap+=<,>,h,l,[,]              " Wrap Will move to the previous/next line after reaching first/last character in the line.
+"" set tw=500                              " Wrap Linebreak on 500 characters
+"" set lbr                                 " Wrap When wrap doesnt cut word
+"" set whichwrap+=<,>,h,l,[,]              " Wrap Will move to the previous/next line after reaching first/last character in the line.
 set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file
@@ -17,10 +19,8 @@ set lazyredraw                          " Don't redraw while executing macros (g
 set ruler                               " Show the cursor position all the time
 set cmdheight=2                         " More space for displaying messages
 set iskeyword+=-                        " treat dash separated words as a word text object"
-set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
-set t_Co=256                            " Support 256 colors
 set showmatch                           " Show matching brackets when text indicator is over them
 set mat=1                               " How many tenths of a second to blink when matching brackets
 set foldcolumn=1                        " Add a bit extra margin to the left

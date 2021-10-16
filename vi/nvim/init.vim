@@ -8,14 +8,16 @@ source $MYCONF/vi/common/load_plug.vim
 
 call plug#begin('~/.vim/plugged')
 
-"COMMON
- Plug 'https://github.com/tpope/vim-surround.git'            " Shortcut surroung
- Plug 'https://github.com/tpope/vim-commentary.git'          " intellij: Shortcut commentary
- Plug 'vim-scripts/argtextobj.vim'                           " intellij: Text-object like motion for arguments
- Plug 'machakann/vim-highlightedyank'                        " intellij: Make the yanked region apparent!
- Plug 'justinmk/vim-sneak'                                   " s<char><char>
- Plug 'easymotion/vim-easymotion'                            " Easy motion plug
- Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }     " Project manager
+"COMMON WITH VIM
+ Plug 'https://github.com/tpope/vim-surround.git'           " Shortcut surroung
+ Plug 'https://github.com/tpope/vim-commentary.git'         " intellij: Shortcut commentary
+ Plug 'vim-scripts/argtextobj.vim'                          " intellij: Text-object like motion for arguments
+ Plug 'machakann/vim-highlightedyank'                       " intellij: Make the yanked region apparent!
+ Plug 'justinmk/vim-sneak'                                  " s<char><char>
+ Plug 'easymotion/vim-easymotion'                           " Easy motion plug
+ Plug 'preservim/nerdtree'                                  " Project manager
+ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'             " NerdTree icon
+ Plug 'ryanoasis/vim-devicons'                              " Use for nerdtree styntax
  Plug 'tpope/vim-fugitive'                                  " GIT
  Plug 'tpope/vim-rhubarb'                                   " GIT with more command
  Plug 'junegunn/gv.vim'                                     " GIT browse commit
@@ -49,13 +51,9 @@ call plug#begin('~/.vim/plugged')
  Plug 'neovim/nvim-lspconfig'                                " LSP nvim
  Plug 'williamboman/nvim-lsp-installer'                      " Install LSP server
  Plug 'hrsh7th/nvim-cmp'                                     " Autocompletion plugin
- Plug 'hrsh7th/cmp-nvim-lsp' " LSP source for nvim-cmp
+ Plug 'hrsh7th/cmp-nvim-lsp'                                 " LSP source for nvim-cmp
  Plug 'saadparwaiz1/cmp_luasnip' " Snippets source for nvim-cmp
  Plug 'L3MON4D3/LuaSnip' " Snippets plugin
-
- Plug 'jose-elias-alvarez/null-ls.nvim' " Eslint Prettier...
- Plug 'jose-elias-alvarez/nvim-lsp-ts-utils' " Js utils function
-
 
  Plug 'glepnir/lspsaga.nvim'                                 " LSP Popup action
  Plug 'kyazdani42/nvim-tree.lua'                             " Project manager
@@ -67,6 +65,7 @@ call plug#begin('~/.vim/plugged')
 
  Plug 'mhartington/oceanic-next'                           " Theme vim with treesitter
  Plug 'christianchiarulli/nvcode-color-schemes.vim'
+ Plug 'rafamadriz/neon'
 
 
 call plug#end()
@@ -77,13 +76,14 @@ call plug#end()
 source $MYCONF/vi/vim/plugins/airline.vim
 
 
-" NEOVIM ONLY
+luafile $MYCONF/vi/nvim/lua/treesitter.lua
 " source $MYCONF/vi/nvim/themes/oceanic-next.vim
-source $MYCONF/vi/nvim/themes/nord.vim
+" source $MYCONF/vi/nvim/themes/nord.vim
+source $MYCONF/vi/nvim/themes/neon.vim
 
 source $MYCONF/vi/nvim/plugins/barbar.vim
-luafile $MYCONF/vi/nvim/lua/treesitter.lua
 
+source $MYCONF/vi/common/plugins/nerdtree.vim
 source $MYCONF/vi/common/plugins/sneak.vim
 source $MYCONF/vi/common/plugins/signify.vim
 source $MYCONF/vi/common/plugins/rainbow.vim
@@ -99,5 +99,5 @@ source $MYCONF/vi/nvim/plugins/auto-save.vim
 source $MYCONF/vi/common/mapping/mapping.vim
 source $MYCONF/vi/nvim/mapping/mapping.vim
 source $MYCONF/vi/nvim/plugins/which-key.vim
- 
+
 luafile $MYCONF/vi/nvim/lua/nvim-lsp.lua
