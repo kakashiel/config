@@ -7,12 +7,14 @@ let mapleader=" "
 let maplocalleader="//"
 
 """ Plugins  --------------------------------
-" set commentary
-" set easymotion
-" set argtextobj
-" set highlightedyank
+set commentary
+set argtextobj
+set highlightedyank
 set sneak
 set surround
+set easymotion
+" set ideamarks
+
 """ Plugin settings -------------------------
 let g:highlightedyank_highlight_color = "rgba(:136, 195, 136, 1)"
 let g:argtextobj_pairs="[:],{:},(:),<:>"
@@ -32,7 +34,8 @@ set ideastatusicon=gray
 set idearefactormode=keep
 
 """ Mappings --------------------------------
-"imap jj <Esc>
+imap jk <Esc>
+imap kj <Esc>
 nnoremap <C-o> :action Back<CR>
 nnoremap <C-i> :action Forward<CR>
 nmap gD :action GotoImplementation<CR>

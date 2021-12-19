@@ -13,30 +13,29 @@ autoload -Uz _zinit
 
 
 # PLUGINS
-zinit ice wait'!0' 
-zinit snippet OMZ::plugins/git/git.plugin.zsh
-zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
-zinit ice wait'!0' 
-zinit snippet PZT::modules/node/init.zsh
-zinit snippet PZT::modules/command-not-found/init.zsh
-zinit ice wait lucid atload'_zsh_autosuggest_start'
-zinit light zsh-users/zsh-autosuggestions
-zinit light zdharma/fast-syntax-highlighting
-zinit load zdharma/history-search-multi-word
-zinit snippet PZT::modules/tmux
-zinit load wfxr/forgit
-zstyle ':prezto:module:tmux:iterm' integrate 'yes'
+# zinit ice wait'!0' 
+# zinit snippet OMZ::plugins/git/git.plugin.zsh
+# zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
+# zinit ice wait'!0' 
+# zinit snippet PZT::modules/node/init.zsh
+# zinit snippet PZT::modules/command-not-found/init.zsh
+# zinit ice wait lucid atload'_zsh_autosuggest_start'
+# zinit light zsh-users/zsh-autosuggestions
+# zinit light zdharma/fast-syntax-highlighting
+# zinit load zdharma/history-search-multi-word
+# zinit snippet PZT::modules/tmux
+# zinit load wfxr/forgit
+# zstyle ':prezto:module:tmux:iterm' integrate 'yes'
 
 # HISTORY SUBSTRING SEARCHING
-zinit ice wait"0b" lucid atload'bindkey "$terminfo[kcuu1]" history-substring-search-up; bindkey "$terminfo[kcud1]" history-substring-search-down'
-zinit light zsh-users/zsh-history-substring-search
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'j' history-substring-search-down
-bindkey -M viins 'jj' vi-cmd-mode
-bindkey -M viins 'jk' vi-cmd-mode
-bindkey -M viins 'kj' vi-cmd-mode
+# zinit ice wait"0b" lucid atload'bindkey "$terminfo[kcuu1]" history-substring-search-up; bindkey "$terminfo[kcud1]" history-substring-search-down'
+# zinit light zsh-users/zsh-history-substring-search
+# bindkey '^[[A' history-substring-search-up
+# bindkey '^[[B' history-substring-search-down
+# bindkey -M vicmd 'k' history-substring-search-up
+# bindkey -M vicmd 'j' history-substring-search-down
+# bindkey -M viins 'jk' vi-cmd-mode
+# bindkey -M viins 'kj' vi-cmd-mode
 
 
 # NVM
@@ -45,25 +44,25 @@ bindkey -M viins 'kj' vi-cmd-mode
 # zinit light lukechilds/zsh-nvm
 
 # TAB COMPLETIONS
-zinit ice wait"0b" lucid blockf
-zinit light zsh-users/zsh-completions
-zstyle ':completion:*' completer _expand _complete _ignored _approximate
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-zstyle ':completion:*' menu select=2
-zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %p%s'
-zstyle ':completion:*:descriptions' format '-- %d --'
-zstyle ':completion:*:processes' command 'ps -au$USER'
-zstyle ':completion:complete:*:options' sort false
-zstyle ':fzf-tab:complete:_zlua:*' query-string input
-zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm,cmd -w -w"
-zstyle ':fzf-tab:complete:kill:argument-rest' extra-opts --preview=$extract'ps --pid=$in[(w)1] -o cmd --no-headers -w -w' --preview-window=down:3:wrap
-zstyle ":completion:*:git-checkout:*" sort false
+# zinit ice wait"0b" lucid blockf
+# zinit light zsh-users/zsh-completions
+# zstyle ':completion:*' completer _expand _complete _ignored _approximate
+# zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+# zstyle ':completion:*' menu select=2
+# zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %p%s'
+# zstyle ':completion:*:descriptions' format '-- %d --'
+# zstyle ':completion:*:processes' command 'ps -au$USER'
+# zstyle ':completion:complete:*:options' sort false
+# zstyle ':fzf-tab:complete:_zlua:*' query-string input
+# zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm,cmd -w -w"
+# zstyle ':fzf-tab:complete:kill:argument-rest' extra-opts --preview=$extract'ps --pid=$in[(w)1] -o cmd --no-headers -w -w' --preview-window=down:3:wrap
+# zstyle ":completion:*:git-checkout:*" sort false
 
 # LS_COLOR
-zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
-    atpull'%atclone' pick"clrs.zsh" nocompile'!' \
-    atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
-zinit light trapd00r/LS_COLORS
+# zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
+#     atpull'%atclone' pick"clrs.zsh" nocompile'!' \
+#     atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
+# zinit light trapd00r/LS_COLORS
 
 #THEME
 #zinit ice depth=1; zinit light romkatv/powerlevel10k
@@ -75,10 +74,10 @@ zstyle :prompt:pure:git:stash show yes
 
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
-zinit light-mode for \
-    zinit-zsh/z-a-rust \
-    zinit-zsh/z-a-as-monitor \
-    zinit-zsh/z-a-patch-dl \
-    zinit-zsh/z-a-bin-gem-node
+# zinit light-mode for \
+#     zinit-zsh/z-a-rust \
+#     zinit-zsh/z-a-as-monitor \
+#     zinit-zsh/z-a-patch-dl \
+#     zinit-zsh/z-a-bin-gem-node
 
 ### End of Zinit's installer chunk
