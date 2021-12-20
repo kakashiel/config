@@ -66,9 +66,9 @@ autoload -Uz _zinit
 
 #THEME
 #zinit ice depth=1; zinit light romkatv/powerlevel10k
-zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
-zinit light sindresorhus/pure
-zstyle :prompt:pure:git:stash show yes
+# zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
+# zinit light sindresorhus/pure
+# zstyle :prompt:pure:git:stash show yes
 
 
 

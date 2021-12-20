@@ -14,6 +14,9 @@ brew install gitui
 brew install lazygit
 brew install git-gui
 brew install git-crypt
+#ZSH
+brew install romkatv/powerlevel10k/powerlevel10k
+
 #VIM
 brew install universal-ctags
 brew install fzf
@@ -30,3 +33,4 @@ brew install pass-otp
 #VPN
 brew tap benwebber/tunnelblickctl
 brew install tunnelblickctl
+

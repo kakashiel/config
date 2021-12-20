@@ -32,3 +32,9 @@ zstyle ':completion:*:*:git:*' script $ZDOTDIR/plugins-copy/git-completion.zsh
 fpath=(~/.zsh $fpath)
 
 autoload -Uz compinit && compinit
+
+# NPM
+source $ZDOTDIR/plugins-copy/npm.sh
+
+#P10k
+source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
