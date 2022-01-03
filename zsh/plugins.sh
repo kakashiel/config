@@ -28,13 +28,13 @@ bindkey -M viins 'kj' vi-cmd-mode
 #GIT
 
 # Load Git completion
-zstyle ':completion:*:*:git:*' script $ZDOTDIR/plugins-copy/git-completion.zsh
+zstyle ':completion:*:*:git:*' script $MYCONF/zsh/plugins-copy/git-completion.zsh
 fpath=(~/.zsh $fpath)
 
 autoload -Uz compinit && compinit
 
 # NPM
-source $ZDOTDIR/plugins-copy/npm.sh
+source $MYCONF/zsh/plugins-copy/npm.sh
 
 #P10k
 source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme

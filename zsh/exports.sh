@@ -13,6 +13,7 @@ export HISTSIZE=50000
 export SAVEHIST=50000
 
 #PATH
+export PATH="/usr/local/opt/libpq/bin:$PATH"
 export PATH=/usr/local/sbin:$PATH
 export PATH=$PATH:$HOME/.local/bin
 

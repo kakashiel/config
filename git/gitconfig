@@ -30,17 +30,17 @@
 
 #Commit
     # Amend last commit without modifying commit message
-    amend = "!git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend"
+    amend = "!log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend"
     aa = "add --all"
-    cam = "git commit -a -m"
-    cana = "git commit -v -a --no-edit --amend"
+    cam = "commit -a -m"
+    cana = "commit -v -a --no-edit --amend"
     ct = "citool"
     cta = "citool -amend"
 
 #Push
     pf = "push --force"
     pfn = "push --force --no-verify"
-    pup = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
+    pup = "!push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
 #Pull
     # Safer pulls; don't do anything other than a fast forward on merge
     pull = "pull --ff-only"
@@ -72,7 +72,7 @@
     out = "log @{u}.."
 
     # Print the title of the current branch; sometimes useful for scripting
-    currentbranch = "!git branch --contains HEAD | grep '*' | tr -s ' ' | cut -d ' ' -f2"
+    currentbranch = "!branch --contains HEAD | grep '*' | tr -s ' ' | cut -d ' ' -f2"
 
     # Better diffs for prose
     wdiff = "diff --color-words"

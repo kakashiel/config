@@ -433,7 +433,7 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>560 562 799 450 0 0 1920 1200 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1920 1175 0 0 1920 1175 </string>
+	<string>-240 -150 1915 1025 0 0 1680 1025 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 0 1920 1177 0 0 1920 1177 </string>
 	<key>New Bookmarks</key>
@@ -1228,11 +1228,11 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>Monaco 12</string>
+			<string>codicon 12</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MesloLGS-NF-Regular 15</string>
+			<string>Monaco 15</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
@@ -1319,7 +1319,7 @@
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Use Non-ASCII Font</key>
-			<false/>
+			<true/>
 			<key>Vertical Spacing</key>
 			<real>1</real>
 			<key>Visual Bell</key>
@@ -1336,8 +1336,7 @@
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
-		<string>Hack Nerd Font</string>
-		<string>Hack Nerd Font Mono</string>
+		<string>codicon</string>
 		<string>Monaco</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
@@ -1345,12 +1344,12 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1920, 1200}}</string>
 		<key>topLeft</key>
-		<string>{345, 922}</string>
+		<string>{715, 987}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>8A0F2610-9494-466E-AD47-5A11568CBCF1</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>106</integer>
+	<integer>115</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>

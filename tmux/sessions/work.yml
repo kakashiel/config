@@ -1,11 +1,15 @@
 session_name: work
 windows:
   - window_name: dev window
-    layout: main-vertical
+    layout: main-horizontal
     panes:
       - shell_command: # pane no. 1
+          - z api
+      - shell_command: 
+          - tmux resize-pane -D 35
+          - tmux resize-pane -L 48
           - z w w w
           - npm run start
-      - shell_command: # pane no. 1
+      - shell_command: 
           - z w api
           - npm run logs

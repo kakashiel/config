@@ -87,3 +87,5 @@ augroup myvimrc " auto source
      au BufWritePost *.lua,*.vim,.vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
  augroup END
 
+ set completeopt=menu,menuone,noselect
+
