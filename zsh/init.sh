@@ -11,7 +11,6 @@ source $MYCONF/zsh/settings/function.sh
 source $MYCONF/zsh/zinit.sh
 source $MYCONF/zsh/adrien.sh
 
-
 #App
 source $MYCONF/zsh/app/git.sh
 source $MYCONF/zsh/app/npm.sh
