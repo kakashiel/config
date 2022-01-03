@@ -21,18 +21,52 @@
     br = "branch"
     ci = "commit"
     d = "diff"
+    a = "add"
+    l = "pull"
+    p = "push"
+    f = "fetch"
+    st = "status"
 
-    # Log that shows titles of last 16 commits
-    l = "log -16 --color=always --all --topo-order --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
+#Commit
+    # Amend last commit without modifying commit message
+    amend = "!git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend"
+    aa = "add --all"
+    cam = "git commit -a -m"
+    cana = "git commit -v -a --no-edit --amend"
+    ct = "citool"
+    cta = "citool -amend"
+
+#Push
+    pf = "push --force"
+    pfn = "push --force --no-verify"
+    pup = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
+#Pull
+    # Safer pulls; don't do anything other than a fast forward on merge
+    pull = "pull --ff-only"
+    lr = "pull --rebase"
+#Rebase
+    rb = "rebase"
+  rbc = "rebase --continue"
+  rbs = "rebase --skip"
+  rba = "rebase --abort"
+
+#Log
     # Log that starts a pager with titles of all the commits in your tree
-    ll = log --color=always --all --topo-order --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-
+    ll = "log --color=always --all --topo-order --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
     # Log that shows the last 10 commits as a graph
     lg = "log -10 --color=always --all --graph --topo-order --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
-
     # Log that shows all commits as a graph (using a pager)
     lgl = "log --color=always --all --graph --topo-order --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+    lo="log --oneline --decorate"
+    lod="log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'"
+    lods="log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=short"
+    log="log --oneline --decorate --graph"
+    loga="log --oneline --decorate --graph --all"
+    lol="log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+    lola="log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all"
+    lols="log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --stat"
+
 
     # Show outgoing commits
     out = "log @{u}.."
@@ -43,18 +77,13 @@
     # Better diffs for prose
     wdiff = "diff --color-words"
 
-    # Safer pulls; don't do anything other than a fast forward on merge
-    pull = "pull --ff-only"
-
-    # Amend last commit without modifying commit message
-    amend = "!git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend"
-
     # Create a commit that will be automatically squashed as a fixup when you
     # run `git rebase --autosquash`
     fixup = "commit --fixup=HEAD"
 
     #When everything is break
-    reg = "reflog"
+    ref = "reflog --pretty='%Cred%h%Creset %<|(15)%gd -%C(auto)%d%Creset %gs %C(blue)%cr%C(reset) %C(bold blue)<%an>%Creset'"
+
 
 [diff]
   # Use better, descriptive initials (c, i, w) instead of a/b.
@@ -69,3 +98,13 @@
   tool = vscode
 [difftool "vscode"]
   cmd = code --wait --diff $LOCAL $REMOTE
+
+  # define command which will be used when "nvim" is set as a merge tool
+[mergetool "nvim"]
+  cmd = nvim -f -c \"Gvdiffsplit!\" \"$MERGED\"
+# set "nvim" as tool for merging
+[merge]
+  tool = nvim
+# automatically launch merge tool without displaying a prompt
+[mergetool]
+  prompt = false

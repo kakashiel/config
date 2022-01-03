@@ -1,0 +1,67 @@
+source ~/Documents/perso/config/vi/vim/init.vim
+source ~/Documents/perso/config/vi/common/config/settings.vim
+source ~/Documents/perso/config/vi/common/mapping/mapping.vim
+
+""" Map leader to space ---------------------
+let mapleader=" "
+let maplocalleader="//"
+
+""" Plugins  --------------------------------
+set commentary
+set argtextobj
+set highlightedyank
+set sneak
+set surround
+set easymotion
+" set ideamarks
+
+""" Plugin settings -------------------------
+let g:highlightedyank_highlight_color = "rgba(:136, 195, 136, 1)"
+let g:argtextobj_pairs="[:],{:},(:),<:>"
+
+""" Common settings -------------------------
+"set showmode
+"set so=5
+"set incsearch
+"set nu
+"set relativenumber
+
+""" Idea specific settings ------------------
+set ideajoin
+"set clipboard
+" set clipboard=unnamedplus
+set ideastatusicon=gray
+set idearefactormode=keep
+
+""" Mappings --------------------------------
+imap jk <Esc>
+imap kj <Esc>
+nnoremap <C-o> :action Back<CR>
+nnoremap <C-i> :action Forward<CR>
+nmap gD :action GotoImplementation<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gr :action FindUsages<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gs :action ActivateStructureToolWindow<CR>
+
+map <leader>s <Plug>(easymotion-s)
+map <leader>f :action FindInPath<CR>
+
+map <leader>d :action Debug<CR>
+map <leader>rn :action RenameElement<CR>
+map <leader>c :action Stop<CR>
+map <leader>z :action ToggleDistractionFreeMode<CR>
+
+map <leader>p :action SelectInProjectView<CR>
+map <leader>a :action Annotate<CR>
+map <leader>h :action Vcs.ShowTabbedFileHistory<CR>
+map [d :action GotoNextError<CR>
+map ]d :action GotoPreviousError<CR>
+
+map <leader>b :action ToggleLineBreakpoint<CR>
+map <leader>o :action FileStructurePopup<CR>
+map <leader>t :action ActivateTerminalToolWindow<CR>
+map <leader>T :action Refactorings.QuickListPopupAction<CR>
+map <leader>l :action Javascript.Linters.EsLint.Fix<CR>
+
+map <leader>v :action MoveEditorToOppositeTabGroup<CR>

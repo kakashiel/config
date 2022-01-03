@@ -1,18 +1,24 @@
 #!/bin/bash
+brew install git
 brew install antigen
 brew install node
 brew install python
 brew install npm
 brew install oath-toolkit
-brew install gitui
-brew install lazygit
 brew install lazydocker
 brew install ncdu
 brew install z
 brew install gpg
+#GIT
+brew install gitui
+brew install lazygit
+brew install git-gui
 brew install git-crypt
+#ZSH
+brew install romkatv/powerlevel10k/powerlevel10k
+
 #VIM
-brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+brew install universal-ctags
 brew install fzf
 brew install vim
 brew install neovim
@@ -27,3 +33,4 @@ brew install pass-otp
 #VPN
 brew tap benwebber/tunnelblickctl
 brew install tunnelblickctl
+

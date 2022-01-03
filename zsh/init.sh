@@ -5,11 +5,15 @@ export MYCONF=$MYPERSO/config
 
 #Settings
 source $MYCONF/zsh/settings/function.sh
+source $MYCONF/zsh/settings/options.sh
+
+source $MYCONF/zsh/exports.sh
+source $MYCONF/zsh/alias.sh
+source $MYCONF/zsh/symlinks.sh
 
 #Plugin
-#source $MYCONF/zsh/antigen.sh
 source $MYCONF/zsh/zinit.sh
-source $MYCONF/zsh/adrien.sh
+source $MYCONF/zsh/plugins.sh
 
 #App
 source $MYCONF/zsh/app/git.sh
