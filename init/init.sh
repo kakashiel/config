@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "source ~/Documents/perso/config/zsh/init.sh" >> ~/.zshrc
+echo "source ~/Documents/perso/config/zsh/.zshrc" >> ~/.zshrc
 
 if [[ $OSTYPE == 'darwin'* ]]; then
   source ./os/mac/init.sh
