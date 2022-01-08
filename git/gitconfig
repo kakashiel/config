@@ -40,6 +40,7 @@
 #Push
     pf = "push --force"
     pfn = "push --force --no-verify"
+    pn = "push --no-verify"
     pup = "!push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
 #Pull
     # Safer pulls; don't do anything other than a fast forward on merge

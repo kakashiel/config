@@ -37,4 +37,6 @@ autoload -Uz compinit && compinit
 source $MYCONF/zsh/plugins-copy/npm.sh
 
 #P10k
-source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
+zsh_add_plugin "romkatv/powerlevel10k"                                                         │  3 source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
+source $MYCONF/zsh/plugins/powerlevel10k
+# source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
