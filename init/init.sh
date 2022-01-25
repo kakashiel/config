@@ -2,7 +2,7 @@
 echo "source ~/Documents/perso/config/zsh/.zshrc" >> ~/.zshrc
 
 if [[ $OSTYPE == 'darwin'* ]]; then
-  source ./os/mac/init.sh
+  source ./mac/init.sh
 fi
 
 

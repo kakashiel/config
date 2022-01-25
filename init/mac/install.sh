@@ -9,6 +9,9 @@ brew install lazydocker
 brew install ncdu
 brew install z
 brew install gpg
+brew install tmux
+brew install tmuxp
+brew install speedtest-cli
 #GIT
 brew install gitui
 brew install lazygit
@@ -22,9 +25,7 @@ brew install universal-ctags
 brew install fzf
 brew install vim
 brew install neovim
-brew install ripgrep
-brew install the_silver_searcher
-brew install fd
+brew install gnu-sed
 
 #PASS
 brew install pass

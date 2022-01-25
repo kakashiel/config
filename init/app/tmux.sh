@@ -1,6 +1,6 @@
 #!/bin/bash
 #TMUX
-pip install --user tmuxp
+pip3 install --user tmuxp
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # start a server but don't attach to it

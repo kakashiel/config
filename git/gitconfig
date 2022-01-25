@@ -41,7 +41,7 @@
     pf = "push --force"
     pfn = "push --force --no-verify"
     pn = "push --no-verify"
-    pup = "!push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
+    pup = "push --set-upstream origin"
 #Pull
     # Safer pulls; don't do anything other than a fast forward on merge
     pull = "pull --ff-only"
@@ -72,8 +72,10 @@
     # Show outgoing commits
     out = "log @{u}.."
 
+#Branch
     # Print the title of the current branch; sometimes useful for scripting
-    currentbranch = "!branch --contains HEAD | grep '*' | tr -s ' ' | cut -d ' ' -f2"
+    currentbranch = "!git branch --contains HEAD | grep '*' | tr -s ' ' | cut -d ' ' -f2"
+   listBranch = "!git --no-pager branch -vr --sort=committerdate"
 
     # Better diffs for prose
     wdiff = "diff --color-words"

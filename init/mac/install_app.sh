@@ -14,5 +14,8 @@ brew install --cask slack
 brew install --cask whatsapp 
 brew install --cask spectacle 
 brew install --cask miro 
-brew install --cask syncthing
-brew install --cask all-in-one-messenger
+#brew install --cask syncthing
+#brew install --cask all-in-one-messenger
+
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font
