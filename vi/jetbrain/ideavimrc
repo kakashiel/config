@@ -1,6 +1,7 @@
-source ~/Documents/perso/config/vi/vim/init.vim
 source ~/Documents/perso/config/vi/common/config/settings.vim
 source ~/Documents/perso/config/vi/common/mapping/mapping.vim
+" Better to manualy add them
+"source ~/Documents/perso/config/vi/common/plug.vim
 
 """ Map leader to space ---------------------
 let mapleader=" "
@@ -10,10 +11,11 @@ let maplocalleader="//"
 set commentary
 set argtextobj
 set highlightedyank
+set easymotion
+set NERDTree
 set sneak
 set surround
-set easymotion
-" set ideamarks
+set ReplaceWithRegister
 
 """ Plugin settings -------------------------
 let g:highlightedyank_highlight_color = "rgba(:136, 195, 136, 1)"
@@ -36,32 +38,38 @@ set idearefactormode=keep
 """ Mappings --------------------------------
 imap jk <Esc>
 imap kj <Esc>
-nnoremap <C-o> :action Back<CR>
-nnoremap <C-i> :action Forward<CR>
-nmap gD :action GotoImplementation<CR>
-nnoremap gd :action GotoDeclaration<CR>
-nnoremap gr :action FindUsages<CR>
-nnoremap gi :action GotoImplementation<CR>
-nnoremap gs :action ActivateStructureToolWindow<CR>
+""" Mappings --------------------------------
+map <leader>s <Plug>(easymotion-f)
+map <leader>f <Plug>(easymotion-f)
+nmap <C-o> <Action>(Back)
+nmap <C-i> <Action>(Forward)
 
-map <leader>s <Plug>(easymotion-s)
-map <leader>f :action FindInPath<CR>
+map <leader>a <Action>(Annotate)
+map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+map [d <Action>(GotoNextError)
+map ]d <Action>(GotoPreviousError)
+map <S-Space> <Action>(GotoNextError)
 
-map <leader>d :action Debug<CR>
-map <leader>rn :action RenameElement<CR>
-map <leader>c :action Stop<CR>
-map <leader>z :action ToggleDistractionFreeMode<CR>
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>o <Action>(FileStructurePopup)
 
-map <leader>p :action SelectInProjectView<CR>
-map <leader>a :action Annotate<CR>
-map <leader>h :action Vcs.ShowTabbedFileHistory<CR>
-map [d :action GotoNextError<CR>
-map ]d :action GotoPreviousError<CR>
 
-map <leader>b :action ToggleLineBreakpoint<CR>
-map <leader>o :action FileStructurePopup<CR>
-map <leader>t :action ActivateTerminalToolWindow<CR>
-map <leader>T :action Refactorings.QuickListPopupAction<CR>
-map <leader>l :action Javascript.Linters.EsLint.Fix<CR>
+map gD <action>(GotoImplementation)
+map gi <action>(QuickImplementations)
+map gd <action>(GotoDeclaration)
+map gr <action>(FindUsages)
+map gs <action>(ActivateStructureToolWindow)
 
-map <leader>v :action MoveEditorToOppositeTabGroup<CR>
+map <leader>d <action>(Debug)
+map <leader>rn <action>(RenameElement)
+map <leader>c <action>(Stop)
+map <leader>z <action>(ToggleDistractionFreeMode)
+
+
+map <leader>b <action>(ToggleLineBreakpoint)
+map <leader>o <action>(FileStructurePopup)
+map <leader>T <action>(ActivateTerminalToolWindow)
+map <leader>t <action>(Refactorings.QuickListPopupAction)
+map <leader>l <action>(Javascript.Linters.EsLint.Fix)
+
+map <leader>v <action>(MoveEditorToOppositeTabGroup)
