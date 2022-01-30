@@ -1,7 +1,6 @@
+source ~/Documents/perso/config/vi/vim/init.vim
 source ~/Documents/perso/config/vi/common/config/settings.vim
 source ~/Documents/perso/config/vi/common/mapping/mapping.vim
-" Better to manualy add them
-"source ~/Documents/perso/config/vi/common/plug.vim
 
 """ Map leader to space ---------------------
 let mapleader=" "
@@ -11,11 +10,10 @@ let maplocalleader="//"
 set commentary
 set argtextobj
 set highlightedyank
-set easymotion
-set NERDTree
 set sneak
 set surround
-set ReplaceWithRegister
+set easymotion
+" set ideamarks
 
 """ Plugin settings -------------------------
 let g:highlightedyank_highlight_color = "rgba(:136, 195, 136, 1)"
@@ -39,7 +37,7 @@ set idearefactormode=keep
 imap jk <Esc>
 imap kj <Esc>
 """ Mappings --------------------------------
-map <leader>s <Plug>(easymotion-f)
+map <leader>s <Plug>(easymotion-s)
 map <leader>f <Plug>(easymotion-f)
 nmap <C-o> <Action>(Back)
 nmap <C-i> <Action>(Forward)
@@ -55,9 +53,9 @@ map <leader>o <Action>(FileStructurePopup)
 
 
 map gD <action>(GotoImplementation)
-map gi <action>(QuickImplementations)
 map gd <action>(GotoDeclaration)
 map gr <action>(FindUsages)
+map gi <action>(GotoImplementation)
 map gs <action>(ActivateStructureToolWindow)
 
 map <leader>d <action>(Debug)
@@ -68,8 +66,8 @@ map <leader>z <action>(ToggleDistractionFreeMode)
 
 map <leader>b <action>(ToggleLineBreakpoint)
 map <leader>o <action>(FileStructurePopup)
-map <leader>T <action>(ActivateTerminalToolWindow)
-map <leader>t <action>(Refactorings.QuickListPopupAction)
+map <leader>t <action>(ActivateTerminalToolWindow)
+map <leader>T <action>(Refactorings.QuickListPopupAction)
 map <leader>l <action>(Javascript.Linters.EsLint.Fix)
 
 map <leader>v <action>(MoveEditorToOppositeTabGroup)
