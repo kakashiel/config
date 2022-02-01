@@ -11,7 +11,9 @@ export CPPFLAGS="-I/usr/local/opt/icu4c/include"
 
 export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig"
 
+alias npmi="npm i"
 alias npms="npm run start"
-alias npml="npm run logs"
+alias npmlo="npm run logs"
+alias npmli="npm run lint"
 alias npmt="npm run test"
 alias npmtf="npm run test:functional"
