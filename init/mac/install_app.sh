@@ -12,7 +12,7 @@ brew install --cask steam
 brew install --cask spotify 
 brew install --cask slack 
 brew install --cask whatsapp 
-brew install --cask spectacle 
+brew install --cask rectangle 
 brew install --cask miro 
 #brew install --cask syncthing
 #brew install --cask all-in-one-messenger

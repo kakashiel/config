@@ -4,8 +4,10 @@ brew install antigen
 brew install node
 brew install python
 brew install npm
+brew install docker-compose
 brew install oath-toolkit
 brew install lazydocker
+brew install htop
 brew install ncdu
 brew install z
 brew install gpg
