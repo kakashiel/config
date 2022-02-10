@@ -13,6 +13,7 @@ alias gbc="git --no-pager branch -vr --sort=committerdate"
 alias sec="$MYPERSO/.sec"
 alias vpn='osascript -e "tell application \"/Applications/Tunnelblick.app\"" -e "connect \"client\"" -e "end tell" ; sec'
 
+alias note="v $MYPERSO/note.txt"
 alias top="glances"
 alias pip="pip3"
 
