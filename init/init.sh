@@ -16,3 +16,4 @@ source ./app/zsh.sh
 
 source ./app/tmux.sh
 source ./app/vim.sh
+source ./app/nvchad.sh
