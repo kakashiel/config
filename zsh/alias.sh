@@ -3,7 +3,7 @@
 ###############
 
 alias la="ls -a"
-alias v="nvim"
+alias v="lvim"
 alias terra="terraform"
 alias dc="docker-compose"
 

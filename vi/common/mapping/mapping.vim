@@ -28,14 +28,14 @@ inoremap <expr> <c-k> ("\<C-p>")
 vnoremap < <gv
 vnoremap > >gv
 
+"
+""""""""
+"COMMAND (mac)
 """""""
-"Buffer
-"""""""
-" TAB in general mode will move to text buffer
-nnoremap <silent>    <TAB> :BufferPrevious<CR>
-nnoremap <silent>    <S-TAB> :BufferNext<CR>
-nnoremap <silent> <Space>bd :BufferOrderByDirectory<CR>
-nnoremap <silent> <Space>bl :BufferOrderByLanguage<CR>
+" Set up iterms 
+" https://github.com/neovim/neovim/issues/5052#issuecomment-232083842
+vnoremap <M-c> "+y
+
 
 "==============
 "Alt

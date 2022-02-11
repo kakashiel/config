@@ -17,10 +17,9 @@ M.treesitter = {
     "dot",
     "elixir",
     "elm",
-    "erland",
     "fish",
     "go",
-    "graphql"
+    "graphql",
     "html",
     "http",
     "java",
@@ -47,7 +46,7 @@ M.treesitter = {
     "tsx",
     "typescript",
     "vim",
-    "yaml"
+    "yaml",
   },
 }
 

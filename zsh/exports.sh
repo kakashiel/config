@@ -16,6 +16,8 @@ export SAVEHIST=50000
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 export PATH=/usr/local/sbin:$PATH
 export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.local/share
+export PATH=$PATH:$HOME/.local/share/nvim/lsp_servers
 
 #NVIM for evryone
 export VISUAL=nvim
