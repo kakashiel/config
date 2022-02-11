@@ -19,7 +19,10 @@ vim.cmd('source $MYCONF/vi/common/plugins/vim-tmux-navigator.vim')
 require "plugins_lvim"
 require "treesitter"
 require "lsp_servers"
+require "plugins.autosave"
 require "mappings"
 
 lvim.format_on_save = false
+
+
 
