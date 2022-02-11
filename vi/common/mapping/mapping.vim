@@ -63,21 +63,16 @@ nnoremap <C-l> <C-w>l
 
 " Close buffer
 nnoremap <C-w> :bd<CR>
-if has('nvim')
-  " nnoremap <C-s> :w<CR>
-  nnoremap <C-w> :BufferClose<CR>
-endif
+
 "==============
 "LEADER
 "==============
 nnoremap <leader>1 :NERDTreeToggle<esc><CR>
 nnoremap <leader>3 :DBUI<esc><CR>
 
-nnoremap <leader>gs :G<CR>
-nnoremap <leader>gf :diffget //2<CR>
-nnoremap <leader>gj :diffget //3<CR>
 nnoremap <leader>n :NERDTreeFind<CR>
 nnoremap <leader>N :NERDTreeToggle<CR>
+nnoremap <leader>q :q<CR>
 nnoremap <leader>z :Goyo<CR>
 nnoremap <leader>/ :Commentary<esc><CR>
 vnoremap <leader>/ :Commentary<CR>
@@ -87,8 +82,6 @@ let g:which_key_map['3'] = 'Database explorer'
 let g:which_key_map['gs'] = 'git status'
 let g:which_key_map['gf'] = 'git diff get local'
 let g:which_key_map['gj'] = 'git diff get remote'
-let g:which_key_map['n'] = 'NERDTree'
-let g:which_key_map['N'] = 'NERDTree'
 let g:which_key_map['z'] = 'Zen'
 let g:which_key_map['/'] = 'Comment'
 

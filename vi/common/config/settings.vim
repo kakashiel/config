@@ -66,24 +66,25 @@ set undofile                            " Maintain undo history between sessions
 set undodir=~/.vim/undodir              "Dir where undo are save
 set undolevels=1000                     " How many undos
 set undoreload=10000                    " number of lines to save for undo
- " This two line remove netrw from the buffer
+" This two line remove netrw from the buffer
 let g:netrw_fastbrowse = 0
 autocmd FileType netrw setl bufhidden=wipe
- " This line add num line to netrw 
+" This line add num line to netrw 
 let g:netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
 autocmd FileType *  setlocal number relativenumber
 au BufWinEnter * set number
 set completeopt=menuone,noselect        " Always open popup and user selection
 
 
- " Return to last edit position when opening files (You want this!)
+" Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
       \ if line("'\"") > 0 && line("'\"") <= line("$") |
       \   exe "normal! g`\"" |
       \ endif
 
-augroup myvimrc " auto source
-     au!
-     au BufWritePost *.lua,*.vim,.vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
- augroup END
-
+if has('vim')
+  augroup myvimrc " auto source
+    au!
+    au BufWritePost *.lua,*.vim,.vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+  augroup END
+endif

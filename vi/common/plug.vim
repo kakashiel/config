@@ -2,7 +2,7 @@
 """"""PLUGIN
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-call plug#begin('~/.vim/plugged')
+call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 "COMMON
  Plug 'https://github.com/tpope/vim-surround.git'           " Shortcut surroung
  Plug 'https://github.com/tpope/vim-commentary.git'         " intellij: comment gc & gcc

@@ -1,0 +1,25 @@
+-- COMMON
+vim.cmd('source $MYCONF/vi/common/config/settings.vim')
+vim.cmd('source $MYCONF/vi/common/mapping/mapping.vim')
+
+vim.cmd('source $MYCONF/vi/common/load_plug.vim')
+-- This file has to be manualy load a lunarvim dont do it :(
+vim.cmd('source ~/.config/nvim/autoload/plug.vim')
+vim.cmd('source $MYCONF/vi/common/plug.vim')
+--
+-- Mess up a bit color when load nvim
+-- vim.cmd('source $MYCONF/vi/common/plugins/nerdtree.vim')
+vim.cmd('source $MYCONF/vi/common/plugins/sneak.vim')
+vim.cmd('source $MYCONF/vi/common/plugins/signify.vim')
+vim.cmd('source $MYCONF/vi/common/plugins/rainbow.vim')
+vim.cmd('source $MYCONF/vi/common/plugins/argtextobj.vim')
+vim.cmd('source $MYCONF/vi/common/plugins/gutentags.vim')
+vim.cmd('source $MYCONF/vi/common/plugins/vim-tmux-navigator.vim')
+
+require "plugins_lvim"
+require "treesitter"
+require "lsp_servers"
+require "mappings"
+
+lvim.format_on_save = false
+
