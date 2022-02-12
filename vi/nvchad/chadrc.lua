@@ -24,7 +24,7 @@ M.plugins = {
 }
 
 M.ui = {
-   theme = "onedark",
+   theme = "catppuccin",
 }
 
 

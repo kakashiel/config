@@ -61,6 +61,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+nnoremap <Tab> = :bnext<CR>
+nnoremap <S-Tab> = :bprevious<CR>
 " Close buffer
 nnoremap <C-w> :bd<CR>
 
@@ -73,17 +75,12 @@ nnoremap <leader>3 :DBUI<esc><CR>
 nnoremap <leader>n :NERDTreeFind<CR>
 nnoremap <leader>N :NERDTreeToggle<CR>
 nnoremap <leader>q :q<CR>
-nnoremap <leader>z :Goyo<CR>
-nnoremap <leader>/ :Commentary<esc><CR>
-vnoremap <leader>/ :Commentary<CR>
+
 " Single mappings
 let g:which_key_map['1'] = 'explorer'
 let g:which_key_map['3'] = 'Database explorer'
-let g:which_key_map['gs'] = 'git status'
-let g:which_key_map['gf'] = 'git diff get local'
-let g:which_key_map['gj'] = 'git diff get remote'
-let g:which_key_map['z'] = 'Zen'
-let g:which_key_map['/'] = 'Comment'
+let g:which_key_map['n'] = 'Nerd tree find'
+let g:which_key_map['N'] = 'Nerd tree toggle'
 
 "==============
 "LOCALLEADER

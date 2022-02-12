@@ -17,9 +17,6 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
  Plug 'tpope/vim-rhubarb'                                   " GIT with more command
  Plug 'junegunn/gv.vim'                                     " GIT browse commit
  Plug 'mhinz/vim-signify'                                   " GIT show line modified
- Plug 'psliwka/vim-smoothie'                                " Scrolling more smooth
- Plug 'junegunn/goyo.vim'                                   " ZEN mode
- Plug 'ludovicchabant/vim-gutentags'                        " Automate the creation and updating of tags in the background
  Plug 'luochen1990/rainbow'                                 " Rainbow
  Plug 'christoomey/vim-tmux-navigator'                      " Vim/Tmux seamlessly
  " Plug 'preservim/vimux'                                     " run VimuxRunCommand
