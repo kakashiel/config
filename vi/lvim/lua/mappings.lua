@@ -4,8 +4,6 @@ SEARCH_TYPES_FILES = "!*.ts "
 
 local wk = require("which-key")
 wk.register({
-  n = {"<cmd>NvimTreeToggle<CR>", "Explorer" },
-  N = {"<cmd>NERDTreeToggle<cr>", "Tree toggle" },
   e = {"<cmd>Telescope oldfiles<cr>", "Open recent file" },
   E = {"<cmd>Telescope buffers<cr>", "Open recent buffer" },
   ["<space>"] = "which_key_ignore",
@@ -21,11 +19,15 @@ wk.register({
     g = {"<cmd>Telescope live_grep file_ignore_patterns={".. SEARCH_IGNORE..","..SEARCH_IGNORE_TESTS_FILES..","..SEARCH_TYPES_FILES.. [[}
     <cr>]], "test"}
   },
+  l = {"<cmd>lua vim.lsp.buf.formatting()<CR>", "Format" },
+  n = {"<cmd>NvimTreeToggle<CR>", "Explorer" },
+  N = {"<cmd>NERDTreeToggle<cr>", "Tree toggle" },
   O = {
     name = "Open file",
     a = {"<cmd>Telescope find_files hidden=true no_ignore=true<cr>", "Look everywhere" },
     o = {"<cmd>Telescope find_files hidden=true <cr>", "Normal" },
   },
+  rn = {"<cmd>lua vim.lsp.buf.rename()<CR>", "Rename" },
   t = {
     name = "Telescope",
     c = {"<cmd>Telescope colorscheme<cr>", "Open colorscheme" },
@@ -34,9 +36,12 @@ wk.register({
   },
 }, {prefix = "<leader>"})
 
+vim.cmd("nnoremap [d <cmd>lua vim.diagnostic.goto_next()<CR>")
+vim.cmd("nnoremap ]d <cmd>lua vim.diagnostic.goto_prev()<CR>")
+
 -- Remap default lunarvim
 lvim.builtin.which_key.mappings["e"] = {
-
-  ":Telescope oldfiles<cr>", "Open recent file"
+  ":Telescope oldfiles<cr>", "Open recent file",
 }
+
 
