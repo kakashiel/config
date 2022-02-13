@@ -4,7 +4,12 @@ vim.cmd('source $MYCONF/vi/common/mapping/mapping.vim')
 
 vim.cmd('source $MYCONF/vi/common/load_plug.vim')
 -- This file has to be manualy load a lunarvim dont do it :(
-vim.cmd('source ~/.config/nvim/autoload/plug.vim')
+vim.api.nvim_exec([[
+let data_dir = stdpath('data') . '/site' 
+execute "source " . expand(data_dir) . "/autoload/plug.vim"
+
+]], false)
+
 vim.cmd('source $MYCONF/vi/common/plug.vim')
 --
 vim.cmd('source $MYCONF/vi/common/plugins/sneak.vim')
