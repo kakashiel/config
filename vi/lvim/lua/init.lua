@@ -22,6 +22,7 @@ require "treesitter"
 require "lsp_servers"
 require "plugins.autosave"
 require "plugins.neoscroll"
+require "plugins.telescope"
 require "mappings"
 
 lvim.format_on_save = false
