@@ -3,6 +3,11 @@ formatters.setup {
   { exe = "black" },
   { exe = "black", filetypes = { "python" } },
   {
+    exe = "prettier",
+    args = { "--print-width", "100" },
+    filetypes = { "javascript", "javascriptreact","javascript.jsx", "typescript.tsx", "typescript", "typescriptreact" },
+  },
+  {
     exe = "eslint",
     args = { "--print-width", "100" },
     filetypes = { "javascript", "javascriptreact","javascript.jsx", "typescript.tsx", "typescript", "typescriptreact" },
