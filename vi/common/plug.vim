@@ -13,6 +13,8 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
  Plug 'preservim/nerdtree'                                  " intellij: Project manager
  Plug 'vim-scripts/ReplaceWithRegister'                     " intellij: repace: gr & grr
  Plug 'tommcdo/vim-exchange'                                " intellij: exchange: gc & gcc
+ Plug 'tpope/vim-repeat'                                    " Repeat also pluging
+ Plug 'tpope/vim-speeddating'                               " Incremente date & time
  Plug 'tpope/vim-fugitive'                                  " GIT
  Plug 'tpope/vim-rhubarb'                                   " GIT with more command
  Plug 'junegunn/gv.vim'                                     " GIT browse commit
