@@ -19,6 +19,8 @@ brew install gitui
 brew install lazygit
 brew install git-gui
 brew install git-crypt
+brew install git-extras
+brew install diff-so-fancy
 #ZSH
 brew install romkatv/powerlevel10k/powerlevel10k
 
