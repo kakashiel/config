@@ -1,6 +1,7 @@
 # COMPLETIONS
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
+zsh_add_plugin "zsh-users/zsh-completions"
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
@@ -24,14 +25,6 @@ bindkey -M vicmd 'j' history-substring-search-down
 #VIM
 bindkey -M viins 'jk' vi-cmd-mode
 bindkey -M viins 'kj' vi-cmd-mode
-
-#GIT
-
-# Load Git completion
-zstyle ':completion:*:*:git:*' script $MYCONF/zsh/plugins-copy/git-completion.zsh
-fpath=(~/.zsh $fpath)
-
-autoload -Uz compinit && compinit
 
 # NPM
 source $MYCONF/zsh/plugins-copy/npm.sh

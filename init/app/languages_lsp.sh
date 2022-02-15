@@ -1,11 +1,13 @@
 #! /bin/bash
 
 # lsp
+# Glow: pretty print markdown
 npm install -g \
   typescript \
   typescript-language-server \
   eslint \
-  prettier \
+  prettier \ 
+  glow \ 
   shellcheck
 
 #null-ls
