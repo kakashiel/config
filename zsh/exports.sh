@@ -20,7 +20,7 @@ export PATH=$PATH:$HOME/.local/share
 export PATH=$PATH:$HOME/.local/share/nvim/lsp_servers
 
 #NVIM for evryone
-export VISUAL=nvim
+export VISUAL=lvim
 export EDITOR="$VISUAL"
 
 
