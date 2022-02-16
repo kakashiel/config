@@ -11,6 +11,10 @@ ln -sf $MYCONF/vi/nvchad/* ~/.config/nvim/lua/custom
 #LUNARVIM
 ln -sf $MYCONF/vi/lvim/* ~/.config/lvim/
 
+#TMUX extracto
+mkdir -p ~/.config/extrakto/
+ln -f $MYCONF/tmux/extrakto.conf ~/.config/extrakto/
+
 
 ln -f $MYCONF/vi/vim/init.vim ~/.vimrc 
 ln -f $MYCONF/vi/jetbrain/ideavimrc ~/.ideavimrc 

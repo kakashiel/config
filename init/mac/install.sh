@@ -14,6 +14,7 @@ brew install gpg
 brew install tmux
 brew install tmuxp
 brew install speedtest-cli
+brew install bash
 #GIT
 brew install gitui
 brew install lazygit
