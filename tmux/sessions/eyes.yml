@@ -1,7 +1,7 @@
 session_name: eyes
 windows:
   - window_name: dev window
-    layout: main-vertical
+    layout: even-vertical
     panes:
       - shell_command: # pane no. 1
           - docker stats

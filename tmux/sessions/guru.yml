@@ -1,0 +1,8 @@
+session_name: guru
+windows:
+  - window_name: dev window
+    layout: even-vertical
+    panes:
+      -  ssh cloud_user@13.211.234.155
+      - ssh cloud_user@54.206.95.240
+      - ssh cloud_user@3.26.27.239

@@ -25,8 +25,6 @@ alias home_rig1="ssh -i $MYPERSO/credentials/euryale/ssh/mining ad@192.168.0.51"
 #Icloud nosync node_modules
 alias nosync="find ~/Documents -name node_modules -prune -exec touch {}/.nosync \;"
 
-
-
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
