@@ -17,12 +17,10 @@ map 0 ^|                             " Remap VIM 0 to first non-blank character
 command! W w !sudo tee % > /dev/null|" :W sudo saves the file 
 noremap == <esc>gg=G''<CR>|          "== Fast indent
 
-" Use backspace in normal mode
-nnoremap <BS> i<BS><Esc>`^
-
-"Better nav for omnicomplete
-inoremap <expr> <c-j> ("\<C-n>")
-inoremap <expr> <c-k> ("\<C-p>")
+" Git diff conflict
+nnoremap <leader>gD :Gvdiffsplit!<CR>
+nnoremap gdh :diffget //2<CR>
+nnoremap gdl :diffget //3<CR>
 
 " Better tabbing
 vnoremap < <gv

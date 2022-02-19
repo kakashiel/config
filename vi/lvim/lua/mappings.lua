@@ -21,9 +21,6 @@ wk.register({
   },
   g = {
     D = {"<cmd>Gvdiffsplit! <cr>", "Diff 3 way" },
-    dh = {"<cmd>diffget //2 <cr>", "Get left" },
-    dl = {"<cmd>diffget //3<cr>", "Get Right" },
-
   },
   l = {"<cmd>lua vim.lsp.buf.formatting()<CR>", "Format" },
   n = {"<cmd>NvimTreeToggle<CR>", "Explorer" },
