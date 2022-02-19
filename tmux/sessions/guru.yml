@@ -4,5 +4,8 @@ windows:
     layout: even-vertical
     panes:
       -  ssh cloud_user@13.211.234.155
+        =l
       - ssh cloud_user@54.206.95.240
+
+kkk
       - ssh cloud_user@3.26.27.239
