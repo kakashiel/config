@@ -88,29 +88,16 @@
     ref = "reflog --pretty='%Cred%h%Creset %<|(15)%gd -%C(auto)%d%Creset %gs %C(blue)%cr%C(reset) %C(bold blue)<%an>%Creset'"
 
 
-[diff]
-  # Use better, descriptive initials (c, i, w) instead of a/b.
-  mnemonicPrefix = true
-  # Show renames/moves as such
-  renames = true
-  # When using --word-diff, assume --word-diff-regex=.
-  wordRegex = .
-  # Display submodule-related information (commit listings)
-  submodule = log
-  # Use VSCode as default diff tool when running `git diff-tool`
-  tool = vscode
-[difftool "vscode"]
-  cmd = code --wait --diff $LOCAL $REMOTE
-
-  # define command which will be used when "nvim" is set as a merge tool
-[mergetool "nvim"]
-  cmd = nvim -f -c \"Gvdiffsplit!\" \"$MERGED\"
 # set "nvim" as tool for merging
 [merge]
   tool = nvim
 # automatically launch merge tool without displaying a prompt
 [mergetool]
+	keepBackup = false
   prompt = false
+[mergetool "nvim"]
+  cmd = nvim -f -c \"Gvdiffsplit!\" \"$MERGED\"
+
 # git diff-so-fancy 
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
