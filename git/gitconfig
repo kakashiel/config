@@ -90,13 +90,18 @@
 
 # set "nvim" as tool for merging
 [merge]
-  tool = nvim
+  tool = merge3
 # automatically launch merge tool without displaying a prompt
 [mergetool]
 	keepBackup = false
   prompt = false
-[mergetool "nvim"]
-  cmd = nvim -f -c \"Gvdiffsplit!\" \"$MERGED\"
+#Not working with new lua nvim :(
+# https://www.reddit.com/r/neovim/comments/qatokl/using_nvim_as_mergetool_with_vimfugitive/
+[mergetool "fugitive"]
+    cmd = nvim -f -c \"Gvdiffsplit!\" \"$MERGED\"
+[mergetool "merge3"]
+    cmd = nvim -d -c \"wincmd l\" \"$LOCAL\" \"$MERGED\" \"$REMOTE\"
+
 
 # git diff-so-fancy 
 [core]

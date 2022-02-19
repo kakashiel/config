@@ -19,21 +19,16 @@ noremap == <esc>gg=G''<CR>|          "== Fast indent
 
 " Git diff conflict
 nnoremap <leader>gD :Gvdiffsplit!<CR>
-nnoremap gdh :diffget //2<CR>
-nnoremap gdl :diffget //3<CR>
+" For Gvdiffsplit
+" nnoremap gdh :diffget //2<CR>
+" nnoremap gdl :diffget //3<CR>
+
+nnoremap gdh :diffget LOCAL<CR>
+nnoremap gdl :diffget REMOTE<CR>
 
 " Better tabbing
 vnoremap < <gv
 vnoremap > >gv
-
-"
-""""""""
-"COMMAND (mac)
-"""""""
-" Set up iterms 
-" https://github.com/neovim/neovim/issues/5052#issuecomment-232083842
-vnoremap <M-c> "+y
-
 
 "==============
 "Alt
@@ -59,10 +54,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-nnoremap <Tab> = :bnext<CR>
-nnoremap <S-Tab> = :bprevious<CR>
-" Close buffer
-nnoremap <C-w> :bd<CR>
 
 "==============
 "LEADER
@@ -73,6 +64,11 @@ nnoremap <leader>3 :DBUI<esc><CR>
 nnoremap <leader>n :NERDTreeFind<CR>
 nnoremap <leader>N :NERDTreeToggle<CR>
 nnoremap <leader>q :q<CR>
+
+" Close buffer
+nnoremap <leader>w :bd<CR>
+nnoremap <Tab> = :bnext<CR>
+nnoremap <S-Tab> = :bprevious<CR>
 
 " Single mappings
 let g:which_key_map['1'] = 'explorer'
