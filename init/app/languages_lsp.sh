@@ -1,14 +1,17 @@
 #! /bin/bash
 
-# lsp
+# Typescript
 npm install -g \
   typescript \
   typescript-language-server \
   eslint \
-  prettier \ 
-  shellcheck
+  prettier 
+
+# Bash
+npm install -g shellcheck
 
 # Glow: pretty print markdown
 brew install glow
 
-#null-ls
+# Java
+brew install java clang-format
