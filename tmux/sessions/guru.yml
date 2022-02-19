@@ -3,6 +3,6 @@ windows:
   - window_name: dev window
     layout: even-vertical
     panes:
-      -  ssh cloud_user@13.211.234.155
-      - ssh cloud_user@54.206.95.240
-      - ssh cloud_user@3.26.27.239
+      - ssh cloud_user@569becc0031c.mylabserver.com
+      - ssh cloud_user@569becc0032c.mylabserver.com
+      - ssh cloud_user@569becc0033c.mylabserver.com
