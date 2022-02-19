@@ -1,3 +1,4 @@
+--
 session_name: guru
 windows:
   - window_name: dev window
