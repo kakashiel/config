@@ -39,16 +39,16 @@ vnoremap <M-c> "+y
 "Alt
 "==============
 
-" Use alt + hjkl to resize windows
-nnoremap <M-j>    :resize -2<CR>
-nnoremap <M-k>    :resize +2<CR>
-nnoremap <M-h>    :vertical resize -2<CR>
-nnoremap <M-l>    :vertical resize +2<CR>
-" Use alt + hjkl to resize windows (MAC)
-nnoremap ∆    :resize -2<CR>
-nnoremap ˚    :resize +2<CR>
-nnoremap ˙    :vertical resize -2<CR>
-nnoremap ¬    :vertical resize +2<CR>
+" Use alt + maj + hjkl to resize windows
+nnoremap <M-J>    :resize -2<CR>
+nnoremap <M-K>    :resize +2<CR>
+nnoremap <M-H>    :vertical resize -2<CR>
+nnoremap <M-L>    :vertical resize +2<CR>
+" Use alt + maj + hjkl to resize windows (MAC)
+nnoremap Ô    :resize -2<CR>
+nnoremap     :resize +2<CR>
+nnoremap Ó    :vertical resize -2<CR>
+nnoremap Ò    :vertical resize +2<CR>
 
 "==============
 "Ctrl
