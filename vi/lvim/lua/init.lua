@@ -17,6 +17,7 @@ vim.cmd('source $MYCONF/vi/common/plugins/signify.vim')
 vim.cmd('source $MYCONF/vi/common/plugins/rainbow.vim')
 vim.cmd('source $MYCONF/vi/common/plugins/vim-tmux-navigator.vim')
 
+
 require "plugins_lvim"
 require "treesitter"
 require "lsp_servers"
@@ -27,5 +28,8 @@ require "mappings"
 
 lvim.format_on_save = false
 
+
+-- NVIM
+vim.opt.clipboard = ""
 
 
