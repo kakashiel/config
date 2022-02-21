@@ -1461,6 +1461,8 @@
 	<false/>
 	<key>StatusBarPosition</key>
 	<integer>1</integer>
+	<key>TabStyleWithAutomaticOption</key>
+	<integer>5</integer>
 	<key>TabViewType</key>
 	<integer>2</integer>
 	<key>VisualIndicatorForEsc</key>

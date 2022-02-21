@@ -19,4 +19,5 @@ source $MYCONF/zsh/app/pass.sh
 source $MYCONF/zsh/app/tmux.sh
 source $MYCONF/zsh/app/z.sh
 source $MYCONF/zsh/app/fzf.sh
+source $MYCONF/zsh/app/java.zsh
 
