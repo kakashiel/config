@@ -13,6 +13,7 @@ set highlightedyank
 set sneak
 set surround
 set easymotion
+set NERDTree
 " set ideamarks
 
 """ Plugin settings -------------------------
