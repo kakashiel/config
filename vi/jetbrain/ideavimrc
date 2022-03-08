@@ -81,7 +81,8 @@ map <leader>rm <action>(ExtractMethod)
 map <leader>rn <action>(RenameElement)
 map <leader>rr <action>(RenameElement)
 map <leader>rg <action>(Generate)
-map <leader>rI <action>(OptimizeImports)
+map <leader>ro <action>(OptimizeImports)
+map <leader>ri <action>(OptimizeImports)
 
 " Splits manipulation
 map <leader>ws <action>(SplitHorizontally)
