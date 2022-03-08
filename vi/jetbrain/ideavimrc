@@ -43,6 +43,7 @@ map <leader>f <Plug>(easymotion-f)
 nmap <C-o> <Action>(Back)
 nmap <C-i> <Action>(Forward)
 
+map <leader>/ <Action>(CommentByLineComment)
 map <leader>a <Action>(Annotate)
 map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
 map [d <Action>(GotoNextError)

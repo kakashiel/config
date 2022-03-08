@@ -15,6 +15,7 @@ fi
 source ./app/zsh.sh
 
 source ./app/tmux.sh
+source ./app/lvim.sh
 #LSP HERE
 source ./app/languages_lsp.sh
 source ./app/nvchad.sh

@@ -14,6 +14,7 @@ brew install --cask slack
 brew install --cask whatsapp 
 brew install --cask rectangle 
 brew install --cask miro 
+brew install --cask anki
 #brew install --cask syncthing
 #brew install --cask all-in-one-messenger
 
