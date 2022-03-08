@@ -37,7 +37,10 @@ set idearefactormode=keep
 """ Mappings --------------------------------
 imap jk <Esc>
 imap kj <Esc>
+
+""" Action List https://gist.github.com/zchee/9c78f91cc5ad771c1f5d
 """ Mappings --------------------------------
+
 map <leader>s <Plug>(easymotion-s)
 map <leader>f <Plug>(easymotion-f)
 nmap <C-o> <Action>(Back)
@@ -57,19 +60,32 @@ map <leader>o <Action>(FileStructurePopup)
 map gD <action>(GotoImplementation)
 map gd <action>(GotoDeclaration)
 map gr <action>(FindUsages)
-map gi <action>(GotoImplementation)
+map gi <action>(QuickImplementations)
 map gs <action>(ActivateStructureToolWindow)
+map gt <action>(GotoTest)
 
 map <leader>d <action>(Debug)
-map <leader>rn <action>(RenameElement)
 map <leader>c <action>(Stop)
 map <leader>z <action>(ToggleDistractionFreeMode)
 
 
+map <leader>e <action>(RecentFiles)
 map <leader>b <action>(ToggleLineBreakpoint)
 map <leader>o <action>(FileStructurePopup)
 map <leader>t <action>(ActivateTerminalToolWindow)
-map <leader>T <action>(Refactorings.QuickListPopupAction)
 map <leader>l <action>(Javascript.Linters.EsLint.Fix)
 
-map <leader>v <action>(MoveEditorToOppositeTabGroup)
+" Refactorings
+map <leader>T <action>(Refactorings.QuickListPopupAction)
+map <leader>rm <action>(ExtractMethod)
+map <leader>rn <action>(RenameElement)
+map <leader>rr <action>(RenameElement)
+map <leader>rg <action>(Generate)
+map <leader>rI <action>(OptimizeImports)
+
+" Splits manipulation
+map <leader>ws <action>(SplitHorizontally)
+map <leader>wv <action>(SplitVertically)
+map <leader>wc <action>(Unsplit)
+map <leader>wC <action>(UnsplitAll)
+map <leader>wd <action>(OpenEditorInOppositeTabGroup)
