@@ -1,7 +1,7 @@
-echo "GovTech: SHIP: `oathtool -w 0 --totp -b ILJQWD77XK56ALX4`"
+# echo "GovTech: SHIP: `oathtool -w 0 --totp -b 65RSUX4Y2ENDNWLT`"
 
 if [ "$(uname)" == "Darwin" ]; then
-  oathtool -w 0 --totp -b ILJQWD77XK56ALX4 | tr -d '\n' | pbcopy
+  oathtool -w 0 --totp -b 65RSUX4Y2ENDNWLT | tr -d '\n' | pbcopy
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   echo 'Copyboard on linux not done'
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then

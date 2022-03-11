@@ -1,3 +1,4 @@
 #With brew install z
-. /usr/local/etc/profile.d/z.sh
+. /opt/homebrew/etc/profile.d/z.sh
+
 
