@@ -23,5 +23,5 @@ source $MYCONF/zsh/app/fzf.sh
 # source $MYCONF/zsh/app/java.zsh
 
 #Work
-alias trust="$MYCONF/work/trust/sec.sh"
+alias phx="$MYCONF/work/trust/sec.sh"
 
