@@ -1,4 +1,5 @@
 #Settings
+source ~/.zsh_profile
 source $MYCONF/zsh/settings/function.sh
 source $MYCONF/zsh/settings/options.sh
 
@@ -14,7 +15,6 @@ source $MYCONF/zsh/plugins.sh
 source $MYCONF/zsh/app/git.sh
 source $MYCONF/zsh/app/npm.sh
 source $MYCONF/zsh/app/python.sh
-source $MYCONF/zsh/app/brew.sh
 # source $MYCONF/zsh/app/android.sh
 source $MYCONF/zsh/app/pass.sh
 source $MYCONF/zsh/app/tmux.sh
