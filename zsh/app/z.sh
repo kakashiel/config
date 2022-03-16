@@ -1,3 +1,5 @@
+#! /bin/sh
+
 #With brew install z
 if [[ -z "${OLD_BREW}" ]]; then
   MY_SCRIPT_VARIABLE="Some default value because DEPLOY_ENV is undefined"

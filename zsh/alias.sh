@@ -1,3 +1,5 @@
+#! /bin/sh
+
 ###############
 #ALIAS
 ###############
@@ -16,7 +18,6 @@ alias vpn='osascript -e "tell application \"/Applications/Tunnelblick.app\"" -e 
 alias note="v $MYPERSO/note.txt"
 alias todo="v $MYPERSO/todo.txt"
 alias top="glances"
-alias pip="pip3"
 
 alias home_vpn="ssh pi@192.168.0.50"
 alias home_rig1="ssh -i $MYPERSO/credentials/euryale/ssh/mining ad@192.168.0.51"

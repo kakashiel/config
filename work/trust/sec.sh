@@ -1,4 +1,4 @@
-# echo "GovTech: SHIP: `oathtool -w 0 --totp -b 65RSUX4Y2ENDNWLT`"
+echo "Phoenix: GitHub: `oathtool -w 0 --totp -b XPSUFH4FAW2NLZCU`"
 
 if [ "$(uname)" == "Darwin" ]; then
   oathtool -w 0 --totp -b 65RSUX4Y2ENDNWLT | tr -d '\n' | pbcopy

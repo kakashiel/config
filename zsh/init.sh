@@ -1,5 +1,7 @@
-#Settings
+#! /bin/sh
+
 source ~/.zsh_profile
+#Settings
 source $MYCONF/zsh/settings/function.sh
 source $MYCONF/zsh/settings/options.sh
 
@@ -21,6 +23,8 @@ source $MYCONF/zsh/app/tmux.sh
 source $MYCONF/zsh/app/z.sh
 source $MYCONF/zsh/app/fzf.sh
 # source $MYCONF/zsh/app/java.zsh
+source $MYCONF/zsh/app/k8s.sh
+source $MYCONF/zsh/app/aws.sh
 
 #Work
 alias phx="$MYCONF/work/trust/sec.sh"

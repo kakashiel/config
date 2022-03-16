@@ -1,3 +1,5 @@
+#! /bin/sh
+
 ###############
 #EXPORT
 ###############
@@ -18,6 +20,8 @@ export PATH=/usr/local/sbin:$PATH
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.local/share
 export PATH=$PATH:$HOME/.local/share/nvim/lsp_servers
+export PATH=/opt/homebrew/bin/:$PATH
+
 
 #NVIM for evryone
 export VISUAL=lvim
