@@ -6,6 +6,6 @@ if ! [ -x "$(command -v aws)" ]; then
   fi
 else
   alias k="kubectl"
-  export KUBECONFIG=~/.kube/config:~/.kube/kubconfig2 
+  export KUBECONFIG=./kubeconfig:~/.kube/config 
   source <(kubectl completion zsh)
 fi

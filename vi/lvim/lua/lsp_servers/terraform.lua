@@ -1,4 +1,3 @@
-local parser_configs = require("nvim-treesitter.parsers").get_parser_configs()
-parser_configs.hcl = {
-  filetype = "hcl", "terraform",
-}
+require'lspconfig'.terraformls.setup{}
+vim.cmd('autocmd BufWritePre *.tf lua vim.lsp.buf.formatting_sync()')
+

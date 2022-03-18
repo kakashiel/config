@@ -23,7 +23,7 @@ source $MYCONF/zsh/app/tmux.sh
 source $MYCONF/zsh/app/z.sh
 source $MYCONF/zsh/app/fzf.sh
 # source $MYCONF/zsh/app/java.zsh
-source $MYCONF/zsh/app/k8s.sh
+source $MYCONF/zsh/app/kubernetes.sh
 source $MYCONF/zsh/app/aws.sh
 source $MYCONF/zsh/app/terraform.sh
 
