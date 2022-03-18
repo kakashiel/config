@@ -5,6 +5,7 @@ if ! [ -x "$(command -v aws)" ]; then
     brew install kubectl
   fi
 else
-  source <(kubectl completion zsh)
   alias k="kubectl"
+  export KUBECONFIG=~/.kube/config:~/.kube/kubconfig2 
+  source <(kubectl completion zsh)
 fi

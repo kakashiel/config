@@ -6,7 +6,6 @@
 
 alias la="ls -a"
 alias v="lvim"
-alias terra="terraform"
 alias dc="docker-compose"
 
 alias gpmyconf="cd $MYCONF && g aa && g cam 'update myconf' && g l && g p && cd -"

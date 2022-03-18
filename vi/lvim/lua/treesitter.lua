@@ -18,6 +18,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "graphql",
   "html",
   "http",
+  "hcl",
   "java",
   "javascript",
   "jsdoc",
