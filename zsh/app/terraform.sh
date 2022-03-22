@@ -6,8 +6,7 @@ if ! [ -x "$(command -v terraform)" ]; then
     brew install hashicorp/tap/terraform
   fi
   terraform -install-autocomplete
-else
-  alias t="terraform"
-  alias terra="terraform"
 fi
+alias t="terraform"
+alias terra="terraform"
 
