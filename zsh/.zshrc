@@ -3,7 +3,13 @@ export MYWORK=$HOME/work
 export MYPERSO=$MYDOC/perso
 export MYCONF=$MYPERSO/config
 
-source $MYCONF/zsh/init.sh
+#M1
+if [[ $(uname -m) == 'arm64' ]]; then
+  echo M1
+fi
+  source $MYCONF/zsh/init.sh
+
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/Documents/perso/config/zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.

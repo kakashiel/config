@@ -6,6 +6,8 @@ npm install -g \
   typescript-language-server \
   eslint \
   prettier 
+# Graphql lsp
+npm i graphql-language-service-server
 
 # Bash
 npm install -g shellcheck
