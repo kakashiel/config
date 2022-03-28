@@ -4,10 +4,10 @@ export MYPERSO=$MYDOC/perso
 export MYCONF=$MYPERSO/config
 
 #M1
-if [[ $(uname -m) == 'arm64' ]]; then
-  echo M1
-fi
-  source $MYCONF/zsh/init.sh
+# if [[ $(uname -m) == 'arm64' ]]; then
+#   echo M1
+# fi
+source $MYCONF/zsh/init.sh
 
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/Documents/perso/config/zsh/.zshrc.
