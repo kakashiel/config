@@ -20,11 +20,11 @@ noremap == <esc>gg=G''<CR>|          "== Fast indent
 " Git diff conflict
 nnoremap <leader>gD :Gvdiffsplit!<CR>
 " For Gvdiffsplit
-" nnoremap gdh :diffget //2<CR>
-" nnoremap gdl :diffget //3<CR>
+nnoremap gdh :diffget //2<CR>
+nnoremap gdl :diffget //3<CR>
 
-nnoremap gdh :diffget LOCAL<CR>
-nnoremap gdl :diffget REMOTE<CR>
+" nnoremap gdh :diffget LOCAL<CR>
+" nnoremap gdl :diffget REMOTE<CR>
 
 " Better tabbing
 vnoremap < <gv

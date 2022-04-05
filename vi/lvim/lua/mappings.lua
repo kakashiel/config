@@ -47,7 +47,7 @@ lvim.builtin.which_key.mappings["e"] = {
   ":Telescope oldfiles<cr>", "Open recent file",
 }
 lvim.builtin.which_key.mappings["q"] = {
-  ":wq<cr>", "Save and quit",
+  ":q<cr>", "Quit",
 }
 lvim.builtin.which_key.mappings["S"]= {
   name = "Session",

@@ -43,6 +43,10 @@ lvim.plugins = {
     "felipec/vim-sanegx",
     event = "BufRead",
   },
+  { -- nvim enable on browser with firenvim 
+    'glacambre/firenvim',
+    run = function() vim.fn['firenvim#install'](0) end 
+  },
   -- COLORSCHEME
   {'FrenzyExists/aquarium-vim'},
   {'catppuccin/nvim'},

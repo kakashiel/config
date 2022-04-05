@@ -1,6 +1,5 @@
 #! /bin/sh
 export ZDOTDIR=~/
-
 source ~/.zsh_profile
 #Settings
 source $MYCONF/zsh/settings/function.sh
