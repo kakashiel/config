@@ -43,6 +43,9 @@ imap kj <Esc>
 
 map <leader>s <Plug>(easymotion-s)
 map <leader>f <Plug>(easymotion-f)
+map s <Plug>(easymotion-f)
+map S <Plug>(easymotion-F)
+map gs <Plug>(easymotion-s)
 nmap <C-o> <Action>(Back)
 nmap <C-i> <Action>(Forward)
 
