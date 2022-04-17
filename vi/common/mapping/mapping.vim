@@ -30,6 +30,10 @@ nnoremap gdl :diffget //3<CR>
 vnoremap < <gv
 vnoremap > >gv
 
+" Map Ctrl-Backspace to delete the previous word in insert mode.
+imap <C-BS> <C-w>
+
+
 "==============
 "Alt
 "==============

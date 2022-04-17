@@ -82,7 +82,7 @@ autocmd BufReadPost *
       \   exe "normal! g`\"" |
       \ endif
 
-if has('vim')
+if !has('nvim')
   augroup myvimrc " auto source
     au!
     au BufWritePost *.lua,*.vim,.vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
