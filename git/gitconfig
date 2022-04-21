@@ -1,95 +1,102 @@
 #
-[user]
-  name = Adrien L
-  email = adrien.loustaunau@gmail.com
-[includeIf "gitdir:~/work/PrjPhx"] # job needs, like workspace/* so all included projects
-  [user]
-    name = adrien-loustaunau-prjphx
-    email = adrien.loustaunau@prjphx.com
+; [user]
+;   name = Adrien L
+;   email = adrien.loustaunau@gmail.com
+; [user]
+;   name = adrien-loustaunau-prjphx
+;   email = adrien.loustaunau@prjphx.com
+; [includeIf "gitdir:~/Documents/perso"] # job needs, like workspace/* so all included projects
+;   path = ~/Documents/perso/config/git/gitconfig-gitlab
+
+[includeIf "gitdir:~/Documents/perso"]
+  path = ~/Documents/perso/config/git/gitconfig-perso
+[includeIf "gitdir:~/work/"]
+  path = ~/Documents/perso/config/git/gitconfig-work
+
 # -*- Conf -*-
 [color]
-	branch = auto
-	diff = auto
-	status = auto
+  branch = auto
+  diff = auto
+  status = auto
   showbranch = auto
-	ui = true
+  ui = true
 [alias]
     # List things
-    tags = "tag -l"
-    branches = "branch -a"
-    remotes = "remote -v"
+  tags = "tag -l"
+  branches = "branch -a"
+  remotes = "remote -v"
 
     # Shorten common commands
-    co = "checkout"
-    st = "status"
-    br = "branch"
-    ci = "commit"
-    d = "diff"
-    a = "add"
-    l = "pull"
-    p = "push"
-    f = "fetch"
-    st = "status"
+  co = "checkout"
+  st = "status"
+  br = "branch"
+  ci = "commit"
+  d = "diff"
+  a = "add"
+  l = "pull"
+  p = "push"
+  f = "fetch"
+  st = "status"
 
 
 #Commit
     # Amend last commit without modifying commit message
-    amend = "!log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend"
-    aa = "add --all"
-    cam = "commit -a -m"
-    cana = "commit -v -a --no-edit --amend"
-    ct = "citool"
-    cta = "citool -amend"
+  amend = "!log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend"
+  aa = "add --all"
+  cam = "commit -a -m"
+  cana = "commit -v -a --no-edit --amend"
+  ct = "citool"
+  cta = "citool -amend"
 
 #Push
-    pf = "push --force"
-    pfn = "push --force --no-verify"
-    pn = "push --no-verify"
-    pup = "push --set-upstream origin"
+  pf = "push --force"
+  pfn = "push --force --no-verify"
+  pn = "push --no-verify"
+  pup = "push --set-upstream origin"
 #Pull
     # Safer pulls; don't do anything other than a fast forward on merge
-    pull = "pull --ff-only"
-    lr = "pull --rebase"
+  pull = "pull --ff-only"
+  lr = "pull --rebase"
 #Rebase
-    rb = "rebase"
+  rb = "rebase"
   rbc = "rebase --continue"
   rbs = "rebase --skip"
   rba = "rebase --abort"
 
 #Log
     # Log that starts a pager with titles of all the commits in your tree
-    ll = "log --color=always --all --topo-order --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+  ll = "log --color=always --all --topo-order --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
     # Log that shows the last 10 commits as a graph
-    lg = "log -10 --color=always --all --graph --topo-order --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+  lg = "log -10 --color=always --all --graph --topo-order --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
     # Log that shows all commits as a graph (using a pager)
-    lgl = "log --color=always --all --graph --topo-order --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-    lo="log --oneline --decorate"
-    lod="log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'"
-    lods="log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=short"
-    log="log --oneline --decorate --graph"
-    loga="log --oneline --decorate --graph --all"
-    lol="log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
-    lola="log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all"
-    lols="log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --stat"
+  lgl = "log --color=always --all --graph --topo-order --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+  lo="log --oneline --decorate"
+  lod="log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'"
+  lods="log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=short"
+  log="log --oneline --decorate --graph"
+  loga="log --oneline --decorate --graph --all"
+  lol="log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+  lola="log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all"
+  lols="log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --stat"
 
 
     # Show outgoing commits
-    out = "log @{u}.."
+  out = "log @{u}.."
 
 #Branch
     # Print the title of the current branch; sometimes useful for scripting
-    currentbranch = "!git branch --contains HEAD | grep '*' | tr -s ' ' | cut -d ' ' -f2"
-   listBranch = "!git --no-pager branch -vr --sort=committerdate"
+  currentbranch = "!git branch --contains HEAD | grep '*' | tr -s ' ' | cut -d ' ' -f2"
+  listBranch = "!git --no-pager branch -vr --sort=committerdate"
 
     # Better diffs for prose
-    wdiff = "diff --color-words"
+  wdiff = "diff --color-words"
 
     # Create a commit that will be automatically squashed as a fixup when you
     # run `git rebase --autosquash`
-    fixup = "commit --fixup=HEAD"
+  fixup = "commit --fixup=HEAD"
 
     #When everything is break
-    ref = "reflog --pretty='%Cred%h%Creset %<|(15)%gd -%C(auto)%d%Creset %gs %C(blue)%cr%C(reset) %C(bold blue)<%an>%Creset'"
+  ref = "reflog --pretty='%Cred%h%Creset %<|(15)%gd -%C(auto)%d%Creset %gs %C(blue)%cr%C(reset) %C(bold blue)<%an>%Creset'"
 
 
 # set "nvim" as tool for merging
@@ -97,18 +104,18 @@
   tool = merge3
 # automatically launch merge tool without displaying a prompt
 [mergetool]
-	keepBackup = false
+  keepBackup = false
   prompt = false
 #Not working with new lua nvim :(
 # https://www.reddit.com/r/neovim/comments/qatokl/using_nvim_as_mergetool_with_vimfugitive/
 [mergetool "fugitive"]
-    cmd = nvim -f -c \"Gvdiffsplit!\" \"$MERGED\"
+  cmd = nvim -f -c \"Gvdiffsplit!\" \"$MERGED\"
 [mergetool "merge3"]
-    cmd = nvim -d -c \"wincmd l\" \"$LOCAL\" \"$MERGED\" \"$REMOTE\"
+  cmd = nvim -d -c \"wincmd l\" \"$LOCAL\" \"$MERGED\" \"$REMOTE\"
 
 
 # git diff-so-fancy 
 [core]
-	pager = diff-so-fancy | less --tabs=4 -RFX
+  pager = diff-so-fancy | less --tabs=4 -RFX
 [interactive]
-	diffFilter = diff-so-fancy --patch
+  diffFilter = diff-so-fancy --patch
