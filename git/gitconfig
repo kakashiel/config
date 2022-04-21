@@ -1,4 +1,7 @@
 #
+[user]
+	name = test
+  email = adrien.loustaunau@gmail.com
 ; [user]
 ;   name = Adrien L
 ;   email = adrien.loustaunau@gmail.com
@@ -8,10 +11,10 @@
 ; [includeIf "gitdir:~/Documents/perso"] # job needs, like workspace/* so all included projects
 ;   path = ~/Documents/perso/config/git/gitconfig-gitlab
 
-[includeIf "gitdir:~/Documents/perso"]
-  path = ~/Documents/perso/config/git/gitconfig-perso
-[includeIf "gitdir:~/work/"]
-  path = ~/Documents/perso/config/git/gitconfig-work
+; [includeIf "gitdir:~/Documents/perso"]
+;   path = ~/Documents/perso/config/git/gitconfig-perso
+; [includeIf "gitdir:~/work/"]
+;   path = ~/Documents/perso/config/git/gitconfig-work
 
 # -*- Conf -*-
 [color]
