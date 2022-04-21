@@ -2,7 +2,7 @@
   name = Adrien L
   email = adrien.loustaunau@gmail.com
 
-[includeIf "gitdir:~/Documents"]
+[includeIf "gitdir:~/Documents/perso/config"]
   path = ~/Documents/perso/config/git/gitconfig-perso
 [includeIf "gitdir:~/work/"]
   path = ~/Documents/perso/config/git/gitconfig-work
