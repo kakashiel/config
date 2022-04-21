@@ -1,15 +1,6 @@
-#
-[user]
-	name = test
-  email = adrien.loustaunau@gmail.com
-; [user]
-;   name = Adrien L
-;   email = adrien.loustaunau@gmail.com
-; [user]
-;   name = adrien-loustaunau-prjphx
-;   email = adrien.loustaunau@prjphx.com
-; [includeIf "gitdir:~/Documents/perso"] # job needs, like workspace/* so all included projects
-;   path = ~/Documents/perso/config/git/gitconfig-gitlab
+#[user]
+#  name = Adrien L
+#  email = adrien.loustaunau@gmail.com
 
 [includeIf "gitdir:~/Documents"]
   path = ~/Documents/perso/config/git/gitconfig-perso
