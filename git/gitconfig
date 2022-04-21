@@ -13,8 +13,8 @@
 
 ; [includeIf "gitdir:~/Documents/perso"]
 ;   path = ~/Documents/perso/config/git/gitconfig-perso
-; [includeIf "gitdir:~/work/"]
-;   path = ~/Documents/perso/config/git/gitconfig-work
+[includeIf "gitdir:~/work/"]
+  path = ~/Documents/perso/config/git/gitconfig-work
 
 # -*- Conf -*-
 [color]
