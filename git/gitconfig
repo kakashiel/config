@@ -2,6 +2,10 @@
 [user]
   name = Adrien L
   email = adrien.loustaunau@gmail.com
+[includeIf "gitdir:~/work/PrjPhx"] # job needs, like workspace/* so all included projects
+  [user]
+    name = adrien-loustaunau-prjphx
+    email = adrien.loustaunau@prjphx.com
 # -*- Conf -*-
 [color]
 	branch = auto

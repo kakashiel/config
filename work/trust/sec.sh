@@ -1,4 +1,5 @@
 echo "Phoenix: GitHub: `oathtool -w 0 --totp -b XPSUFH4FAW2NLZCU`"
+echo "Phoenix: learning: `oathtool -w 0 --totp -b 3D7E7IVAZQP5ZR43`"
 
 if [ "$(uname)" == "Darwin" ]; then
   oathtool -w 0 --totp -b 65RSUX4Y2ENDNWLT | tr -d '\n' | pbcopy

@@ -4,9 +4,7 @@
 
 mkdir -p ~/.config/nvim
 #NVCHAD
-mkdir -p ~/.config/nvim/lua
-mkdir -p ~/.config/nvim/lua/custom
-ln -sf $MYCONF/vi/nvchad/* ~/.config/nvim/lua/custom
+ln -sf $MYCONF/vi/nvim/* ~/.config/nvim/
 
 #LUNARVIM
 ln -sf $MYCONF/vi/lvim/* ~/.config/lvim/
