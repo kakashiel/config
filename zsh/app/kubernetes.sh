@@ -1,6 +1,7 @@
 #! /bin/sh
 
-if ! [ -x "$(command -v aws)" ]; then
+# if ! [ -x "$(command -v kubectl)" ]; then
+if ! command -v kubectl &> /dev/null; then
   if [[ "$OSTYPE" == "darwin"* ]]; then
     brew install kubectl
   fi

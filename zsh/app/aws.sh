@@ -1,5 +1,6 @@
 #! /bin/sh
-if ! [ -x "$(command -v aws)" ]; then
+# if ! [ -x "$(command -v aws)" ]; then
+if ! command -v aws &> /dev/null; then
   if [[ "$OSTYPE" == "darwin"* ]]; then
     brew install awscli
     brew install eksctl
