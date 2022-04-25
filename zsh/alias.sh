@@ -9,6 +9,7 @@ alias v="lvim"
 alias dc="docker-compose"
 
 alias gpmyconf="cd $MYCONF && g aa && g cam 'update myconf' && g l && g p && cd -"
+alias gpleet="cd $MYPERSO/leetcode && g aa && g cam 'Auto push leetcode' && g l && g p && cd -"
 alias gbc="git --no-pager branch -vr --sort=committerdate"
 
 alias sec="$MYPERSO/.sec"
