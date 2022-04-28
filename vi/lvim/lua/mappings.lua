@@ -4,6 +4,10 @@ SEARCH_TYPES_FILES = "!*.ts "
 
 local wk = require("which-key")
 wk.register({
+  b = {
+    name = "Buffer",
+    c = {"<cmd>%bd|e#|bd#<cr>", "Close all buffers expect current" },
+  },
   e = {"<cmd>Telescope oldfiles<cr>", "Open recent file" },
   E = {"<cmd>Telescope buffers<cr>", "Open recent buffer" },
   ["<space>"] = "which_key_ignore",

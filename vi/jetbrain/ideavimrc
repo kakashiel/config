@@ -56,7 +56,7 @@ map [d <Action>(GotoNextError)
 map ]d <Action>(GotoPreviousError)
 map <S-Space> <Action>(GotoNextError)
 
-map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>br <Action>(ToggleLineBreakpoint)
 map <leader>o <Action>(FileStructurePopup)
 
 
@@ -72,6 +72,7 @@ map <leader>c <action>(Stop)
 map <leader>z <action>(ToggleDistractionFreeMode)
 
 
+map <leader>bc <Action>(CloseAllEditorsButActive)
 map <leader>e <action>(RecentFiles)
 map <leader>b <action>(ToggleLineBreakpoint)
 map <leader>o <action>(FileStructurePopup)
