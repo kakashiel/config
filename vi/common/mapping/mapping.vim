@@ -72,7 +72,7 @@ nnoremap <leader>q :q<CR>
 " Close buffer
 nnoremap <leader>w :bd<CR>
 " Close buffer expect current one
-nnoremap <leader>bc :%bd|e#|bd#<CR> 
+nnoremap <leader>bc :%bd\|e#\|bd#<CR> 
 nnoremap <Tab> = :bnext<CR>
 nnoremap <S-Tab> = :bprevious<CR>
 
