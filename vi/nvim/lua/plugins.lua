@@ -42,6 +42,11 @@ packer.init {
 return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
+  use "mhartington/oceanic-next" -- Have packer manage itself
+  use {
     'glacambre/firenvim',
     run = function() vim.fn['firenvim#install'](0) end 
   }
@@ -49,4 +54,3 @@ return packer.startup(function(use)
     require("packer").sync()
   end
 end)
-
