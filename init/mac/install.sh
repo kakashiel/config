@@ -28,6 +28,7 @@ brew install romkatv/powerlevel10k/powerlevel10k
 #VIM
 brew install universal-ctags
 brew install fzf
+brew install ripgrep
 brew install vim
 brew install neovim
 brew install gnu-sed
