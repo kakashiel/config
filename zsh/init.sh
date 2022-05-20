@@ -8,6 +8,7 @@ source $MYCONF/zsh/settings/options.sh
 source $MYCONF/zsh/exports.sh
 source $MYCONF/zsh/alias.sh
 source $MYCONF/zsh/symlinks.sh
+source $MYCONF/zsh/mappings.sh
 
 #Plugin
 source $MYCONF/zsh/app/brew.sh

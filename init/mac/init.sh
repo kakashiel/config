@@ -7,6 +7,8 @@ sudo chown -R $(whoami) /usr/local/Cellar
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 git -C $(brew --repo homebrew/core) checkout master
 
+brew analytics off
+
 source ./mac/install_app.sh
 source ./mac/install.sh
 

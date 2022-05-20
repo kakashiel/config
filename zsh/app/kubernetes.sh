@@ -11,7 +11,7 @@ fi
 
 lazykubectl() {
   unset -f kubectl 2>/dev/null
-  export KUBECONFIG=./kubeconfig:~/.kube/config 
+  export KUBECONFIG=./kubeconfig:~/.kube/kubeconfig:~/.kube/config 
   source <(kubectl completion zsh)
 }
 
