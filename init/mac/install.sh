@@ -9,7 +9,7 @@ brew install oath-toolkit
 brew install lazydocker
 brew install htop
 brew install ncdu
-brew install z
+brew install zoxide
 brew install gpg
 brew install tmux
 brew install tmuxp

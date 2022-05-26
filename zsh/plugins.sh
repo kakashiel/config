@@ -33,4 +33,3 @@ bindkey -M viins 'kj' vi-cmd-mode
 #P10k
 zsh_add_plugin "romkatv/powerlevel10k"                                                         │  3 source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
 source $MYCONF/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
-# source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme

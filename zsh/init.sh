@@ -21,12 +21,12 @@ source $MYCONF/zsh/app/python.sh
 # source $MYCONF/zsh/app/android.sh
 source $MYCONF/zsh/app/pass.sh
 source $MYCONF/zsh/app/tmux.sh
-source $MYCONF/zsh/app/z.sh
 source $MYCONF/zsh/app/fzf.sh
 # source $MYCONF/zsh/app/java.zsh
 source $MYCONF/zsh/app/kubernetes.sh
 source $MYCONF/zsh/app/aws.sh
 source $MYCONF/zsh/app/terraform.sh
+source $MYCONF/zsh/app/zoxide.sh
 
 #Work
 alias phx="$MYCONF/work/trust/sec.sh"
