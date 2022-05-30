@@ -4,7 +4,7 @@ set magic " For regular expressions turn magic on
 
 set t_Co=256                            " Support 256 colors
 set mouse=a                             " Enable your mouse
-syntax enable                           " Enables syntax highlighing
+syntax off                              " Enable just for vim
 set colorcolumn=80                      " Linebreak
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                                " WRAP Cut long lines as just one line

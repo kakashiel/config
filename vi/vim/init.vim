@@ -3,6 +3,8 @@ source $MYCONF/vi/common/mapping/mapping.vim
 source $MYCONF/vi/common/load_plug.vim
 source $MYCONF/vi/common/plug.vim
 
+
+source $MYCONF/vi/vim/settings.vim
 source $MYCONF/vi/vim/plug.vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""PLUGIN CONFIG

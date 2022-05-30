@@ -3,7 +3,7 @@
 ###############
 
 mkdir -p ~/.config/nvim
-#NVCHAD
+#NVIM
 ln -sf $MYCONF/vi/nvim/* ~/.config/nvim/
 
 #LUNARVIM
