@@ -23,4 +23,10 @@ sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtua
 brew install hashicorp/tap/terraform-ls
 
 # Grammarly
-npm i -g @emacs-grammarly/grammarly-languageserver
+# npm i -g @emacs-grammarly/grammarly-languageserver
+npm i -g @emacs-grammarly/unofficial-grammarly-language-server
+
+# html/css
+npm i -g vscode-langservers-extracted
+
+
