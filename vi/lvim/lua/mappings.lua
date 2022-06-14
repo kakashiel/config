@@ -29,11 +29,7 @@ wk.register({
   l = {"<cmd>lua vim.lsp.buf.formatting()<CR>", "Format" },
   n = {"<cmd>NvimTreeToggle<CR>", "Explorer" },
   N = {"<cmd>NERDTreeToggle<cr>", "Tree toggle" },
-  O = {
-    name = "Open file",
-    a = {"<cmd>Telescope find_files hidden=true no_ignore=true<cr>", "Look everywhere" },
-    o = {"<cmd>Telescope find_files hidden=true <cr>", "Normal" },
-  },
+  O = {"<cmd>Telescope find_files hidden=true <cr>", "Search file" },
   rn = {"<cmd>lua vim.lsp.buf.rename()<CR>", "Rename" },
   t = {
     name = "Telescope",
