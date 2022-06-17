@@ -45,7 +45,9 @@ return packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
-  use "mhartington/oceanic-next" -- Have packer manage itself
+  use "folke/which-key.nvim" -- Create key bindings that stick
+  use "lewis6991/impatient.nvim"
+  use "mhartington/oceanic-next"
   use {
     'glacambre/firenvim',
     run = function() vim.fn['firenvim#install'](0) end 

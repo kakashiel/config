@@ -1,4 +1,5 @@
-local colorscheme = "oceanic-next"
+-- local colorscheme = "oceanic-next"
+local colorscheme = "oceanicNext"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then

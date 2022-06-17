@@ -21,8 +21,21 @@ local options = {
  syntax="disable"
 }
 
+--TODO: Move this
+local init_path = debug.getinfo(1, "S").source:sub(2)
+local base_dir = init_path:match("(.*[/\\])"):sub(1, -2)
+print(base_dir)
+
+if not vim.tbl_contains(vim.opt.rtp:get(), base_dir) then
+  vim.opt.rtp:append(base_dir)
+end
+print(base_dir)
+
+require ("bootstrap"):init(base_dir);
+require "impatient"
 require "plugins"
 require "plugins.treesitter"
 require "plugins.theme"
+require ("mappings.lunarvim").config();
 --vim.cmd('source $MYCONF/vi/nvim/firevim.vim')
 
