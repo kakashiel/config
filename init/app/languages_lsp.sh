@@ -7,7 +7,7 @@ npm install -g \
   eslint \
   prettier 
 # Graphql lsp
-npm i graphql-language-service-server
+npm -g i graphql-language-service-server
 
 # Bash
 npm install -g shellcheck
@@ -24,7 +24,7 @@ brew install hashicorp/tap/terraform-ls
 
 # Grammarly
 # npm i -g @emacs-grammarly/grammarly-languageserver
-npm i -g @emacs-grammarly/unofficial-grammarly-language-server
+# npm i -g @emacs-grammarly/unofficial-grammarly-language-server
 
 # html/css
 npm i -g vscode-langservers-extracted

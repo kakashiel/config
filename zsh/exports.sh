@@ -6,7 +6,7 @@
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export BROWSER=chrome
-export ZDOTDIR="$MYCONF/zsh"
+# export ZDOTDIR="$MYCONF/zsh"
 
 #Color ls
 export CLICOLOR=1

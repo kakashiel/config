@@ -24,3 +24,6 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# bun completions
+[ -s "/Users/adrien/.bun/_bun" ] && source "/Users/adrien/.bun/_bun"

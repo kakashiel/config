@@ -12,8 +12,6 @@ if [[ $MY_OS == *'Ubuntu'* ]]; then
   source ./ubuntu_rig/init.sh
 fi
 
-source ./app/zsh.sh
-
 source ./app/tmux.sh
 source ./app/lvim.sh
 #LSP HERE

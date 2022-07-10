@@ -94,3 +94,7 @@ map <leader>wv <action>(SplitVertically)
 map <leader>wc <action>(Unsplit)
 map <leader>wC <action>(UnsplitAll)
 map <leader>wd <action>(OpenEditorInOppositeTabGroup)
+
+" formatting
+map == <action>(ReformatCode)
+map -- <action>(OptimizeImports)
