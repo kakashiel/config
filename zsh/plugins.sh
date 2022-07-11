@@ -1,9 +1,9 @@
 #! /bin/sh
 
 # COMPLETIONS
-zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-completions"
+zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
@@ -30,7 +30,3 @@ bindkey -M vicmd 'j' history-substring-search-down
 #VIM
 bindkey -M viins 'jk' vi-cmd-mode
 bindkey -M viins 'kj' vi-cmd-mode
-
-#P10k
-zsh_add_plugin "romkatv/powerlevel10k"                                                         │  3 source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
-source $MYCONF/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
