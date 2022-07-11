@@ -1,33 +1,33 @@
 #! /bin/sh
 export ZDOTDIR=~/
-export MYZDOTDIR=$MYCONF/zsh
-source ~/.zsh_profile
+export MYZDOTDIR="$MYCONF/zsh"
+. ~/.zsh_profile
 #Settings
-source $MYCONF/zsh/settings/function.sh
-source $MYCONF/zsh/settings/options.sh
+. "$MYZDOTDIR/settings/function.sh"
+. "$MYZDOTDIR/settings/options.sh"
 
-source $MYCONF/zsh/exports.sh
-source $MYCONF/zsh/alias.sh
-source $MYCONF/zsh/symlinks.sh
-source $MYCONF/zsh/mappings.sh
+. "$MYZDOTDIR/exports.sh"
+. "$MYZDOTDIR/alias.sh"
+. "$MYZDOTDIR/symlinks.sh"
+. "$MYZDOTDIR/mappings.sh"
 
 #Plugin
-source $MYCONF/zsh/app/brew.sh
-source $MYCONF/zsh/plugins.sh
+. "$MYZDOTDIR/app/brew.sh"
+. "$MYZDOTDIR/plugins.sh"
 
 #App
-source $MYCONF/zsh/app/git.sh
-source $MYCONF/zsh/app/npm.sh
-source $MYCONF/zsh/app/python.sh
+. "$MYZDOTDIR/app/git.sh"
+. "$MYZDOTDIR/app/npm.sh"
+. "$MYZDOTDIR/app/python.sh"
 # source $MYCONF/zsh/app/android.sh
-source $MYCONF/zsh/app/pass.sh
-source $MYCONF/zsh/app/tmux.sh
-source $MYCONF/zsh/app/fzf.sh
+. "$MYZDOTDIR/app/pass.sh"
+. "$MYZDOTDIR/app/tmux.sh"
+. "$MYZDOTDIR/app/fzf.sh"
 # source $MYCONF/zsh/app/java.zsh
-source $MYCONF/zsh/app/kubernetes.sh
-source $MYCONF/zsh/app/aws.sh
-source $MYCONF/zsh/app/terraform.sh
-source $MYCONF/zsh/app/zoxide.sh
+. "$MYZDOTDIR/app/kubernetes.sh"
+. "$MYZDOTDIR/app/aws.sh"
+. "$MYZDOTDIR/app/terraform.sh"
+. "$MYZDOTDIR/app/zoxide.sh"
 
 #Work
 alias phx="$MYCONF/work/trust/sec.sh"
