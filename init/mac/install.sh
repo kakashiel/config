@@ -23,7 +23,7 @@ brew install git-crypt
 brew install git-extras
 brew install diff-so-fancy
 #ZSH
-brew install romkatv/powerlevel10k/powerlevel10k
+brew install starship
 
 #VIM
 brew install universal-ctags

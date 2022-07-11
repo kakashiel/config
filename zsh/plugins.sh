@@ -12,6 +12,7 @@ _comp_options+=(globdots)		# Include hidden files.
 autoload bashcompinit && bashcompinit
 
 
+
 # HISTORY SUBSTRING SEARCHING
 zsh_add_plugin "zsh-users/zsh-history-substring-search"
 autoload -U up-line-or-beginning-search

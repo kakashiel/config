@@ -12,7 +12,6 @@ source $MYCONF/zsh/mappings.sh
 
 #Plugin
 source $MYCONF/zsh/app/brew.sh
-source $MYCONF/zsh/plugins.sh
 
 #App
 source $MYCONF/zsh/app/git.sh
@@ -31,3 +30,5 @@ source $MYCONF/zsh/app/zoxide.sh
 #Work
 alias phx="$MYCONF/work/trust/sec.sh"
 
+#Load plugins
+source $MYCONF/zsh/plugins.sh
