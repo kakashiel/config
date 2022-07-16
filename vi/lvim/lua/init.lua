@@ -32,5 +32,4 @@ lvim.format_on_save = false
 
 -- NVIM
 vim.opt.clipboard = ""
-
-
+print('end')

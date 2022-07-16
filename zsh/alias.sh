@@ -14,6 +14,7 @@ alias gpleet="cd $MYPERSO/leetcode && g aa && g cam '[AL] Auto push leetcode' &&
 alias gbc="git --no-pager branch -vr --sort=committerdate"
 
 alias sec="$MYPERSO/.sec"
+alias envv=". $MYPERSO/work/env.sh"
 alias vpn='osascript -e "tell application \"/Applications/Tunnelblick.app\"" -e "connect \"client\"" -e "end tell" ; sec'
 
 alias note="v $MYPERSO/note.txt"
@@ -22,6 +23,7 @@ alias top="glances"
 
 alias home_vpn="ssh pi@192.168.0.50"
 alias home_rig1="ssh -i $MYPERSO/credentials/euryale/ssh/mining ad@192.168.0.51"
+alias chrome="open -a 'Google Chrome'"
 
 
 #Icloud nosync node_modules

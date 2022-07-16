@@ -22,6 +22,7 @@ brew install git-gui
 brew install git-crypt
 brew install git-extras
 brew install diff-so-fancy
+brew install gh
 #ZSH
 brew install starship
 
