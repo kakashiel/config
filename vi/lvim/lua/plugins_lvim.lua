@@ -3,12 +3,12 @@ lvim.plugins = {
   {'karb94/neoscroll.nvim'},
 
   { --show git blame
-  "f-person/git-blame.nvim",
-  event = "BufRead",
-  config = function()
-    vim.cmd "highlight default link gitblame SpecialComment"
-    vim.g.gitblame_enabled = 0
-  end,
+    "f-person/git-blame.nvim",
+    event = "BufRead",
+    config = function()
+      vim.cmd "highlight default link gitblame SpecialComment"
+      vim.g.gitblame_enabled = 0
+    end,
   },
   { --autoclose and autorename html tag
     "windwp/nvim-ts-autotag",
@@ -18,11 +18,11 @@ lvim.plugins = {
     end,
   },
   { --preview markdown in neovim
-  "npxbr/glow.nvim",
-  ft = {"markdown"}
+    "npxbr/glow.nvim",
+    ft = {"markdown"}
   },
   { -- Simple session management
-  "folke/persistence.nvim",
+    "folke/persistence.nvim",
     event = "BufReadPre", -- this will only start session saving when an actual file was opened
     module = "persistence",
     config = function()
@@ -30,22 +30,14 @@ lvim.plugins = {
         dir = vim.fn.expand(vim.fn.stdpath "config" .. "/session/"),
         options = { "buffers", "curdir", "tabpages", "winsize" },
       }
-  end,
+    end,
   },
   { -- highlight TODO FIX WARRNING
-  "folke/todo-comments.nvim",
-  event = "BufRead",
-  config = function()
-    require("todo-comments").setup()
-  end,
-  },
-  { -- Open url with gx
-    "felipec/vim-sanegx",
+    "folke/todo-comments.nvim",
     event = "BufRead",
-  },
-  { -- nvim enable on browser with firenvim 
-    'glacambre/firenvim',
-    run = function() vim.fn['firenvim#install'](0) end 
+    config = function()
+      require("todo-comments").setup()
+    end,
   },
   -- COLORSCHEME
   {'FrenzyExists/aquarium-vim'},

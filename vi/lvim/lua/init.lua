@@ -18,7 +18,6 @@ vim.cmd('source $MYCONF/vi/common/plugins/rainbow.vim')
 vim.cmd('source $MYCONF/vi/common/plugins/vim-tmux-navigator.vim')
 
 
-require "packer"
 require "treesitter"
 require "plugins_lvim"
 require "lsp_servers"
