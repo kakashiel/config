@@ -6,6 +6,9 @@
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export BROWSER=chrome
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  BROWSER='"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --any --extra --arguments'
+fi
 # export ZDOTDIR="$MYCONF/zsh"
 
 #Color ls

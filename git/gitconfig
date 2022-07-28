@@ -38,6 +38,7 @@
   amend = "!log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend"
   aa = "add --all"
   cam = "commit -a -m"
+  canm = "commit -a --no-verify -m"
   cana = "commit -v -a --no-edit --amend"
   ct = "citool"
   cta = "citool -amend"
