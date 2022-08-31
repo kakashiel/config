@@ -12,6 +12,7 @@ alias dc="docker-compose"
 alias gpmyconf="cd $MYCONF && g aa && g cam '[AL] Auto push conf' && g l && g p && cd -"
 alias gpleet="cd $MYPERSO/leetcode && g aa && g cam '[AL] Auto push leetcode' && g l && g p && cd -"
 alias gbc="git --no-pager branch -vr --sort=committerdate"
+alias groot="cd $(git rev-parse --show-toplevel)"
 
 alias sec="$MYPERSO/.sec"
 alias envv=". $MYPERSO/work/env.sh"
