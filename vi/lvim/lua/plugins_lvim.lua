@@ -39,9 +39,11 @@ lvim.plugins = {
       require("todo-comments").setup()
     end,
   },
+  -- Auto change color with mac os preference
+  {'f-person/auto-dark-mode.nvim'},
   -- COLORSCHEME
-  {'FrenzyExists/aquarium-vim'},
-  {'catppuccin/nvim'},
+  {'EdenEast/nightfox.nvim'},
+  {'folke/tokyonight.nvim'},
   {'andersevenrud/nordic.nvim'},
   {'shaunsingh/nord.nvim'},
   {'NTBBloodbath/doom-nvim'},
@@ -50,11 +52,10 @@ lvim.plugins = {
   {'mangeshrex/uwu.vim'},
   {'tiagovla/tokyodark.nvim'},
   {'luisiacc/gruvbox-baby'},
-  {'kyazdani42/blue-moon'},
   {'sainnhe/sonokai'},
-  {'rafamadriz/neon'},
   {'ishan9299/nvim-solarized-lua'},
 
 }
 
+-- mac see plugins auto-dark-mode
 lvim.colorscheme = 'doom-one'
