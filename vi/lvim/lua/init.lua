@@ -24,7 +24,7 @@ require "lsp_servers"
 require "plugins.autosave"
 require "plugins.neoscroll"
 require "plugins.telescope"
-require "plugins.auto-dark-mode"
+-- require "plugins.auto-dark-mode"
 require "mappings"
 
 lvim.format_on_save = false
