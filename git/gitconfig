@@ -4,7 +4,7 @@
 
 [includeIf "gitdir:~/Documents/"]
   path = ~/Documents/perso/config/git/gitconfig-perso
-[includeIf "gitdir:~/work/"]
+[includeIf "gitdir:~/work/phoenix"]
   path = ~/Documents/perso/config/git/gitconfig-work
 
 # -*- Conf -*-
