@@ -31,14 +31,20 @@
     {"before": ["u"], "commands": ["undo"]},
     {"before": ["U"], "commands": ["redo"]},
     {"before": ["=", "="], "after": ["gg=G"]},
+    {"before": ["<space>"], "commands": ["workbench.action.files.save"]},
     {
       "before": ["<leader>", "n"],
       "commands": ["workbench.files.action.showActiveFileInExplorer"]
     },
     {
+      "before": ["<leader>", "N"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
       "before": ["<leader>", "e"],
       "commands": ["workbench.action.quickOpenLeastRecentlyUsedEditorInGroup"]
     },
+    {"before": ["<leader>", "r", "n"], "commands": ["editor.action.rename"]},
     {"before": ["<leader>", "/"], "commands": ["editor.action.commentLine"]},
     {"before": ["<C-o>"], "commands": ["workbench.action.navigateBack"]},
     {"before": ["<C-i>"], "commands": ["workbench.action.navigateForward"]}
