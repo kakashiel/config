@@ -3,20 +3,27 @@
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
-  "editor.fontSize": 12,
+  "editor.fontSize": 18,
   "editor.accessibilitySupport": "off",
   "terminal.integrated.env.osx": {"FIG_NEW_SESSION": "1"},
   "vim.sneak": true,
   "vim.sneakReplacesF": true,
   "vim.sneakUseIgnorecaseAndSmartcase": true,
   "vim.easymotion": true,
-  "vim.vimrc.enable": true,
   "vim.leader": "<space>",
   "vim.incsearch": true,
   "vim.hlsearch": true,
-  "vim.useSystemClipboard": true,
+  "vim.highlightedyank.enable": true,
+  "vim.useSystemClipboard": false,
   "vim.useCtrlKeys": true,
-  "vim.handleKeys": {"<C-a>": false, "<C-f>": false},
+  "vim.handleKeys": {
+    "<C-w>": false,
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-x>": false,
+    "<C-c>": false,
+    "<C-v>": true
+  },
   "vim.insertModeKeyBindings": [
     {"before": ["j", "k"], "after": ["<Esc>"]},
     {"before": ["k", "j"], "after": ["<Esc>"]}
@@ -24,13 +31,23 @@
   "vim.visualModeKeyBindings": [
     {"before": ["j", "k"], "after": ["<Esc>"]},
     {"before": ["k", "j"], "after": ["<Esc>"]},
+    {"before": ["<leader>","y"], "after": ["\"", "+", "y"]},
+    {"before": ["<leader>","p"], "after": ["\"", "+", "p"]},
     {"before": [">"], "commands": ["editor.action.indentLines"]},
-    {"before": ["<"], "commands": ["editor.action.outdentLines"]}
+    {"before": ["<"], "commands": ["editor.action.outdentLines"]},
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.action.quickOpen"]
+    },
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {"before": ["u"], "commands": ["undo"]},
     {"before": ["U"], "commands": ["redo"]},
-    {"before": ["=", "="], "after": ["gg=G"]},
+    {"before": ["=", "="], "after": ["g","g","=","G", "`", "`"]},
+    {"before": ["<leader>","y"], "after": ["\"", "+", "y"]},
+    {"before": ["<leader>","p"], "after": ["\"", "+", "p"]},
+    {"before": ["g", "r"], "commands": ["editor.action.goToReferences"]},
+    {"before": ["g", "o"], "commands": ["breadcrumbs.toggleToOn"]},
     {"before": ["<space>"], "commands": ["workbench.action.files.save"]},
     {
       "before": ["<leader>", "n"],
@@ -42,11 +59,25 @@
     },
     {
       "before": ["<leader>", "e"],
-      "commands": ["workbench.action.quickOpenLeastRecentlyUsedEditorInGroup"]
+      "commands": ["workbench.action.quickOpen"]
     },
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    {"before": ["<leader>", "l"], "commands": ["eslint.executeAutofix"]},
     {"before": ["<leader>", "r", "n"], "commands": ["editor.action.rename"]},
     {"before": ["<leader>", "/"], "commands": ["editor.action.commentLine"]},
     {"before": ["<C-o>"], "commands": ["workbench.action.navigateBack"]},
-    {"before": ["<C-i>"], "commands": ["workbench.action.navigateForward"]}
-  ]
+    {"before": ["<C-i>"], "commands": ["workbench.action.navigateForward"]},
+    {"before": ["<leader>", "m"], "commands": ["bookmarks.list"]}
+  ],
+  "files.autoSave": "afterDelay",
+  // "workbench.colorTheme": "Default Light+",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "git.autofetch": true
 }
