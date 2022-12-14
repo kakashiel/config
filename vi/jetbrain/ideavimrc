@@ -54,17 +54,19 @@ map <leader>a <Action>(Annotate)
 map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
 map [d <Action>(GotoNextError)
 map ]d <Action>(GotoPreviousError)
-map <S-Space> <Action>(GotoNextError)
 
 map <leader>br <Action>(ToggleLineBreakpoint)
 map <leader>o <Action>(FileStructurePopup)
 
+map <leader>n :NERDTreeFind<CR>
+map <leader>N :NERDTreeToggle<CR>
 
 map gD <action>(GotoImplementation)
 map gd <action>(GotoDeclaration)
 map gr <action>(FindUsages)
 map gi <action>(QuickImplementations)
-map gs <action>(ActivateStructureToolWindow)
+map go <action>(ActivateStructureToolWindow)
+map go <action>(FileStructurePopup)
 map gt <action>(GotoTest)
 
 map <leader>d <action>(Debug)
