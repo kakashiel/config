@@ -9,6 +9,8 @@ alias ll="ls -al"
 alias v="lvim"
 alias dc="docker-compose"
 
+alias aliases='v $MYCONF/zsh/alias.sh'
+
 alias gpmyconf="cd $MYCONF && g aa && g cam '[AL] Auto push conf' && g l && g p && cd -"
 alias gpleet="cd $MYPERSO/leetcode && g aa && g cam '[AL] Auto push leetcode' && g l && g p && cd -"
 alias gbc="git --no-pager branch -vr --sort=committerdate"
