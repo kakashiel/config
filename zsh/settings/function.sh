@@ -10,6 +10,13 @@ agrep (){
 }
 alias ag="agrep"
 
+#Create folder and go inside
+mkcdir ()
+{
+    mkdir -p -- "$1" &&
+       cd -P -- "$1"
+}
+
 
 # Function to source files if they exist
 function zsh_add_file() {
