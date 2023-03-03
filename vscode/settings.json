@@ -24,7 +24,7 @@
     "somefile___": true
   },
   "git.autofetch": true,
-  "gitlens.mode.active": "zen",
+  // "gitlens.mode.active": "zen",
   "terminal.integrated.defaultProfile.windows": "GitBash",
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
@@ -61,8 +61,6 @@
     {"before": ["k", "j"], "after": ["<Esc>"]}
   ],
   "vim.visualModeKeyBindings": [
-    {"before": ["j", "k"], "after": ["<Esc>"]},
-    {"before": ["k", "j"], "after": ["<Esc>"]},
     {"before": ["<leader>", "y"], "after": ["\"", "+", "y"]},
     {"before": ["<leader>", "p"], "after": ["\"", "+", "p"]},
     {"before": [">"], "commands": ["editor.action.indentLines"]},
@@ -92,6 +90,8 @@
       "commands": ["workbench.action.toggleSidebarVisibility"]
     },
     {"before": ["<leader>", "e"], "commands": ["workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"]},
+    {"before": ["J"], "commands": ["workbench.action.previousEditor"]},
+    {"before": ["K"], "commands": ["workbench.action.nextEditor"]},
     {"before": ["[", "d"], "commands": ["editor.action.marker.next"]},
     {"before": ["]", "d"], "commands": ["editor.action.marker.prev"]},
     {"before": ["<leader>", "l"], "commands": ["eslint.executeAutofix"]},
@@ -109,5 +109,8 @@
   },
   "[java]": {
     "editor.suggest.snippetsPreventQuickSuggestions": false
+  },
+  "[python]": {
+    "editor.formatOnType": true
   },
 }

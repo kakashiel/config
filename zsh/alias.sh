@@ -23,6 +23,8 @@ alias note="v $MYPERSO/writting/note.md"
 alias todo="v $MYPERSO/writting/todo.md"
 alias diary="v $MYPERSO/writting/diary.md"
 
+alias gpt='chatgpt'
+
 alias home_vpn="ssh pi@192.168.0.50"
 alias home_rig1="ssh -i $MYPERSO/credentials/euryale/ssh/mining ad@192.168.0.51"
 
