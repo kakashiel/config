@@ -21,7 +21,6 @@ vim.cmd('source $MYCONF/vi/common/plugins/vim-tmux-navigator.vim')
 require "treesitter"
 require "plugins_lvim"
 require "lsp_servers"
-require "plugins.autosave"
 require "plugins.neoscroll"
 require "plugins.telescope"
 -- require "plugins.auto-dark-mode"

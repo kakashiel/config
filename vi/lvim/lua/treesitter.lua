@@ -39,7 +39,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "regex",
   "scala",
   "scss",
-  "swift",
+  -- "swift",
   "tsx",
   "typescript",
   "vim",
