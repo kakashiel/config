@@ -29,6 +29,7 @@ export MYZDOTDIR="$MYCONF/zsh"
 . "$MYZDOTDIR/app/aws.sh"
 . "$MYZDOTDIR/app/terraform.sh"
 . "$MYZDOTDIR/app/zoxide.sh"
+. "$MYZDOTDIR/app/lvim.sh"
 
 #Work
 alias phx="$MYCONF/work/trust/sec.sh"

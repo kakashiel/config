@@ -30,6 +30,7 @@ export PATH=/opt/homebrew/bin/:$PATH
 export VISUAL=lvim
 export EDITOR="$VISUAL"
 
-export XDG_CONFIG_HOME=~/.config/lazynvim/
-export XDG_DATA_HOME=~/.local/share/lazynvim
+# // Nvim config dont wor
+# export XDG_CONFIG_HOME=~/.config/lazynvim/
+# export XDG_DATA_HOME=~/.local/share/lazynvim
 
