@@ -4,12 +4,16 @@
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-completions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+
 autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 _comp_options+=(globdots)		# Include hidden files.
 #Bash completion compatibility
 autoload bashcompinit && bashcompinit
+
+zsh_add_plugin "Aloxaf/fzf-tab"
+source $MYZDOTDIR/plugins/fzf-tab/fzf-tab.plugin.zsh
 
 
 

@@ -15,6 +15,7 @@ brew install tmux
 brew install tmuxp
 brew install speedtest-cli
 brew install bash
+brew install terminal-notifier
 #GIT
 brew install gitui
 brew install lazygit

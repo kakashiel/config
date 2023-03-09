@@ -30,6 +30,7 @@ export MYZDOTDIR="$MYCONF/zsh"
 . "$MYZDOTDIR/app/terraform.sh"
 . "$MYZDOTDIR/app/zoxide.sh"
 . "$MYZDOTDIR/app/lvim.sh"
+. "$MYZDOTDIR/app/zsh-notify.sh"
 
 #Work
 alias phx="$MYCONF/work/trust/sec.sh"
