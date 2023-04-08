@@ -32,6 +32,7 @@ export MYZDOTDIR="$MYCONF/zsh"
 . "$MYZDOTDIR/app/lvim.sh"
 . "$MYZDOTDIR/app/zsh-notify.sh"
 . "$MYZDOTDIR/app/jetbrain.zsh"
+. "$MYZDOTDIR/app/gradle.sh"
 
 #Work
 alias phx="$MYCONF/work/trust/sec.sh"

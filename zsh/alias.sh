@@ -9,9 +9,10 @@ alias ll="ls -al"
 alias v="lvim"
 alias dc="docker-compose"
 
-alias aliases='v $MYCONF/zsh/alias.sh'
+alias valias='v $MYCONF/zsh/alias.sh'
 
 alias gpmyconf="cd $MYCONF && g aa && g cam '[AL] Auto push conf' && g l && g p && cd -"
+alias ide=". $MYCONF/scripts/idea_lauch.sh"
 alias gpleet="cd $MYPERSO/leetcode && g aa && g cam '[AL] Auto push leetcode' && g l && g p && cd -"
 alias gbc="git --no-pager branch -vr --sort=committerdate"
 alias groot='cd $(git rev-parse --show-toplevel)'
@@ -22,6 +23,7 @@ alias sec="$MYPERSO/.sec"
 alias note="v $MYPERSO/writting/note.md"
 alias todo="v $MYPERSO/writting/todo.md"
 alias diary="v $MYPERSO/writting/diary.md"
+alias cix="v $MYPERSO/writting/cix.md"
 
 alias gpt='chatgpt'
 

@@ -1,7 +1,9 @@
 {
+  "window.autoDetectColorScheme": true,
+  "workbench.colorTheme": "Default Light+",
   "security.workspace.trust.untrustedFiles": "open",
   "editor.suggestSelection": "first",
-  "editor.fontSize": 16,
+  "editor.fontSize": 14,
   "editor.accessibilitySupport": "off",
   "editor.cursorSurroundingLines": 5,
   "problems.showCurrentInStatus": true,
@@ -113,4 +115,5 @@
   "[python]": {
     "editor.formatOnType": true
   },
+  "editor.inlineSuggest.enabled": true,
 }

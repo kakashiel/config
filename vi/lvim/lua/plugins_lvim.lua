@@ -39,6 +39,9 @@ lvim.plugins = {
       require("todo-comments").setup()
     end,
   },
+  {
+    "github/copilot.vim"
+  },
   -- Auto change color with mac os preference
   {'f-person/auto-dark-mode.nvim'},
   -- COLORSCHEME

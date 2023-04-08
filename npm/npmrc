@@ -1,0 +1,10 @@
+; CIX
+; begin auth token
+//pkgs.dev.azure.com/ClimateImpactX/CIX/_packaging/CIX-Repo/npm/registry/:username=ClimateImpactX
+//pkgs.dev.azure.com/ClimateImpactX/CIX/_packaging/CIX-Repo/npm/registry/:_password=[c3FrMnhvMmtqZnVvYmxqd2EzNG83NWk2b2pmZnc2eXFycmQyaGNkemFjb3hibXVtanhlcQ==]
+//pkgs.dev.azure.com/ClimateImpactX/CIX/_packaging/CIX-Repo/npm/registry/:email=npm requires email to be set but doesn't use the value
+//pkgs.dev.azure.com/ClimateImpactX/CIX/_packaging/CIX-Repo/npm/:username=ClimateImpactX
+//pkgs.dev.azure.com/ClimateImpactX/CIX/_packaging/CIX-Repo/npm/:_password=[c3FrMnhvMmtqZnVvYmxqd2EzNG83NWk2b2pmZnc2eXFycmQyaGNkemFjb3hibXVtanhlcQ==]
+//pkgs.dev.azure.com/ClimateImpactX/CIX/_packaging/CIX-Repo/npm/:email=npm requires email to be set but doesn't use the value
+; end auth token
+; ===================

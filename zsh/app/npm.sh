@@ -1,4 +1,7 @@
 #! /bin/sh
+
+#Symlink npm config user
+ln -f $MYCONF/npm/npmrc ~/.npmrc
 # NPM completions
 
 alias npmi="npm i"
