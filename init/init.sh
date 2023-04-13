@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "export ISPERSO=false" >> ~/.zshrc
+echo "export ISWORK=false" >> ~/.zshrc
 echo "source ~/Documents/perso/config/zsh/.zshrc" >> ~/.zshrc
 
 if [[ $OSTYPE == 'darwin'* ]]; then

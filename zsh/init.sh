@@ -11,6 +11,7 @@ export MYZDOTDIR="$MYCONF/zsh"
 . "$MYZDOTDIR/symlinks.sh"
 . "$MYZDOTDIR/mappings.sh"
 . "$MYZDOTDIR/credentials.sh"
+. "$MYZDOTDIR/credentials-work.sh"
 
 #Plugin
 . "$MYZDOTDIR/app/brew.sh"

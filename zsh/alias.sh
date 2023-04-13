@@ -23,13 +23,11 @@ alias sec="$MYPERSO/.sec"
 alias note="v $MYPERSO/writting/note.md"
 alias todo="v $MYPERSO/writting/todo.md"
 alias diary="v $MYPERSO/writting/diary.md"
-alias cix="v $MYPERSO/writting/cix.md"
-
-alias gpt='chatgpt'
 
 alias home_vpn="ssh pi@192.168.0.50"
 alias home_rig1="ssh -i $MYPERSO/credentials/euryale/ssh/mining ad@192.168.0.51"
 
+alias gpt="python3 ~/gpt-cli/gpt.py"
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'

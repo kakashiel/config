@@ -11,6 +11,7 @@ set commentary
 set argtextobj
 set highlightedyank
 set sneak
+set quickscope " Should be after sneak
 set surround
 set easymotion
 set NERDTree
