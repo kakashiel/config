@@ -21,6 +21,7 @@ export MYZDOTDIR="$MYCONF/zsh"
 . "$MYZDOTDIR/app/git.sh"
 . "$MYZDOTDIR/app/npm.sh"
 . "$MYZDOTDIR/app/python.sh"
+. "$MYZDOTDIR/app/java.sh"
 # source $MYCONF/zsh/app/android.sh
 . "$MYZDOTDIR/app/pass.sh"
 . "$MYZDOTDIR/app/tmux.sh"
