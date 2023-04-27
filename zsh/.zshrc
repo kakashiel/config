@@ -11,7 +11,7 @@ export MYCONF=$MYPERSO/config
 
 source $MYCONF/zsh/init.sh
 
-eval "$(starship init zsh)"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(starship init zsh)"
 
