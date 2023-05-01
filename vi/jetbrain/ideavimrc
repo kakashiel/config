@@ -56,8 +56,8 @@ map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
 map [d <Action>(GotoNextError)
 map ]d <Action>(GotoPreviousError)
 
-map <leader>br <Action>(ToggleLineBreakpoint)
 map <leader>o <Action>(FileStructurePopup)
+map <leader>z <action>(ToggleDistractionFreeMode)
 
 map <leader>n :NERDTreeFind<CR>
 map <leader>N :NERDTreeToggle<CR>
@@ -70,9 +70,16 @@ map go <action>(ActivateStructureToolWindow)
 map go <action>(FileStructurePopup)
 map gt <action>(GotoTest)
 
+" Debug
 map <leader>d <action>(Debug)
+map <leader>br <Action>(ToggleLineBreakpoint)
 map <leader>c <action>(Stop)
-map <leader>z <action>(ToggleDistractionFreeMode)
+map <C-j> <action>(StepOver)
+map <C-k> <action>(Resume)
+map <C-h> <action>(StepOut)
+map <C-l> <action>(ForceStepInto)
+map <Space>qe <action>(QuickEvaluateExpression)
+map <Space>ee <action>(EvaluateExpression)
 
 
 map <leader>bc <Action>(CloseAllEditorsButActive)
