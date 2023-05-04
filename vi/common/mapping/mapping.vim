@@ -25,6 +25,10 @@ nnoremap gdl :diffget //3<CR>
 
 " nnoremap gdh :diffget LOCAL<CR>
 " nnoremap gdl :diffget REMOTE<CR>
+"
+" Use clipboard 
+noremap Y "+y
+noremap P "+p
 
 " Better tabbing
 vnoremap < <gv
