@@ -1,8 +1,0 @@
-session_name: t2
-windows:
-  - window_name: dev window
-    layout: main-vertical
-    panes:
-      - shell_command: # pane no. 1
-          - ls -al
-      - echo second pane # pane no. 2

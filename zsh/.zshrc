@@ -13,5 +13,10 @@ source $MYCONF/zsh/init.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-eval "$(starship init zsh)"
+
+# Load starship prompt
+# eval "$(starship init zsh)"
+
+zsh_add_plugin "sindresorhus/pure"
+fpath+=($MYZDOTDIR/plugins/pure)
 

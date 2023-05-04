@@ -1,6 +1,4 @@
 #!/bin/bash
-brew install git
-brew install antigen
 brew install node
 brew install python
 brew install npm
@@ -11,12 +9,15 @@ brew install htop
 brew install ncdu
 brew install zoxide
 brew install gpg
-brew install tmux
-brew install tmuxp
 brew install speedtest-cli
 brew install bash
-brew install terminal-notifier
+
+#TMUX
+brew install terminal-notifier #
+brew install tmux
+
 #GIT
+brew install git
 brew install gitui
 brew install lazygit
 brew install git-gui
@@ -24,8 +25,10 @@ brew install git-crypt
 brew install git-extras
 brew install diff-so-fancy
 brew install gh
+
 #ZSH
 brew install starship
+brew install pure
 
 #VIM
 brew install universal-ctags
@@ -38,8 +41,4 @@ brew install gnu-sed
 #PASS
 brew install pass
 brew install pass-otp
-
-#VPN
-brew tap benwebber/tunnelblickctl
-brew install tunnelblickctl
 

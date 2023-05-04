@@ -1,8 +1,0 @@
-session_name: guru
-windows:
-  - window_name: dev window
-    layout: even-vertical
-    panes:
-      - ssh cloud_user@569becc0031c.mylabserver.com
-      - ssh cloud_user@569becc0032c.mylabserver.com
-      - ssh cloud_user@569becc0033c.mylabserver.com
