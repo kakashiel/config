@@ -2,8 +2,12 @@
 # Alias specifc to an OS
 case "$(uname -s)" in
   Darwin) # echo 'Mac OS X'
-    alias airpod=". $MYCONF/scripts/ios/audio_air_pod.sh"
+    alias mute=". $MYCONF/scripts/ios/input_mute.sh"
+    alias unmute=". $MYCONF/scripts/ios/input_unmute.sh"
+    alias mm="mute"
+    alias um="unmute"
     alias speaker=". $MYCONF/scripts/ios/audio_mac_speaker.sh"
+    alias airpod=". $MYCONF/scripts/ios/audio_air_pod.sh"
     ;;
   Linux)
     alias ls='ls --color=auto'
