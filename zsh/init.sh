@@ -6,6 +6,9 @@ export MYZDOTDIR="$MYCONF/zsh"
 . "$MYZDOTDIR/settings/function.sh"
 . "$MYZDOTDIR/settings/options.sh"
 
+#Settings
+. "$MYCONF/scripts/init.sh"
+
 . "$MYZDOTDIR/exports.sh"
 . "$MYZDOTDIR/alias.sh"
 . "$MYZDOTDIR/symlinks.sh"

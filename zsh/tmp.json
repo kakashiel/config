@@ -1,0 +1,82 @@
+{
+  "tradeDetails": {
+    "tradeId": "12349",
+    "tradeDate": "2023-05-02 02:35:28.796",
+    "side": "SELL",
+    "aggressorIndicator": true,
+    "blockTrade": false,
+    "tradeStatus": "SETTLED",
+    "venue": "Spot",
+    "entityId": 1
+  },
+  "clientInfo": {
+    "holdingAccountId": "EV01H000002C",
+    "clientId": 3,
+    "clientName": "Eolve Trading",
+    "tradingAccountId": "EV01T0000008",
+    "clientVenueId": 3,
+    "clientDetails": {
+      "id": 3,
+      "crmId": "EV-001-100",
+      "clientName": "Eolve Trading",
+      "shortName": "EVUAT",
+      "activeTraderStatus": "LIQUIDITY_PROVIDER",
+      "traderName": ""
+    },
+    "traderId": "12345123"
+  },
+  "contractTradeDetails": {
+    "holdingContractAssetId": null,
+    "contractId": null,
+    "orderQuantity": 1,
+    "price": 100,
+    "tradeAmount": 10000,
+    "gstOnTrade": 0,
+    "gstOnFees": -0.4,
+    "fees": -5.0,
+    "netAmount": 9994.6,
+    "contractDetail": {
+      "id": 4,
+      "assetType": "CONTRACT",
+      "name": "Trader Contract",
+      "umsSymbol": "TRDSYMB",
+      "currencyCode": "USD",
+      "assetCashId": null,
+      "conversionRatioPerLot": 100
+    },
+    "projectDetails": [
+      {
+        "holdingContractProjectAssetId": 29,
+        "assetId": 20,
+        "orderQuantity": 100,
+        "assetClass": "CREDIT",
+        "instrument": "VERRA-1020-2020-2020-11269",
+        "instrumentName": "Solar Power Plant of 15MW in Gujarat by Palace Solar Energy Private Limited",
+        "batchNo": "11269",
+        "vintageStart": "2020",
+        "vintageEnd": "2020",
+        "instrumentCode": "VERRA-1020-2020-2020-11269",
+        "instrumentType": "VCU",
+        "holdingProjectAssetId": null,
+        "contractId": 4,
+        "venueId": 1,
+        "entityId": "1",
+        "registryId": "VERRA",
+        "projectId": "1020",
+        "projectName": "Solar Power Plant of 15MW in Gujarat by Palace Solar Energy Private Limited",
+        "totalVintageQuantity": null,
+        "status": "ACTIVE",
+        "quantityInCredits": "10000"
+      }
+    ]
+  },
+  "tradeTransactionDetails": {
+    "fromHoldingAccount": "EV01H000002C",
+    "toHoldingAccount": "TCSH000002E",
+    "entityHoldingAccount": "CIXH000002B",
+    "entityTotalAmount": 5.4,
+    "entityFees": 5.0,
+    "entityGstOnFees": 0.4,
+    "entityGstOnTrade": 0
+  }
+}
