@@ -10,10 +10,10 @@ let maplocalleader="//"
 set commentary
 set argtextobj
 set highlightedyank
+set easymotion
 set sneak
 set quickscope " Should be after sneak
 set surround
-set easymotion
 set NERDTree
 " set ideamarks
 
@@ -44,8 +44,6 @@ imap kj <Esc>
 
 map <leader>s <Plug>(easymotion-s)
 map <leader>f <Plug>(easymotion-f)
-map s <Plug>(easymotion-f)
-map S <Plug>(easymotion-F)
 map gs <Plug>(easymotion-s)
 nmap <C-o> <Action>(Back)
 nmap <C-i> <Action>(Forward)
