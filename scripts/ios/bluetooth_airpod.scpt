@@ -1,4 +1,3 @@
-#!/usr/bin/osascript
 use framework "IOBluetooth"
 use scripting additions
 

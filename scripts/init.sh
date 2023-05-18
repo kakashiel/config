@@ -8,7 +8,7 @@ case "$(uname -s)" in
     alias um="unmute"
     alias speaker=". $MYCONF/scripts/ios/audio_mac_speaker.sh"
     alias input-airpod=". $MYCONF/scripts/ios/audio_air_pod.sh"
-    alias airpod=". $MYCONF/scripts/ios/bluetooth_airpod.sh"
+    alias airpod="osascript $MYCONF/scripts/ios/bluetooth_airpod.scpt"
     ;;
   Linux)
     alias ls='ls --color=auto'
