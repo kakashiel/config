@@ -98,10 +98,16 @@ map <leader>ri <action>(OptimizeImports)
 
 " Splits manipulation
 map <leader>ws <action>(SplitHorizontally)
+map <leader>\- <action>(SplitHorizontally)
 map <leader>wv <action>(SplitVertically)
+map <leader>\| <action>(SplitVertically)
 map <leader>wc <action>(Unsplit)
 map <leader>wC <action>(UnsplitAll)
 map <leader>wd <action>(OpenEditorInOppositeTabGroup)
+map <c-h> <c-w>h
+map <c-l> <c-w>l
+map <c-j> <c-w>j
+map <c-k> <c-w>k
 
 " formatting
 map == <action>(ReformatCode)

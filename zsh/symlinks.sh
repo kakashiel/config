@@ -21,4 +21,7 @@ ln -f $MYCONF/gh/config.yml ~/.config/gh/config.yml
 
 #VSCODE
 # ln -f $MYCONF/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
-#
+
+#GPT
+mkdir -p ~/.config/gpt-cli
+ln -f $MYCONF/gpt/gpt.yml ~/.config/gpt-cli/gpt.yml
