@@ -1,7 +1,7 @@
 #! /bin/sh
 
 ###############
-#ALIAS
+#COMMON
 ###############
 
 alias la="ls -a"
@@ -9,30 +9,35 @@ alias ll="ls -al"
 alias v="lvim"
 alias dc="docker-compose"
 
-alias valias='v $MYCONF/zsh/alias.sh'
-
-alias gpmyconf="cd $MYCONF && g aa && g cam '[AL] Auto push conf' && g l && g p && cd -"
-alias ide=". $MYCONF/scripts/idea_lauch.sh"
-alias gpleet="cd $MYPERSO/leetcode && g aa && g cam '[AL] Auto push leetcode' && g l && g p && cd -"
-alias gbc="git --no-pager branch -vr --sort=committerdate"
-alias groot='cd $(git rev-parse --show-toplevel)'
-alias tfmt="groot; t fmt  -recursive -write=true; cd -"
-
-alias sec="$MYPERSO/.sec"
-
-alias note="v $MYPERSO/writting/note.md"
-alias todo="v $MYPERSO/writting/todo.md"
-alias diary="v $MYPERSO/writting/diary.md"
-
-alias home_vpn="ssh pi@192.168.0.50"
-alias home_rig1="ssh -i $MYPERSO/credentials/euryale/ssh/mining ad@192.168.0.51"
-
-alias gpt="python3 ~/gpt-cli/gpt.py"
-
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
+
+###############
+# Quick edit
+###############
+alias valias='v $MYCONF/zsh/alias.sh'
+alias note="v $MYPERSO/writting/note.md"
+alias todo="v $MYPERSO/writting/todo.md"
+alias diary="v $MYPERSO/writting/diary.md"
+alias vjson="v //tmp/test.json"
+
+###############
+# Git push
+###############
+alias gpmyconf="cd $MYCONF && g aa && g cam '[AL] Auto push conf' && g l && g p && cd -"
+alias gpleet="cd $MYPERSO/leetcode && g aa && g cam '[AL] Auto push leetcode' && g l && g p && cd -"
+
+###############
+# MY HOME
+###############
+alias home_vpn="ssh pi@192.168.0.50"
+alias home_rig1="ssh -i $MYPERSO/credentials/euryale/ssh/mining ad@192.168.0.51"
+
+alias ide=". $MYCONF/scripts/idea_lauch.sh"
+alias gpt="python3 ~/gpt-cli/gpt.py"
+
 
 # Alias specifc to an OS
 case "$(uname -s)" in

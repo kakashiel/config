@@ -9,4 +9,5 @@ if ! [ -x "$(command -v terraform)" ]; then
 fi
 alias t="terraform"
 alias terra="terraform"
+alias tfmt="groot; t fmt  -recursive -write=true; cd -"
 
