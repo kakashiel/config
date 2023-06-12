@@ -25,9 +25,10 @@ brew install git-crypt
 brew install git-extras
 brew install diff-so-fancy
 brew install gh
+brew install typos-cli
+brew install pre-commit
 
 #ZSH
-brew install starship
 brew install pure
 
 #VIM

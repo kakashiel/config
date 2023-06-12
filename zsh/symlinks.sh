@@ -25,3 +25,6 @@ ln -f $MYCONF/gh/config.yml ~/.config/gh/config.yml
 #GPT
 mkdir -p ~/.config/gpt-cli
 ln -f $MYCONF/gpt/gpt.yml ~/.config/gpt-cli/gpt.yml
+
+#typos
+ln -f $MYCONF/typos/typos.toml ~/.typos.toml
