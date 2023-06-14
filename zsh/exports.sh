@@ -13,9 +13,6 @@ fi
 
 #Color ls
 export CLICOLOR=1
-export HISTFILE="$MYPERSO/.zsh_history"
-export HISTSIZE=50000
-export SAVEHIST=50000
 
 #PATH
 export PATH="/usr/local/opt/libpq/bin:$PATH"
