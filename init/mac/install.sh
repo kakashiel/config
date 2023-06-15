@@ -29,6 +29,7 @@ brew install typos-cli
 brew install pre-commit
 
 #ZSH
+brew install zsh
 brew install pure
 
 #VIM

@@ -10,3 +10,7 @@ setopt SHARE_HISTORY
 export HISTFILE="$MYPERSO/.zsh_history"
 export HISTSIZE=50000
 export SAVEHIST=80000 # Should be 20% > than HISTSIZE
+# if slow delete rm -rf .zsh_sessions/*
+
+fpath+=("/usr/local/share/zsh/site-functions")
+
