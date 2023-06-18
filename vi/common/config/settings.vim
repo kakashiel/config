@@ -59,7 +59,7 @@ set ffs=unix,dos,mac                    " Use Unix as the standard file type
 "set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 "set list                                " Set no print character
 set  wildmenu                           " Turn on the Wild menu
-set wildmode=longest:full,full
+set wildmode=longest:full,full,list:lastused
 set wildignore=*.o,*~,*.pyc             " Ignore compiled files
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/node_modules/*
 set undofile                            " Maintain undo history between sessions

@@ -6,7 +6,7 @@
 
 alias la="ls -a"
 alias ll="ls -al"
-alias v="lvim"
+alias v="nvim"
 alias dc="docker-compose"
 
 # Colorize grep output (good for log files)

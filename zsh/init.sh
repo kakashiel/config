@@ -35,7 +35,7 @@ export MYZDOTDIR="$MYCONF/zsh"
 . "$MYZDOTDIR/app/terraform.sh"
 . "$MYZDOTDIR/app/zoxide.sh"
 . "$MYZDOTDIR/app/lvim.sh"
+. "$MYZDOTDIR/app/nvim.sh"
 . "$MYZDOTDIR/app/zsh-notify.sh"
 . "$MYZDOTDIR/app/jetbrain.zsh"
 . "$MYZDOTDIR/app/gradle.sh"
-

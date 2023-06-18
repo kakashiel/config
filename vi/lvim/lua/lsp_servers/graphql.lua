@@ -1,1 +1,0 @@
-require'lspconfig'.graphiql.setup{}

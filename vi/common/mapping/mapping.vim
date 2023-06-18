@@ -17,15 +17,6 @@ map 0 ^|                             " Remap VIM 0 to first non-blank character
 command! W w !sudo tee % > /dev/null|" :W sudo saves the file 
 noremap == <esc>gg=G''<CR>|          "== Fast indent
 
-" Git diff conflict
-nnoremap <leader>gD :Gvdiffsplit!<CR>
-" For Gvdiffsplit
-nnoremap gdh :diffget //2<CR>
-nnoremap gdl :diffget //3<CR>
-
-" nnoremap gdh :diffget LOCAL<CR>
-" nnoremap gdl :diffget REMOTE<CR>
-"
 " Use clipboard 
 noremap Y "+y
 noremap P "+p
