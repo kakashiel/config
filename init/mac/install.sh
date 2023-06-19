@@ -38,9 +38,8 @@ brew install fzf
 brew install ripgrep
 brew install vim
 brew install neovim
-brew install gnu-sed
+brew install gnu-sed #Need it for nvim-pack/nvim-spectre
 
 #PASS
 brew install pass
 brew install pass-otp
-

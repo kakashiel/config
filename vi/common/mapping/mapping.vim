@@ -57,11 +57,6 @@ nnoremap <C-l> <C-w>l
 "==============
 "LEADER
 "==============
-nnoremap <leader>1 :NERDTreeToggle<esc><CR>
-nnoremap <leader>3 :DBUI<esc><CR>
-
-nnoremap <leader>n :NERDTreeFind<CR>
-nnoremap <leader>N :NERDTreeToggle<CR>
 nnoremap <leader>q :q<CR>
 
 " Close buffer
@@ -71,9 +66,4 @@ nnoremap <leader>bc :%bd\|e#\|bd#<CR>
 nnoremap <Tab> = :bnext<CR>
 nnoremap <S-Tab> = :bprevious<CR>
 
-" Single mappings
-let g:which_key_map['1'] = 'explorer'
-let g:which_key_map['3'] = 'Database explorer'
-let g:which_key_map['n'] = 'Nerd tree find'
-let g:which_key_map['N'] = 'Nerd tree toggle'
 

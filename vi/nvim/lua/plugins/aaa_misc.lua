@@ -1,6 +1,6 @@
 return {
   { "Pocco81/AutoSave.nvim" },
-  { "karb94/neoscroll.nvim" },
+  { "christoomey/vim-tmux-navigator" },
   { --show git blame
     "f-person/git-blame.nvim",
     event = "BufRead",
@@ -8,31 +8,6 @@ return {
       vim.cmd("highlight default link gitblame SpecialComment")
       vim.g.gitblame_enabled = 0
     end,
-  },
-  { --preview markdown in neovim
-    "npxbr/glow.nvim",
-    ft = { "markdown" },
-  },
-  { -- Simple session management
-    "folke/persistence.nvim",
-    event = "BufReadPre", -- this will only start session saving when an actual file was opened
-    module = "persistence",
-    config = function()
-      require("persistence").setup({
-        dir = vim.fn.expand(vim.fn.stdpath("config") .. "/session/"),
-        options = { "buffers", "curdir", "tabpages", "winsize" },
-      })
-    end,
-  },
-  { -- highlight TODO FIX WARRNING
-    "folke/todo-comments.nvim",
-    event = "BufRead",
-    config = function()
-      require("todo-comments").setup()
-    end,
-  },
-  {
-    "github/copilot.vim",
   },
   -- Auto change color with mac os preference
   { "f-person/auto-dark-mode.nvim" },

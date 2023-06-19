@@ -16,8 +16,8 @@ vim.cmd("source $MYCONF/vi/common/mapping/mapping.vim")
 -- )
 
 -- Add Vim plugin
--- vim.cmd('source $MYCONF/vi/common/plug.vim')
--- vim.cmd("source $MYCONF/vi/common/plugins/sneak.vim")
--- vim.cmd("source $MYCONF/vi/common/plugins/signify.vim")
--- vim.cmd("source $MYCONF/vi/common/plugins/rainbow.vim")
--- vim.cmd("source $MYCONF/vi/common/plugins/vim-tmux-navigator.vim")
+vim.cmd("source $MYCONF/vi/common/plug.vim")
+vim.cmd("source $MYCONF/vi/common/plugins/sneak.vim")
+vim.cmd("source $MYCONF/vi/common/plugins/signify.vim")
+vim.cmd("source $MYCONF/vi/common/plugins/rainbow.vim")
+vim.cmd("source $MYCONF/vi/common/plugins/vim-tmux-navigator.vim")

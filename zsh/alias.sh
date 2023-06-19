@@ -21,6 +21,7 @@ alias valias='v $MYCONF/zsh/alias.sh'
 alias note="v $MYPERSO/writting/note.md"
 alias todo="v $MYPERSO/writting/todo.md"
 alias diary="v $MYPERSO/writting/diary.md"
+alias anki="vim  //tmp/diary.md -c \"set nospell\""
 alias vjson="v //tmp/test.json"
 
 ###############
@@ -38,22 +39,21 @@ alias home_rig1="ssh -i $MYPERSO/credentials/euryale/ssh/mining ad@192.168.0.51"
 alias ide=". $MYCONF/scripts/idea_lauch.sh"
 alias gpt="python3 ~/gpt-cli/gpt.py"
 
-
 # Alias specifc to an OS
 case "$(uname -s)" in
 
-  Darwin) # echo 'Mac OS X'
-    alias chrome="open -a 'Google Chrome'"
-    #Icloud nosync node_modules
-    alias nosync="find ~/Documents -name node_modules -prune -exec touch {}/.nosync \;"
-    alias vpn='osascript -e "tell application \"/Applications/Tunnelblick.app\"" -e "connect \"client\"" -e "end tell" ; sec'
-    ;;
-  Linux)
-    alias ls='ls --color=auto'
-    ;;
-  CYGWIN* | MINGW32* | MSYS* | MINGW*)# echo 'MS Windows'
-    ;;
-  *)
-    # echo 'Other OS'
-    ;;
+Darwin) # echo 'Mac OS X'
+	alias chrome="open -a 'Google Chrome'"
+	#Icloud nosync node_modules
+	alias nosync="find ~/Documents -name node_modules -prune -exec touch {}/.nosync \;"
+	alias vpn='osascript -e "tell application \"/Applications/Tunnelblick.app\"" -e "connect \"client\"" -e "end tell" ; sec'
+	;;
+Linux)
+	alias ls='ls --color=auto'
+	;;
+CYGWIN* | MINGW32* | MSYS* | MINGW*) # echo 'MS Windows'
+	;;
+*)
+	# echo 'Other OS'
+	;;
 esac

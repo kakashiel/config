@@ -3,3 +3,4 @@
 -- Add any additional options here
 local opt = vim.opt
 opt.wildmode = "longest:full,full,list:lastused"
+opt.clipboard = ""
