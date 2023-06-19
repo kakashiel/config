@@ -1,6 +1,5 @@
 return {
   { "Pocco81/AutoSave.nvim" },
-  { "christoomey/vim-tmux-navigator" },
   { --show git blame
     "f-person/git-blame.nvim",
     event = "BufRead",
@@ -12,16 +11,16 @@ return {
   -- Auto change color with mac os preference
   { "f-person/auto-dark-mode.nvim" },
   -- COLORSCHEME
-  { "EdenEast/nightfox.nvim" },
-  { "folke/tokyonight.nvim" },
-  { "andersevenrud/nordic.nvim" },
-  { "shaunsingh/nord.nvim" },
-  { "NTBBloodbath/doom-nvim" },
-  { "dracula/vim" },
-  { "Mofiqul/dracula.nvim" },
-  { "mangeshrex/uwu.vim" },
-  { "tiagovla/tokyodark.nvim" },
-  { "luisiacc/gruvbox-baby" },
-  { "sainnhe/sonokai" },
-  { "ishan9299/nvim-solarized-lua" },
+  { "EdenEast/nightfox.nvim", event = "VeryLazy" },
+  { "folke/tokyonight.nvim", event = "VeryLazy" },
+  { "andersevenrud/nordic.nvim", event = "VeryLazy" },
+  { "shaunsingh/nord.nvim", event = "VeryLazy" },
+  { "NTBBloodbath/doom-nvim", event = "VeryLazy" },
+  { "dracula/vim", event = "VeryLazy" },
+  { "Mofiqul/dracula.nvim", event = "VeryLazy" },
+  { "mangeshrex/uwu.vim", event = "VeryLazy" },
+  { "tiagovla/tokyodark.nvim", event = "VeryLazy" },
+  { "luisiacc/gruvbox-baby", event = "VeryLazy" },
+  { "sainnhe/sonokai", event = "VeryLazy" },
+  { "ishan9299/nvim-solarized-lua", event = "VeryLazy" },
 }
