@@ -37,7 +37,26 @@ return {
     keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
     config = true,
   },
-
+  -- Archive: keybindings don't work (maybe override by lazyvim)
+  {
+    "alexghergh/nvim-tmux-navigation",
+    event = "VeryLazy",
+    config = function()
+      local nvim_tmux_nav = require("nvim-tmux-navigation")
+      nvim_tmux_nav.setup({
+        disable_when_zoomed = true,
+        -- Don't work acctually set in keymaps.lua
+        keybindings = {
+          left = "<C-h>",
+          down = "<C-j>",
+          up = "<C-k>",
+          right = "<C-l>",
+          last_active = "<C->",
+          next = "<C-Space>",
+        },
+      })
+    end,
+  },
   -- override nvim-cmp and add cmp-emoji
   {
     "hrsh7th/nvim-cmp",

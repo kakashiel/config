@@ -20,6 +20,8 @@ noremap == <esc>gg=G''<CR>|          "== Fast indent
 " Use clipboard 
 noremap Y "+y
 noremap P "+p
+" keep the copy don't replace with selection
+xnoremap <leader>p "_dP
 
 " Better tabbing
 vnoremap < <gv

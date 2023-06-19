@@ -2,6 +2,9 @@
 """"""PLUGIN
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" For neovim ~/.local/share/nvim/plugged
+" For vim  ~/.vim/plugged
+
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 "COMMON
  Plug 'https://github.com/tpope/vim-surround.git'           " Shortcut surroung
