@@ -1,5 +1,6 @@
 -- COMMON
 vim.cmd("source $MYCONF/vi/common/config/settings.vim")
+vim.cmd("source $MYCONF/vi/common/config/autocmd.vim")
 vim.cmd("source $MYCONF/vi/common/mapping/mapping.vim")
 
 -- Not working with lazy.vim

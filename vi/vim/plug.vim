@@ -25,6 +25,8 @@ call plug#begin('~/.vim/plugged')
  Plug 'psliwka/vim-smoothie'                                " Scrolling more smooth
  Plug 'junegunn/goyo.vim'                                   " ZEN mode
  Plug 'ludovicchabant/vim-gutentags'                        " Automate the creation and updating of tags in the background
+ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+ Plug 'junegunn/fzf.vim'
 
  Plug 'ryanoasis/vim-devicons'                              " Set of icons
 "THEME
