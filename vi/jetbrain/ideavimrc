@@ -1,5 +1,6 @@
 source ~/Documents/perso/config/vi/vim/init.vim
 source ~/Documents/perso/config/vi/common/config/settings.vim
+source ~/Documents/perso/config/vi/common/config/autocmd.vim
 source ~/Documents/perso/config/vi/common/mapping/mapping.vim
 
 """ Map leader to space ---------------------

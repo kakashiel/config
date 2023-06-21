@@ -14,3 +14,16 @@ else
   " Underline in replace mode
   let &t_EI = "\e[1 q"
 endif
+
+"Use relative numbers in normal mode only for an active buffer; use absolute numbers everywhere else.
+augroup numbertoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
+ " Autoreload after modifying .vimrc.
+ augroup reload_vimrc " {
+     autocmd!
+     autocmd BufWritePost $MYVIMRC source $MYVIMRC
+ augroup END " }
