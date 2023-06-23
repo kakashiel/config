@@ -1,5 +1,4 @@
 return {
-  { "Pocco81/auto-save.nvim" },
   { "alexghergh/nvim-tmux-navigation" },
   { --show git blame
     "f-person/git-blame.nvim",

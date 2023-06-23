@@ -16,11 +16,12 @@ return {
       require("leetbuddy").setup({})
     end,
     keys = {
-      { "<leader>Gq", "<cmd>LBQuestions<cr>", desc = "List Questions" },
-      { "<leader>Gl", "<cmd>LBQuestion<cr>", desc = "View Question" },
-      { "<leader>Gr", "<cmd>LBReset<cr>", desc = "Reset Code" },
-      { "<leader>Gt", "<cmd>LBTest<cr>", desc = "Run Code" },
-      { "<leader>Gs", "<cmd>LBSubmit<cr>", desc = "Submit Code" },
+      { "<leader>GL", desc = "Leetcode" },
+      { "<leader>GLq", "<cmd>LBQuestions<cr>", desc = "List Questions" },
+      { "<leader>GLl", "<cmd>LBQuestion<cr>", desc = "View Question" },
+      { "<leader>GLr", "<cmd>LBReset<cr>", desc = "Reset Code" },
+      { "<leader>GLt", "<cmd>LBTest<cr>", desc = "Run Code" },
+      { "<leader>GLs", "<cmd>LBSubmit<cr>", desc = "Submit Code" },
     },
   },
   {
@@ -28,5 +29,29 @@ return {
     keys = {
       { "<leader>GG", "<cmd>VimBeGood<cr>", desc = "Vim be good" },
     },
+  },
+  {
+    "seandewar/nvimesweeper",
+    keys = {
+      { "<leader>Gs", "<cmd>Nvimesweeper<cr>", desc = "Sweeper game" },
+    },
+  },
+  {
+    "alec-gibson/nvim-tetris",
+    keys = {
+      { "<leader>Gt", "<cmd>Tetris<cr>", desc = "Tetris game" },
+    },
+  },
+  {
+    "jim-fx/sudoku.nvim",
+    cmd = "Sudoku",
+    keys = {
+      { "<leader>GS", "<cmd>Sudoku<cr>", desc = "Sudoku game" },
+    },
+    config = function()
+      require("sudoku").setup({
+        -- configuration ...
+      })
+    end,
   },
 }
