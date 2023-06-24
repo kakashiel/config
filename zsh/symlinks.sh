@@ -8,7 +8,7 @@ ln -f $MYCONF/vi/jetbrain/ideavimrc ~/.ideavimrc
 
 #GITHUB
 mkdir -p ~/.config/gh
-ln -f $MYCONF/gh/config.yml ~/.config/gh/config.yml
+ln -f $MYCONF/github/config.yml ~/.config/gh/config.yml
 
 #VSCODE
 # ln -f $MYCONF/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json

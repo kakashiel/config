@@ -1,7 +1,7 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps hereby
-vim.keymap.set({ "n", "v" }, "<leader>/", "gcc", { noremap = true, desc = "Comment" })
+local keymap = vim.keymap.set
 
 vim.keymap.set("n", "<leader-o>", "<leader>ff")
 
@@ -16,5 +16,7 @@ if not vim.g.vscode then
   vim.keymap.set("n", "<C-Space>", nvim_tmux_nav.NvimTmuxNavigateNext)
 end
 
-vim.keymap.set({ "n", "v" }, "<C-s>", ":wa<CR>")
-vim.keymap.set({ "n", "v" }, "<leader>/", ":Commentary<CR>")
+keymap({ "n", "v" }, "<C-s>", ":wa<CR>", { silent = true, noremap = true, desc = "Save all" })
+keymap({ "n", "v" }, "<leader>/", "gcc", { silent = true, remap = true, desc = "Comment" })
+keymap("x", "<leader>/", "gc", { silent = true, remap = true, desc = "Comment" })
+-- keymap({ "n", "v" }, "<leader>/", ":Commentary<CR>")

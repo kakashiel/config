@@ -7,6 +7,7 @@ return {
       -- add a keymap to browse plugin files
       -- stylua: ignore
       { "<leader>F", Util.telescope("live_grep"), desc = "Grep (root dir)" },
+      { "<leader>/", vim.NIL },
       {
         "<leader>fp",
         function()
