@@ -1,5 +1,6 @@
 return {
   { "alexghergh/nvim-tmux-navigation" },
+  { "tpope/vim-commentary" },
   { --show git blame
     "f-person/git-blame.nvim",
     event = "BufRead",
@@ -10,6 +11,8 @@ return {
   },
   -- Auto change color with mac os preference
   { "f-person/auto-dark-mode.nvim" },
+  -- Kitty keywords
+  { "fladson/vim-kitty" },
   -- COLORSCHEME
   { "EdenEast/nightfox.nvim", event = "VeryLazy" },
   { "folke/tokyonight.nvim", event = "VeryLazy" },

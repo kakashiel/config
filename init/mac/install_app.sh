@@ -1,21 +1,24 @@
 #!/bin/bash
 
-brew install --cask google-chrome 
-brew install --cask firefox 
+brew install --cask google-chrome
+brew install --cask firefox
 brew install --cask docker
-brew install --cask iterm2 
-brew install --cask intellij-idea 
-brew install --cask spotify 
-brew install --cask slack 
-brew install --cask whatsapp 
-brew install --cask rectangle 
+brew install --cask iterm2
+brew install --cask intellij-idea
+brew install --cask spotify
+brew install --cask slack
+brew install --cask whatsapp
+brew install --cask rectangle
 brew install --cask anki
 brew install --cask alt-tab
-# brew install --cask virtualbox 
-# brew install --cask visual-studio-code 
-# brew install --cask tunnelblick 
-# brew install --cask steam 
-# brew install --cask miro 
+#kitty
+brew install kitty
+brew install hammerspoon
+# brew install --cask virtualbox
+# brew install --cask visual-studio-code
+# brew install --cask tunnelblick
+# brew install --cask steam
+# brew install --cask miro
 #brew install --cask syncthing
 #brew install --cask all-in-one-messenger
 

@@ -55,6 +55,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+nnoremap <C-s> :wa<CR>
+
 
 "==============
 "LEADER
@@ -68,3 +70,6 @@ nnoremap <leader>bc :%bd\|e#\|bd#<CR>
 "Tab = Ctrl+i
 " nnoremap <Tab> = :bnext<CR>
 " nnoremap <S-Tab> = :bprevious<CR>
+"
+xmap <leader>/ <Plug>Commentary
+

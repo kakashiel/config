@@ -67,7 +67,9 @@
   "uwu.vim": { "branch": "main", "commit": "7900e45c24b59ad8b0a0e1b1204f260d6909bc56" },
   "vim": { "branch": "master", "commit": "3e52a0682a53dd7c2c53133d45948f5a49c5fd9a" },
   "vim-be-good": { "branch": "master", "commit": "c290810728a4f75e334b07dc0f3a4cdea908d351" },
+  "vim-commentary": { "branch": "master", "commit": "e87cd90dc09c2a203e13af9704bd0ef79303d755" },
   "vim-illuminate": { "branch": "master", "commit": "a2907275a6899c570d16e95b9db5fd921c167502" },
+  "vim-kitty": { "branch": "main", "commit": "9a90c68655d20e22f5ff249232c83ab46870f74d" },
   "vim-repeat": { "branch": "master", "commit": "24afe922e6a05891756ecf331f39a1f6743d3d5a" },
   "vim-startuptime": { "branch": "master", "commit": "454b3de856b7bd298700de33d79774ca9b9e3875" },
   "which-key.nvim": { "branch": "main", "commit": "d871f2b664afd5aed3dc1d1573bef2fb24ce0484" }

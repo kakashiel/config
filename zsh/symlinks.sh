@@ -19,3 +19,10 @@ ln -f $MYCONF/gpt/gpt.yml ~/.config/gpt-cli/gpt.yml
 
 #typos
 ln -f $MYCONF/typos/typos.toml ~/.typos.toml
+
+#Kitty
+ln -f $MYCONF/kitty/kitty.conf ~/.config/kitty/kitty.conf
+
+#Hammerspoon
+#
+ln -f $MYCONF/hammerspoon/init.lua ~/.hammerspoon/init.lua

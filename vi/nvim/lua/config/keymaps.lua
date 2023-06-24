@@ -15,3 +15,6 @@ if not vim.g.vscode then
   vim.keymap.set("n", "<C-\\>", nvim_tmux_nav.NvimTmuxNavigateLastActive)
   vim.keymap.set("n", "<C-Space>", nvim_tmux_nav.NvimTmuxNavigateNext)
 end
+
+vim.keymap.set({ "n", "v" }, "<C-s>", ":wa<CR>")
+vim.keymap.set({ "n", "v" }, "<leader>/", ":Commentary<CR>")
