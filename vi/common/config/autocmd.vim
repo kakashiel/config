@@ -27,3 +27,7 @@ augroup END
      autocmd!
      autocmd BufWritePost $MYVIMRC source $MYVIMRC
  augroup END " }
+
+ " Save when losing focust
+au FocusLost * silent! wa
+

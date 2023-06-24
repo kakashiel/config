@@ -10,7 +10,7 @@ brew install --cask slack
 brew install --cask whatsapp
 brew install --cask rectangle
 brew install --cask anki
-brew install --cask alt-tab
+# brew install --cask alt-tab #replace by hammerspoon
 #kitty
 brew install kitty
 brew install hammerspoon

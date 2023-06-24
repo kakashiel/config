@@ -24,5 +24,4 @@ ln -f $MYCONF/typos/typos.toml ~/.typos.toml
 ln -f $MYCONF/kitty/kitty.conf ~/.config/kitty/kitty.conf
 
 #Hammerspoon
-#
-ln -f $MYCONF/hammerspoon/init.lua ~/.hammerspoon/init.lua
+ln -sf $MYCONF/hammerspoon/* ~/.hammerspoon

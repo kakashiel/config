@@ -1,4 +1,5 @@
 set autoread " Set to auto read when a file is changed from the outside
+set autowriteall " Autowrite when switching buffers
 au FocusGained,BufEnter * :checktime "Trigger autoread
 set magic " For regular expressions turn magic on
 "
