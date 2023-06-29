@@ -17,7 +17,7 @@ alias fgrep='fgrep --color=auto'
 ###############
 # Quick edit
 ###############
-alias valias='v $MYCONF/zsh/alias.sh'
+alias vzsh='v $MYCONF/zsh/init.sh'
 alias note="v $MYPERSO/writting/note.md"
 alias todo="v $MYPERSO/writting/todo.md"
 alias diary="v $MYPERSO/writting/diary.md"

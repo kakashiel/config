@@ -6,7 +6,7 @@ hs.loadSpoon("GlobalMute")
 spoon.GlobalMute:bindHotkeys({
 	-- unmute = {lesshyper, "u"},
 	-- mute   = {lesshyper, "m"},
-	toggle = { lesshyper, "space" },
+	toggle = { lesshyper, "m" },
 })
 spoon.GlobalMute:configure({
 	unmute_background = "file:///Library/Desktop%20Pictures/Solid%20Colors/Red%20Orange.png",

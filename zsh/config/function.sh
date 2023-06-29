@@ -10,14 +10,6 @@ agrep (){
 }
 alias ag="agrep"
 
-#Create folder and go inside
-mkcdir ()
-{
-    mkdir -p -- "$1" &&
-       cd -P -- "$1"
-}
-
-
 # Function to source files if they exist
 function zsh_add_file() {
   [ -f "$MYZDOTDIR/$1" ] && source "$MYZDOTDIR/$1"
@@ -49,7 +41,7 @@ function zsh_add_completion() {
   fi
   completion_file="$(basename "${completion_file_path}")"
   if [ "$2" = true ] && compinit "${completion_file:1}"
-  }
+}
 
 timezsh() {
   shell=${1-$SHELL}

@@ -3,39 +3,34 @@ export ZDOTDIR=~/
 export MYZDOTDIR="$MYCONF/zsh"
 . ~/.zsh_profile
 #Settings
-. "$MYZDOTDIR/settings/function.sh"
-. "$MYZDOTDIR/settings/options.sh"
+. "$MYZDOTDIR/config/function.sh"
+. "$MYZDOTDIR/config/settings.sh"
+. "$MYZDOTDIR/config/alias.sh"
+. "$MYZDOTDIR/config/symlinks.sh"
+. "$MYZDOTDIR/config/mappings.sh"
 
-#Settings
-. "$MYCONF/scripts/init.sh"
-
-. "$MYZDOTDIR/exports.sh"
-. "$MYZDOTDIR/alias.sh"
-. "$MYZDOTDIR/symlinks.sh"
-. "$MYZDOTDIR/mappings.sh"
-. "$MYZDOTDIR/credentials.sh"
-. "$MYZDOTDIR/credentials-work.sh"
+#Install
+. "$MYZDOTDIR/install/brew.sh"
 
 #Plugin
-. "$MYZDOTDIR/app/brew.sh"
 . "$MYZDOTDIR/plugins.sh"
 
 #App
 . "$MYZDOTDIR/app/git.sh"
 . "$MYZDOTDIR/app/npm.sh"
 . "$MYZDOTDIR/app/python.sh"
-. "$MYZDOTDIR/app/java.sh"
-# source $MYCONF/zsh/app/android.sh
 . "$MYZDOTDIR/app/pass.sh"
 . "$MYZDOTDIR/app/tmux.sh"
 . "$MYZDOTDIR/app/fzf.sh"
-# source $MYCONF/zsh/app/java.zsh
-. "$MYZDOTDIR/app/kubernetes.sh"
-. "$MYZDOTDIR/app/aws.sh"
 . "$MYZDOTDIR/app/terraform.sh"
 . "$MYZDOTDIR/app/zoxide.sh"
-. "$MYZDOTDIR/app/lvim.sh"
 . "$MYZDOTDIR/app/nvim.sh"
 . "$MYZDOTDIR/app/zsh-notify.sh"
 . "$MYZDOTDIR/app/jetbrain.zsh"
-. "$MYZDOTDIR/app/gradle.sh"
+
+# Script
+. "$MYCONF/scripts/init.sh"
+
+# Other project load
+. "$MYZDOTDIR/my-other-projects/credentials.sh"
+. "$MYZDOTDIR/my-other-projects/credentials-work.sh"
