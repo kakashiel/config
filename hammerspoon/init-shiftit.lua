@@ -2,8 +2,6 @@
 -------------------------------
 -- START Window Management
 -------------------------------
-hs.loadSpoon("SpoonInstall")
-
 spoon.SpoonInstall.repos.ShiftIt = {
 	url = "https://github.com/peterklijn/hammerspoon-shiftit",
 	desc = "ShiftIt spoon repository",
