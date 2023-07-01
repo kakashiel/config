@@ -5,8 +5,8 @@ if [[ -z "${XDG_CONFIG_HOME}" ]]; then
 	touch ~/.zshenv
 	echo 'export XDG_CONFIG_HOME="$HOME/.config"' >>~/.zshenv
 	echo 'export ZDOTDIR="$XDG_CONFIG_HOME/zsh"' >>~/.zshenv
-	echo "export ISPERSO=false" >>~/.zshenv
-	echo "export ISWORK=false" >>~/.zshenv
+	echo "export ISPERSO=false" >>$HOME/.config/zsh/.zshrc
+	echo "export ISWORK=false" >>$HOME/.config/zsh/.zshrc
 	echo "source ~/Documents/perso/config/zsh/.zshrc" >>$HOME/.config/zsh/.zshrc
 fi
 

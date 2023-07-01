@@ -1,7 +1,8 @@
--- Keymaps are automatically loaded on the VeryLazy event
+local ch
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps hereby
 local keymap = vim.keymap.set
+local normalAndVisual = { "n", "v" }
 
 vim.keymap.set("n", "<leader-o>", "<leader>ff")
 
@@ -20,3 +21,8 @@ keymap({ "n", "v" }, "<C-s>", ":wa<CR>", { silent = true, noremap = true, desc =
 keymap({ "n", "v" }, "<leader>/", "gcc", { silent = true, remap = true, desc = "Comment" })
 keymap("x", "<leader>/", "gc", { silent = true, remap = true, desc = "Comment" })
 -- keymap({ "n", "v" }, "<leader>/", ":Commentary<CR>")
+
+-- vim.keymap.set(normalAndVisual, "<Leader>t", { desc = "ChatGPT" })
+vim.keymap.set(normalAndVisual, "<Leader>tk", "<cmd>:ChatGPT<cr>")
+vim.keymap.set(normalAndVisual, "<Leader>tj", "<cmd>:ChatGPTActAs<cr>")
+vim.keymap.set(normalAndVisual, "<Leader>tt", "<cmd>:ChatGPTEditWithInstructions<cr>")
