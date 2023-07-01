@@ -37,7 +37,7 @@ alias home_vpn="ssh pi@192.168.0.50"
 alias home_rig1="ssh -i $MYPERSO/credentials/euryale/ssh/mining ad@192.168.0.51"
 
 alias ide=". $MYCONF/scripts/idea_lauch.sh"
-alias gpt="python3 ~/gpt-cli/gpt.py"
+alias gpt="python3 ~/.local/share/gpt-cli/gpt.py"
 
 # Alias specifc to an OS
 case "$(uname -s)" in

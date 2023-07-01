@@ -1,7 +1,6 @@
 #! /bin/sh
-export ZDOTDIR=~/
 export MYZDOTDIR="$MYCONF/zsh"
-. ~/.zsh_profile
+
 #Settings
 . "$MYZDOTDIR/config/function.sh"
 . "$MYZDOTDIR/config/settings.sh"
@@ -27,6 +26,7 @@ export MYZDOTDIR="$MYCONF/zsh"
 . "$MYZDOTDIR/app/nvim.sh"
 . "$MYZDOTDIR/app/zsh-notify.sh"
 . "$MYZDOTDIR/app/jetbrain.zsh"
+. "$MYZDOTDIR/app/podman.sh"
 
 # Script
 . "$MYCONF/scripts/init.sh"

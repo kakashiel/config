@@ -64,6 +64,8 @@ set wildignore=*.o,*~,*.pyc             " Ignore compiled files
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/node_modules/*
 set undofile                            " Maintain undo history between sessions
 set undodir=~/.vim/undodir              "Dir where undo are save
+set viminfo+=n~/.vim/viminfo
+if has('nvim') | let &viminfo .= '.nvim' | endif
 set undolevels=1000                     " How many undos
 set undoreload=10000                    " number of lines to save for undo
 " This two line remove netrw from the buffer

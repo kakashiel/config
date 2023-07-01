@@ -17,5 +17,5 @@ alias gbc="git --no-pager branch -vr --sort=committerdate"
 ###############
 # Symlink
 ###############
-
-ln -f $MYCONF/git/gitconfig ~/.gitconfig
+mkdir -p $XDG_CONFIG_HOME/git
+ln -f $MYCONF/git/gitconfig $XDG_CONFIG_HOME/git/config
