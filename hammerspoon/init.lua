@@ -78,6 +78,7 @@ spoon.SpoonInstall:andUse("Calendar", { repo = "default" })
 --------------------------------
 -- Start ClipboardTool
 --------------------------------
+--
 spoon.SpoonInstall:andUse("ClipboardTool", {
 	repo = "default",
 	config = {
@@ -91,5 +92,7 @@ spoon.ClipboardTool:bindHotkeys({
 --------------------------------
 -- End ClipboardTool
 --------------------------------
+
 --
 -- spoon.SpoonInstall:andUse("SpeedMenu", { repo = "default" })
+--

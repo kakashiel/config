@@ -1,7 +1,8 @@
 #!/bin/bash
 
-if [[ -z "${ZDOTDIR}" ]]; then
+if [[ -z "${XDG_CONFIG_HOME}" ]]; then
 	mkdir -p ~/.config/zsh
+	touch ~/.zshenv
 	echo 'export XDG_CONFIG_HOME="$HOME/.config"' >>~/.zshenv
 	echo 'export ZDOTDIR="$XDG_CONFIG_HOME/zsh"' >>~/.zshenv
 	echo "export ISPERSO=false" >>~/.zshenv
