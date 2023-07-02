@@ -5,20 +5,15 @@ LESS_HYPER = { "ctrl", "alt" }
 --------------------------------
 --MINE
 --------------------------------
-hs.loadSpoon("kitty") -- Terminal
+require("double-ctrl") -- Kitty
 require("alttab") -- Alt+Tab replacement
 require("reload")
 require("init-shiftit")
 require("vim-mode")
 require("mic-mute")
 require("deepL-translate")
--- require("global-mute")
---
 -- require("teams-toggle-mute")
 -- require("tunnelblick")
---
---
---
 
 --------------------------------
 -- Start Cheatseat
@@ -35,19 +30,16 @@ spoon.KSheet:bindHotkeys({
 --------------------------------
 -- Start Pomodor
 --------------------------------
-spoon.SpoonInstall:andUse(
-	"Cherry",
-	{
-		repo = "default",
-		config = {
-			duration = 1,
-			notification = hs.notify.new({ title = "Done! 🍒", withdrawAfter = 5 }),
-			sound = hs.sound.getByFile(
-				"System/Library/PrivateFrameworks/ScreenReader.framework/Versions/A/Resources/Sounds"
-			),
-		},
-	}
-)
+spoon.SpoonInstall:andUse("Cherry", {
+	repo = "default",
+	config = {
+		duration = 1,
+		notification = hs.notify.new({ title = "Done! 🍒", withdrawAfter = 5 }),
+		sound = hs.sound.getByFile(
+			"System/Library/PrivateFrameworks/ScreenReader.framework/Versions/A/Resources/Sounds"
+		),
+	},
+})
 
 spoon.Cherry:bindHotkeys({
 	start = { HYPER, "p" },
@@ -79,20 +71,27 @@ spoon.SpoonInstall:andUse("Calendar", { repo = "default" })
 -- Start ClipboardTool
 --------------------------------
 --
-spoon.SpoonInstall:andUse("ClipboardTool", {
-	repo = "default",
-	config = {
-		-- menubar_title = "🍒"
-	},
-})
-spoon.ClipboardTool:bindHotkeys({
-	show_clipboard = { HYPER, "c" },
-	toggle_clipboard = { HYPER, "v" },
-})
+-- spoon.SpoonInstall:andUse("ClipboardTool", {
+-- 	repo = "default",
+-- 	config = {
+-- 		-- menubar_title = "🍒"
+-- 	},
+-- })
+-- spoon.ClipboardTool:bindHotkeys({
+-- 	show_clipboard = { HYPER, "c" },
+-- 	toggle_clipboard = { HYPER, "v" },
+-- })
 --------------------------------
 -- End ClipboardTool
 --------------------------------
-
 --
--- spoon.SpoonInstall:andUse("SpeedMenu", { repo = "default" })
+--------------------------------
+-- Start BingDaily
+--------------------------------
 --
+spoon.SpoonInstall:andUse("BingDaily", {
+	repo = "default",
+})
+--------------------------------
+-- End BingDaily
+--------------------------------
