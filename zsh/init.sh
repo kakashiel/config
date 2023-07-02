@@ -7,6 +7,7 @@ export MYZDOTDIR="$MYCONF/zsh"
 . "$MYZDOTDIR/config/alias.sh"
 . "$MYZDOTDIR/config/symlinks.sh"
 . "$MYZDOTDIR/config/mappings.sh"
+. "$MYZDOTDIR/config/light-and-dark.sh"
 
 #Install
 . "$MYZDOTDIR/install/brew.sh"

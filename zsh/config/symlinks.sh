@@ -19,8 +19,9 @@ mkdir -p ~/.config/gpt-cli
 ln -f $MYCONF/gpt/gpt.yml ~/.config/gpt-cli/gpt.yml
 
 #Kitty
-mkdir -p ~/.config/kitty
+mkdir -p ~/.config/kitty/themes
 ln -f $MYCONF/kitty/kitty.conf ~/.config/kitty/kitty.conf
+ln -f $MYCONF/kitty/nord.conf ~/.config/kitty/themes/nord.conf
 
 #Hammerspoon
 mkdir -p ~/.hammerspoon

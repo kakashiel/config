@@ -54,7 +54,6 @@ installMacApp() {
 
 installCliApp() {
   #TMUX
-  #TODO:  Verify this one with zsh-notify
   brew install terminal-notifier
   brew install tmux
 

@@ -17,7 +17,7 @@ alias fgrep='fgrep --color=auto'
 ###############
 # Quick edit
 ###############
-alias vzsh='v $MYCONF/zsh/init.sh'
+alias vzsh='cd $MYCONF; v $MYCONF/zsh/init.sh; cd -'
 alias note="v $MYPERSO/writting/note.md"
 alias todo="v $MYPERSO/writting/todo.md"
 alias diary="v $MYPERSO/writting/diary.md"
@@ -47,6 +47,7 @@ Darwin) # echo 'Mac OS X'
 	#Icloud nosync node_modules
 	alias nosync="find ~/Documents -name node_modules -prune -exec touch {}/.nosync \;"
 	alias vpn='osascript -e "tell application \"/Applications/Tunnelblick.app\"" -e "connect \"client\"" -e "end tell" ; sec'
+	alias clean_nvim="rm -rf ~/.local/share/nvim ~/.local/state/nvim ~/.cache/nvim"
 	;;
 Linux)
 	alias ls='ls --color=auto'

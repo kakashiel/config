@@ -6,5 +6,4 @@ source $MYZDOTDIR/plugins/zsh-notify/notify.plugin.zsh
 
 zstyle ':notify:*' command-complete-timeout 5
 zstyle ':notify:*' always-notify-on-failure no
-zstyle ':notify:*' check-focus no
-
+zstyle ':notify:*' check-focus yes

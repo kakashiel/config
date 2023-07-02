@@ -4,7 +4,7 @@
 ---
 --- Download: [https://github.com/Hammerspoon/Spoons/raw/master/Spoons/KSheet.spoon.zip](https://github.com/Hammerspoon/Spoons/raw/master/Spoons/KSheet.spoon.zip)
 
-local obj={}
+local obj = {}
 obj.__index = obj
 
 -- Metadata
@@ -15,70 +15,77 @@ obj.homepage = "https://github.com/Hammerspoon/Spoons"
 obj.license = "MIT - https://opensource.org/licenses/MIT"
 
 -- Workaround for "Dictation" menuitem
-hs.application.menuGlyphs[148]="fn fn"
+hs.application.menuGlyphs[148] = "fn fn"
 
 obj.commandEnum = {
-    cmd = '⌘',
-    shift = '⇧',
-    alt = '⌥',
-    ctrl = '⌃',
+	cmd = "⌘",
+	shift = "⇧",
+	alt = "⌥",
+	ctrl = "⌃",
 }
 
 --- KSheet:init()
 --- Method
 --- Initialize the spoon
 function obj:init()
-    self.sheetView = hs.webview.new({x=0, y=0, w=0, h=0})
-    self.sheetView:windowTitle("CheatSheets")
-    self.sheetView:windowStyle("utility")
-    self.sheetView:allowGestures(true)
-    self.sheetView:allowNewWindows(false)
-    self.sheetView:level(hs.drawing.windowLevels.tornOffMenu)
-    local cscreen = hs.screen.mainScreen()
-    local cres = cscreen:fullFrame()
-    self.sheetView:frame({
-        x = cres.x+cres.w*0.15/2,
-        y = cres.y+cres.h*0.25/2,
-        w = cres.w*0.85,
-        h = cres.h*0.75
-    })
+	self.sheetView = hs.webview.new({ x = 0, y = 0, w = 0, h = 0 })
+	self.sheetView:windowTitle("CheatSheets")
+	self.sheetView:windowStyle("utility")
+	self.sheetView:allowGestures(true)
+	self.sheetView:allowNewWindows(false)
+	self.sheetView:level(hs.drawing.windowLevels.tornOffMenu)
+	local cscreen = hs.screen.mainScreen()
+	local cres = cscreen:fullFrame()
+	self.sheetView:frame({
+		x = cres.x + cres.w * 0.15 / 2,
+		y = cres.y + cres.h * 0.25 / 2,
+		w = cres.w * 0.85,
+		h = cres.h * 0.75,
+	})
 end
 
 local function processMenuItems(menustru)
-    local menu = ""
-        for pos,val in pairs(menustru) do
-            if type(val) == "table" then
-                -- TODO: Remove menubar items with no shortcuts in them
-                if val.AXRole == "AXMenuBarItem" and type(val.AXChildren) == "table" then
-                    menu = menu .. "<ul class='col col" .. pos .. "'>"
-                    menu = menu .. "<li class='title'><strong>" .. val.AXTitle .. "</strong></li>"
-                    menu = menu .. processMenuItems(val.AXChildren[1])
-                    menu = menu .. "</ul>"
-                elseif val.AXRole == "AXMenuItem" and not val.AXChildren then
-                    if not (val.AXMenuItemCmdChar == '' and val.AXMenuItemCmdGlyph == '') then
-                        local CmdModifiers = ''
-                        for key, value in pairs(val.AXMenuItemCmdModifiers) do
-                            CmdModifiers = CmdModifiers .. obj.commandEnum[value]
-                        end
-                        local CmdChar = val.AXMenuItemCmdChar
-                        local CmdGlyph = hs.application.menuGlyphs[val.AXMenuItemCmdGlyph] or ''
-                        local CmdKeys = CmdChar .. CmdGlyph
-                        menu = menu .. "<li><div class='cmdModifiers'>" .. CmdModifiers .. " " .. CmdKeys .. "</div><div class='cmdtext'>" .. " " .. val.AXTitle .. "</div></li>"
-                    end
-                elseif val.AXRole == "AXMenuItem" and type(val.AXChildren) == "table" then
-                    menu = menu .. processMenuItems(val.AXChildren[1])
-                end
-            end
-        end
-    return menu
+	local menu = ""
+	for pos, val in pairs(menustru) do
+		if type(val) == "table" then
+			if val.AXRole == "AXMenuBarItem" and type(val.AXChildren) == "table" then
+				menu = menu .. "<ul class='col col" .. pos .. "'>"
+				menu = menu .. "<li class='title'><strong>" .. val.AXTitle .. "</strong></li>"
+				menu = menu .. processMenuItems(val.AXChildren[1])
+				menu = menu .. "</ul>"
+			elseif val.AXRole == "AXMenuItem" and not val.AXChildren then
+				if not (val.AXMenuItemCmdChar == "" and val.AXMenuItemCmdGlyph == "") then
+					local CmdModifiers = ""
+					for key, value in pairs(val.AXMenuItemCmdModifiers) do
+						CmdModifiers = CmdModifiers .. obj.commandEnum[value]
+					end
+					local CmdChar = val.AXMenuItemCmdChar
+					local CmdGlyph = hs.application.menuGlyphs[val.AXMenuItemCmdGlyph] or ""
+					local CmdKeys = CmdChar .. CmdGlyph
+					menu = menu
+						.. "<li><div class='cmdModifiers'>"
+						.. CmdModifiers
+						.. " "
+						.. CmdKeys
+						.. "</div><div class='cmdtext'>"
+						.. " "
+						.. val.AXTitle
+						.. "</div></li>"
+				end
+			elseif val.AXRole == "AXMenuItem" and type(val.AXChildren) == "table" then
+				menu = menu .. processMenuItems(val.AXChildren[1])
+			end
+		end
+	end
+	return menu
 end
 
 local function generateHtml(application)
-    local app_title = application:title()
-    local menuitems_tree = application:getMenuItems()
-    local allmenuitems = processMenuItems(menuitems_tree)
+	local app_title = application:title()
+	local menuitems_tree = application:getMenuItems()
+	local allmenuitems = processMenuItems(menuitems_tree)
 
-    local html = [[
+	local html = [[
         <!DOCTYPE html>
         <html>
         <head>
@@ -190,35 +197,35 @@ local function generateHtml(application)
         </html>
         ]]
 
-    return html
+	return html
 end
 
 --- KSheet:show()
 --- Method
 --- Show current application's keybindings in a view.
 function obj:show()
-    local capp = hs.application.frontmostApplication()
-    local webcontent = generateHtml(capp)
-    self.sheetView:html(webcontent)
-    self.sheetView:show()
+	local capp = hs.application.frontmostApplication()
+	local webcontent = generateHtml(capp)
+	self.sheetView:html(webcontent)
+	self.sheetView:show()
 end
 
 --- KSheet:hide()
 --- Method
 --- Hide the cheatsheet view.
 function obj:hide()
-    self.sheetView:hide()
+	self.sheetView:hide()
 end
 
 --- KSheet:toggle()
 --- Method
 --- Alternatively show/hide the cheatsheet view.
 function obj:toggle()
-  if self.sheetView and self.sheetView:hswindow() and self.sheetView:hswindow():isVisible() then
-    self:hide()
-  else
-    self:show()
-  end
+	if self.sheetView and self.sheetView:hswindow() and self.sheetView:hswindow():isVisible() then
+		self:hide()
+	else
+		self:show()
+	end
 end
 
 --- KSheet:bindHotkeys(mapping)
@@ -231,12 +238,12 @@ end
 ---   * hide - Hide the keybinding view
 ---   * toggle - Show if hidden, hide if shown
 function obj:bindHotkeys(mapping)
-  local actions = {
-    toggle = hs.fnutils.partial(self.toggle, self),
-    show = hs.fnutils.partial(self.show, self),
-    hide = hs.fnutils.partial(self.hide, self)
-  }
-  hs.spoons.bindHotkeysToSpec(actions, mapping)
+	local actions = {
+		toggle = hs.fnutils.partial(self.toggle, self),
+		show = hs.fnutils.partial(self.show, self),
+		hide = hs.fnutils.partial(self.hide, self),
+	}
+	hs.spoons.bindHotkeysToSpec(actions, mapping)
 end
 
 return obj
