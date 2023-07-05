@@ -27,7 +27,7 @@ return {
       pickers = {
         buffers = {
           -- sort_lastused = true,
-          -- ignore_current_buffer = true,
+          ignore_current_buffer = true,
           sort_mru = true,
         },
       },

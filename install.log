@@ -1,0 +1,10 @@
+[18:40:04 2023-07-05] FETCHING Version 2.20.3
+[18:40:04 2023-07-05] CREATING /Users/adrien/.spicetify
+[18:40:04 2023-07-05] DOWNLOADING https://github.com/spicetify/spicetify-cli/releases/download/v2.20.3/spicetify-2.20.3-darwin-amd64.tar.gz
+[18:40:08 2023-07-05] EXTRACTING /Users/adrien/.spicetify/spicetify.tar.gz
+[18:40:08 2023-07-05] SETTING EXECUTABLE PERMISSIONS TO /Users/adrien/.spicetify/spicetify
+[18:40:08 2023-07-05] REMOVING /Users/adrien/.spicetify/spicetify.tar.gz
+[18:40:08 2023-07-05] APPENDING /Users/adrien/.spicetify to PATH in /Users/adrien/.config/zsh/.zshrc
+[18:40:08 2023-07-05] Restart your shell to have spicetify in your PATH.
+[18:40:08 2023-07-05] spicetify v2.20.3 was installed successfully to /Users/adrien/.spicetify
+[18:40:08 2023-07-05] Run 'spicetify --help' to get started

@@ -33,4 +33,5 @@ call plug#begin('~/.vim/plugged')
  Plug 'morhetz/gruvbox'                                     " Theme vim
  Plug 'joshdick/onedark.vim'                                " Theme vim
  Plug 'arcticicestudio/nord-vim'                            " Theme vim
+ Plug 'cocopon/iceberg.vim'                                 " Theme vim
  call plug#end()

@@ -40,10 +40,10 @@ assistants:
     temperature: 0.2
     messages:
       - { role: system, content: "You are a java and spring developer" }
-  python:
+  py:
     model: gpt-3.5-turbo
     # model: gpt-4
     top_p: 0.2
     temperature: 0.2
     messages:
-      - { role: system, content: "You are a python data scientiste" }
+      - { role: system, content: "You are a python developer" }
