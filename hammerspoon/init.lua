@@ -10,7 +10,7 @@ require("alttab") -- Alt+Tab replacement
 require("reload")
 require("init-shiftit")
 require("vim-mode")
-require("global-mute")
+require("mic-mute")
 require("deepL-translate")
 -- require("teams-toggle-mute")
 -- require("tunnelblick")
