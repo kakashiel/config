@@ -13,6 +13,7 @@ if [ ! -d ~/.config/tmux ]; then
 	$XDG_CONFIG_HOME/tmux/plugins/tpm/scripts/install_plugins.sh
 	tmux kill-server
 fi
+ln -f $MYCONF/tmux/tmux.conf $XDG_CONFIG_HOME/tmux/tmux.conf
 
 ###############
 #ALIAS
