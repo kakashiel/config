@@ -27,9 +27,6 @@ xnoremap <leader>p "_dP
 vnoremap < <gv
 vnoremap > >gv
 
-" Map Ctrl-Backspace to delete the previous word in insert mode.
-imap <C-BS> <C-w>
-
 
 "==============
 "Alt
@@ -73,3 +70,10 @@ nnoremap <leader>bc :%bd\|e#\|bd#<CR>
 "
 xmap <leader>/ <Plug>Commentary
 
+
+"==============
+" Insert
+"==============
+" Map Ctrl-Backspace to delete the previous word in insert mode.
+" Not working..
+imap <C-BS> <C-w>
