@@ -14,6 +14,7 @@ export MYZDOTDIR="$MYCONF/zsh"
 
 #Plugin
 . "$MYZDOTDIR/plugins.sh"
+. "$MYZDOTDIR/zsh-vi-mode.sh"
 
 #App
 . "$MYZDOTDIR/app/git.sh"
@@ -28,6 +29,7 @@ export MYZDOTDIR="$MYCONF/zsh"
 . "$MYZDOTDIR/app/zsh-notify.sh"
 . "$MYZDOTDIR/app/jetbrain.zsh"
 . "$MYZDOTDIR/app/podman.sh"
+. "$MYZDOTDIR/app/whisper.sh"
 
 # Script
 . "$MYCONF/scripts/init.sh"

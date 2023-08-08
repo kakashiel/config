@@ -11,6 +11,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'tommcdo/vim-exchange'                                " intellij: exchange: gc & gcc
  Plug 'tpope/vim-repeat'                                    " Repeat also pluging
  Plug 'tpope/vim-speeddating'                               " Incremente date & time
+ Plug 'tpope/vim-rsi'                                       " Readling shortcut for insert & command line
  Plug 'tpope/vim-fugitive'                                  " GIT
  Plug 'tpope/vim-rhubarb'                                   " GIT with more command
  Plug 'junegunn/gv.vim'                                     " GIT browse commit

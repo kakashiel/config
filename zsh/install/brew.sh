@@ -101,6 +101,7 @@ installMisc() {
    ncdu \
    htop \
    docker-compose \
+   fd \
    speedtest-cli 
 }
 

@@ -1,6 +1,7 @@
 return {
   { "alexghergh/nvim-tmux-navigation" },
   { "tpope/vim-commentary" },
+  { "tpope/vim-rsi" },
   { --show git blame
     "f-person/git-blame.nvim",
     event = "BufRead",
