@@ -22,10 +22,10 @@ assistants:
     top_p: 0.3
     temperature: 0.4
     messages:
-      - {
-          role: system,
-          content: "You are an french teacher. You correct my grammar, conjugaison and help me to improve my syntax",
-        }
+      - { role: system, content: "You are an french teacher.\
+            You correct my grammar, conjugaison \
+            and help me to improve my syntax. \
+            You also hillight the correction. And put my mistake in parenthese next to the correct word" }
   trader:
     model: gpt-3.5-turbo
     # model: gpt-4
