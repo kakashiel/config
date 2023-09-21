@@ -35,4 +35,5 @@ macToggle() {
 	fi
 
 }
-macToggle
+# macToggle
+darkMode

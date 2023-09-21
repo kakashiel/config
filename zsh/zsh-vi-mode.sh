@@ -9,6 +9,9 @@ bindkey -M vicmd 'j' history-substring-search-down
 # Emacs mode
 bindkey -e
 
+   bindkey '^P' history-beginning-search-backward
+   bindkey '^N' history-beginning-search-forward
+
 #New VIM-Mode
 # Can create conflict with other shortcut
 # zsh_add_plugin "jeffreytse/zsh-vi-mode"

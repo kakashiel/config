@@ -33,8 +33,8 @@ spoon.KSheet:bindHotkeys({
 spoon.SpoonInstall:andUse("Cherry", {
 	repo = "default",
 	config = {
-		duration = 1,
-		notification = hs.notify.new({ title = "Done! 🍒", withdrawAfter = 5 }),
+		duration = 30,
+		notification = hs.notify.new({ title = "Done! 🍒", withdrawAfter = 3 }),
 		sound = hs.sound.getByFile(
 			"System/Library/PrivateFrameworks/ScreenReader.framework/Versions/A/Resources/Sounds"
 		),
