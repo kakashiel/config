@@ -7,7 +7,7 @@ return {
   end,
   -- See in keymap file
   -- keys = {
-  --   { "<leader>t", desc = "ChatGPT", mode = normalAndVisual },
+  -- { "<leader>t", desc = "ChatGPT", mode = normalAndVisual },
   --   { "<leader>tk", "<cmd>:ChatGPT<cr>", desc = "ChatGPT", mode = normalAndVisual },
   --   { "<leader>tj", "<cmd>:ChatGPTActAs<cr>", desc = "ChatGPTActAs", mode = normalAndVisual },
   --   {

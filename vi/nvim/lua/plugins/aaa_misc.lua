@@ -10,8 +10,6 @@ return {
       vim.g.gitblame_enabled = 0
     end,
   },
-  -- Auto change color with mac os preference
-  -- { "f-person/auto-dark-mode.nvim" },
   -- Kitty keywords
   { "fladson/vim-kitty" },
   -- COLORSCHEME

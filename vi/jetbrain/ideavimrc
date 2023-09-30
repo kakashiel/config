@@ -8,15 +8,16 @@ let mapleader=" "
 let maplocalleader="//"
 
 """ Plugins  --------------------------------
-set commentary
-set argtextobj
-set highlightedyank
-set easymotion
-set sneak
-set quickscope " Should be after sneak
-set surround
-set NERDTree
-" set ideamarks
+Plug 'tpope/vim-commentary'
+Plug 'vim-scripts/argtextobj.vim'
+Plug 'machakann/vim-highlightedyank'
+Plug 'easymotion/vim-easymotion' " Install IdeaVim-EasyMotion and AceJump plugins.
+set sneak "Install IdeaVim-sneak plugin.
+set quickscope " Should be after sneak; Install IdeaVim-Quickscope 
+Plug 'tpope/vim-surround'
+Plug 'preservim/nerdtree'
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-rsi' " Test maybe it's not working
 
 """ Plugin settings -------------------------
 let g:highlightedyank_highlight_color = "rgba(:136, 195, 136, 1)"
