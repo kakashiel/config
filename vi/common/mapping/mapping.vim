@@ -71,30 +71,4 @@ nnoremap <leader>bc :%bd\|e#\|bd#<CR>
 xmap <leader>/ <Plug>Commentary
 
 
-"==============
-" Insert
-"==============
-" Map Ctrl-Backspace to delete the previous word in insert mode.
-" Not working..
-imap <C-BS> <C-w>
-
-"==============
-" Auto complete
-"==============
-inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<CR>"
-inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
-inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Down>"
-inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<Up>"
-
-"==============
-"Commande mode (:)
-"==============
-" Enable searching for command history backward
-" cnoremap <expr> <Up>   getcmdtype() ==# ':' ? "\<C-p>" : "\<Up>"
-" cnoremap <expr> <Down> getcmdtype() ==# ':' ? "\<C-n>" : "\<Down>"
- " Enable searching for command history backward
-cnoremap <expr> <Up>   getcmdtype() ==# ':' ? "\<C-r>=getcmdline()[:-2]\<CR>" : "\<Up>"
-cnoremap <expr> <Down> getcmdtype() ==# ':' ? "\<C-r>=getcmdline()[:-2]\<CR>" : "\<Down>"
-
-
 

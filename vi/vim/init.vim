@@ -1,6 +1,7 @@
 source $MYCONF/vi/common/config/settings.vim
 source $MYCONF/vi/common/config/autocmd.vim
 source $MYCONF/vi/common/mapping/mapping.vim
+source $MYCONF/vi/common/mapping/mapping-no-ideavim.vim
 source $MYCONF/vi/common/load_plug.vim
 source $MYCONF/vi/common/plug.vim
 

@@ -6,7 +6,6 @@ export MYZDOTDIR="$MYCONF/zsh"
 . "$MYZDOTDIR/config/settings.sh"
 . "$MYZDOTDIR/config/alias.sh"
 . "$MYZDOTDIR/config/symlinks.sh"
-. "$MYZDOTDIR/config/mappings.sh"
 . "$MYZDOTDIR/config/light-and-dark.sh"
 
 #Install
@@ -14,7 +13,7 @@ export MYZDOTDIR="$MYCONF/zsh"
 
 #Plugin
 . "$MYZDOTDIR/plugins.sh"
-. "$MYZDOTDIR/zsh-vi-mode.sh"
+. "$MYZDOTDIR/config/mappings.sh"
 
 #App
 . "$MYZDOTDIR/app/git.sh"

@@ -2,6 +2,7 @@
 vim.cmd("source $MYCONF/vi/common/config/settings.vim")
 vim.cmd("source $MYCONF/vi/common/config/autocmd.vim")
 vim.cmd("source $MYCONF/vi/common/mapping/mapping.vim")
+vim.cmd("source $MYCONF/vi/common/mapping/mapping-no-ideavim.vim")
 
 -- Not working with lazy.vim
 -- Load plug
@@ -23,5 +24,4 @@ vim.cmd("source $MYCONF/vi/common/plugins/signify.vim")
 vim.cmd("source $MYCONF/vi/common/plugins/rainbow.vim")
 vim.cmd("source $MYCONF/vi/common/plugins/vim-tmux-navigator.vim")
 local options = { noremap = true }
-vim.keymap.set("i", "jj", "<Esc>", options)
 print("Loaded common init.lua")
