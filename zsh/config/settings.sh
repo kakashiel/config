@@ -28,6 +28,7 @@ export PATH=/usr/local/sbin:$PATH
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.local/share
 export PATH=$PATH:$HOME/.local/share/nvim/lsp_servers
+export PATH="/Library/Frameworks/Python.framework/Versions/3.10/bin:$PATH"
 
 #NVIM for evryone
 export VISUAL=nvim
