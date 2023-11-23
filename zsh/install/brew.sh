@@ -36,6 +36,7 @@ installMacApp() {
     whatsapp \
     anki \
     kitty \
+    raycast \
     hammerspoon
 
   #  virtualbox \
