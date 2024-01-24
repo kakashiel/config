@@ -33,7 +33,7 @@ alias gpleet="cd $MYPERSO/leetcode && g aa && g cam '[AL] Auto push leetcode' &&
 ###############
 # MY HOME
 ###############
-alias home_vpn="ssh pi@192.168.0.50"
+alias home_vpn="ssh pi@192.168.1.50"
 alias home_rig1="ssh -i $MYPERSO/credentials/euryale/ssh/mining ad@192.168.0.51"
 
 alias ide=". $MYCONF/scripts/idea_lauch.sh"
