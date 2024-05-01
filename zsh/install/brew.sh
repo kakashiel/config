@@ -27,7 +27,6 @@ installMacApp() {
   brew tap homebrew/cask-fonts
 
   brew install --cask \
-    google-chrome \
     font-hack-nerd-font \
     firefox \
     docker \
@@ -37,6 +36,7 @@ installMacApp() {
     anki \
     kitty \
     raycast \
+    google-chrome \
     hammerspoon
 
   #  virtualbox \
@@ -117,6 +117,7 @@ if ! command -v brew &> /dev/null; then
     installMisc
   fi
 else
+  fpath+=("$(brew --prefix)/share/zsh/site-functions")
   # alias k="kubectl"
 fi
 

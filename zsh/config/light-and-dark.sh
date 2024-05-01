@@ -1,7 +1,9 @@
 #!/bin/bash
 
 lightMode() {
-  tmux source-file $MYCONF/tmux/tmux-light.conf
+  if [[ -n "$TMUX" ]]; then
+    tmux source-file $MYCONF/tmux/tmux-light.conf
+  fi
   if command -v kitty >/dev/null 2>&1; then
     kitty +kitten themes --reload-in=all Kaolin Breeze
   fi
@@ -10,7 +12,9 @@ lightMode() {
 }
 
 darkMode() {
-  tmux source-file $MYCONF/tmux/tmux-dark.conf
+  if [[ -n "$TMUX" ]]; then
+    tmux source-file $MYCONF/tmux/tmux-dark.conf
+  fi
   if command -v kitty >/dev/null 2>&1; then
     kitty +kitten themes --reload-in=all Nord
   fi
