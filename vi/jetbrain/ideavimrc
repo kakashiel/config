@@ -16,7 +16,6 @@ set sneak "Install IdeaVim-sneak plugin.
 set quickscope " Should be after sneak; Install IdeaVim-Quickscope 
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
-Plug 'preservim/nerdtree'
 Plug 'tpope/vim-rsi' " Test maybe it's not working
 
 """ Plugin settings -------------------------
@@ -70,17 +69,6 @@ map go <action>(ActivateStructureToolWindow)
 map go <action>(FileStructurePopup)
 map gt <action>(GotoTest)
 
-" Debug
-map <leader>d <action>(Debug)
-map <leader>br <Action>(ToggleLineBreakpoint)
-map <leader>c <action>(Stop)
-map <C-j> <action>(StepOver)
-map <C-k> <action>(Resume)
-map <C-h> <action>(StepOut)
-map <C-l> <action>(ForceStepInto)
-map <Space>qe <action>(QuickEvaluateExpression)
-map <Space>ee <action>(EvaluateExpression)
-
 
 map <leader>bc <Action>(CloseAllEditorsButActive)
 map <leader>e <action>(RecentFiles)
@@ -94,6 +82,7 @@ map <leader>T <action>(Refactorings.QuickListPopupAction)
 map <leader>rm <action>(ExtractMethod)
 map <leader>rn <action>(RenameElement)
 map <leader>rr <action>(RenameElement)
+map <leader>rr <action>(Run)
 map <leader>rg <action>(Generate)
 map <leader>ro <action>(OptimizeImports)
 map <leader>ri <action>(OptimizeImports)
@@ -110,6 +99,17 @@ map <c-h> <c-w>h
 map <c-l> <c-w>l
 map <c-j> <c-w>j
 map <c-k> <c-w>k
+
+" Debug
+map <leader>d <action>(Debug)
+map <leader>br <Action>(ToggleLineBreakpoint)
+map <leader>c <action>(Stop)
+map <M-j> <action>(StepOver)
+map <M-k> <action>(Resume)
+map <M-h> <action>(StepOut)
+map <M-l> <action>(ForceStepInto)
+map <Space>qe <action>(QuickEvaluateExpression)
+map <Space>ee <action>(EvaluateExpression)
 
 " formatting
 map == <action>(ReformatCode)
