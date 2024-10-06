@@ -35,7 +35,6 @@ installMacApp() {
     whatsapp \
     anki \
     kitty \
-    raycast \
     google-chrome \
     hammerspoon
 
