@@ -7,6 +7,7 @@ return {
     -- opts will be merged with the parent spec
     opts = {
       ensure_installed = {
+        "angular",
         "bash",
         "c",
         "comment",
@@ -17,6 +18,8 @@ return {
         "go",
         "gomod",
         "html",
+        "java",
+        "javadoc",
         "javascript",
         "json",
         "lua",
@@ -29,6 +32,7 @@ return {
         "regex",
         "rst",
         "rust",
+        "scala",
         "sql",
         "terraform",
         "tsx",

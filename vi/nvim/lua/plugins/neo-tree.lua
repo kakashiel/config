@@ -1,7 +1,5 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
+  cmd = "Neotree",
   opts = { close_if_last_window = true },
-  keys = {
-    { "<leader>n", "<cmd>Neotree source=filesystem reveal=true<cr>", desc = "Project" },
-  },
 }

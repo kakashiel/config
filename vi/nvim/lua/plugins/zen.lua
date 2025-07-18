@@ -1,21 +1,20 @@
 return {
   "folke/zen-mode.nvim",
-  keys = {
-    { "<leader>z", "<cmd>ZenMode<cr>", desc = "Zen" },
-  },
-  otps = {
+  cmd = "ZenMode",
+  opts = {
     window = {
-      backdrop = 0.95, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
-      width = 150, -- width of the Zen window
-      height = 1, -- height of the Zen window
+      backdrop = 0.95,
+      width = 150,
+      height = 1,
     },
     plugins = {
-      gitsigns = { enabled = true }, -- disables git signs
+      gitsigns = { enabled = true },
       tmux = { enabled = true },
       kitty = {
         enabled = true,
-        font = "+4", -- font size increment
+        font = "+4",
       },
     },
   },
 }
+

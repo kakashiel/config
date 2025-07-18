@@ -71,4 +71,9 @@ nnoremap <leader>bc :%bd\|e#\|bd#<CR>
 xmap <leader>/ <Plug>Commentary
 
 
-
+"==============
+" Command line ":"
+"==============
+" Use <C-i> and <C-j> in command-line mode for command history search
+cnoremap <C-k> <Up>
+cnoremap <C-j> <Down>

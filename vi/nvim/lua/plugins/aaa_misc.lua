@@ -1,4 +1,5 @@
 return {
+  -- { "alexghergh/nvim-tmux-navigation", lazy = false, priority = 1000 },
   { "alexghergh/nvim-tmux-navigation" },
   { "tpope/vim-commentary" },
   { "tpope/vim-rsi" },
