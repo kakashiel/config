@@ -14,9 +14,9 @@ ln -f $MYCONF/github/config.yml $XDG_CONFIG_HOME/gh/config.yml
 #VSCODE
 # ln -f $MYCONF/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 
-#GPT
-mkdir -p ~/.config/gpt-cli
-ln -f $MYCONF/gpt/gpt.yml ~/.config/gpt-cli/gpt.yml
+#Lazygit
+mkdir -p ~/.config/lazygit
+ln -f $MYCONF/lazygit/config.yml ~/.config/lazygit/config.yml
 
 #Kitty
 mkdir -p ~/.config/kitty/themes

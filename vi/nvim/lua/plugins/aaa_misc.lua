@@ -26,4 +26,6 @@ return {
   { "luisiacc/gruvbox-baby", event = "VeryLazy" },
   { "sainnhe/sonokai", event = "VeryLazy" },
   { "ishan9299/nvim-solarized-lua", event = "VeryLazy" },
+  -- devIvcon
+  { "nvim-tree/nvim-web-devicons", opts = {} },
 }

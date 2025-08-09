@@ -67,6 +67,7 @@ installGitPackages() {
     git-gui \
     git-crypt \
     git-extras \
+    difftastick \
     diff-so-fancy
 
 }

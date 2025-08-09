@@ -19,7 +19,7 @@ export CLICOLOR=1 #Color ls
 
 export BROWSER=chrome
 if [[ "$OSTYPE" == "darwin"* ]]; then
-	BROWSER='"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --any --extra --arguments'
+  BROWSER='"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --any --extra --arguments'
 fi
 
 #PATH
