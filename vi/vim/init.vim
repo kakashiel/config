@@ -23,7 +23,6 @@ source $MYCONF/vi/vim/plugins/goyo.vim
 
 "COMMON
 source $MYCONF/vi/common/plugins/sneak.vim
-source $MYCONF/vi/common/plugins/signify.vim
 source $MYCONF/vi/common/plugins/rainbow.vim
 source $MYCONF/vi/common/plugins/argtextobj.vim
 source $MYCONF/vi/common/plugins/vim-tmux-navigator.vim
