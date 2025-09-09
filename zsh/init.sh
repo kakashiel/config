@@ -34,6 +34,10 @@ export MYZDOTDIR="$MYCONF/zsh"
 # Script
 . "$MYCONF/scripts/init.sh"
 
+# MCP settings
+. "$MYCONF/mcp/init.sh"
+
+
 # Other project load
 . "$MYZDOTDIR/my-other-projects/credentials.sh"
 . "$MYZDOTDIR/my-other-projects/credentials-work.sh"
