@@ -22,6 +22,9 @@ Plug 'tpope/vim-rsi' " Test maybe it's not working
 let g:highlightedyank_highlight_color = "rgba(:136, 195, 136, 1)"
 let g:argtextobj_pairs="[:],{:},(:),<:>"
 
+
+
+
 """ Common settings -------------------------
 "set showmode
 "set so=5
@@ -60,6 +63,7 @@ map <leader>z <action>(ToggleDistractionFreeMode)
 
 map <leader>n :NERDTreeFind<CR>
 map <leader>N :NERDTreeToggle<CR>
+map <leader>yp <Action>(CopyPath)
 
 map gD <action>(GotoImplementation)
 map gd <action>(GotoDeclaration)
@@ -68,6 +72,7 @@ map gi <action>(QuickImplementations)
 map go <action>(ActivateStructureToolWindow)
 map go <action>(FileStructurePopup)
 map gt <action>(GotoTest)
+map gp :action CopyReferencePopupGroup<CR>
 
 
 map <leader>bc <Action>(CloseAllEditorsButActive)
