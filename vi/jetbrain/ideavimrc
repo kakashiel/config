@@ -63,7 +63,6 @@ map <leader>z <action>(ToggleDistractionFreeMode)
 
 map <leader>n :NERDTreeFind<CR>
 map <leader>N :NERDTreeToggle<CR>
-map <leader>yp <Action>(CopyPath)
 
 map gD <action>(GotoImplementation)
 map gd <action>(GotoDeclaration)
